@@ -522,13 +522,14 @@ def batch_url_test(proxies, test_urls, timeout, batch_size=25):
 # IP 反查
 # ============================================================
 def ip_lookup(server):
-    """主库: hackmyip.com（免费、无需key、返回 hosting 字段判断住宅/机房）
-    失败时 fallback 到 ipinfo.io"""
+    """IP反查：hackmyip.com（主，返回hosting）→ ipinfo.io（fallback）→ ip-api.com（再fallback）
+    返回 (ip, info, source)，source记录成功用的是哪个API"""
     try:
         ip = socket.gethostbyname(server)
     except:
-        return server, None
-    # 主库 hackmyip.com
+        return server, None, "dns_fail"
+
+    # 主库: hackmyip.com（免费、返回hosting字段）
     try:
         url = f"https://hackmyip.com/api/v1/ip/{ip}"
         with urllib.request.urlopen(url, timeout=8) as resp:
@@ -549,10 +550,11 @@ def ip_lookup(server):
                     "query": ip,
                     "hosting": priv.get("hosting", False),
                     "asn": net.get("asn", ""),
-                }
-    except:
-        pass
-    # fallback: ipinfo.io
+                }, "hackmyip"
+    except Exception as e:
+        log(f"    [hackmyip失败] {ip}: {e}")
+
+    # fallback 1: ipinfo.io（免费，无hosting字段）
     try:
         url = f"https://ipinfo.io/{ip}/json"
         with urllib.request.urlopen(url, timeout=8) as resp:
@@ -583,23 +585,29 @@ def ip_lookup(server):
                     "org": data.get("org", ""),
                     "query": ip,
                     "hosting": None,
-                }
-    except:
-        pass
-    return ip, None
+                }, "ipinfo"
+    except Exception as e:
+        log(f"    [ipinfo失败] {ip}: {e}")
 
-def batch_ip_lookup(proxies, max_workers=10):
+    return ip, None, "all_failed"
+
+def batch_ip_lookup(proxies, max_workers=2):
+    """批量IP反查：低并发+间隔，避免被hackmyip限流"""
     results = {}
     servers = list(set(p["server"] for p in proxies))
-    log(f"IP反查: {len(servers)} 个唯一服务器")
+    log(f"IP反查: {len(servers)} 个唯一服务器 (并发{max_workers}, 间隔1秒)")
+    source_stats = {"hackmyip": 0, "ipinfo": 0, "all_failed": 0, "dns_fail": 0}
     with ThreadPoolExecutor(max_workers=max_workers) as ex:
         futures = {ex.submit(ip_lookup, s): s for s in servers}
         for i, fut in enumerate(as_completed(futures)):
             server = futures[fut]
-            ip, info = fut.result()
+            ip, info, source = fut.result()
             results[server] = {"ip": ip, "info": info}
-            if (i+1) % 20 == 0:
+            source_stats[source] = source_stats.get(source, 0) + 1
+            time.sleep(1)  # 间隔1秒，避免限流
+            if (i+1) % 10 == 0:
                 log(f"  IP查询 {i+1}/{len(servers)}")
+    log(f"  IP反查完成: hackmyip={source_stats.get('hackmyip',0)} ipinfo={source_stats.get('ipinfo',0)} 失败={source_stats.get('all_failed',0)+source_stats.get('dns_fail',0)}")
     return results
 
 # ============================================================
@@ -639,7 +647,8 @@ def is_residential_ip(server, ip_info=None):
             if good_asn in asn or good_asn in org:
                 return True
         return False
-    return True  # hosting=None 时默认放行
+    # hosting=None = hackmyip和ipinfo都失败了，保守不入池
+    return False
 
 def merge_pool_into_nodes(nodes, pool):
     """把池子中的历史节点合并到待测列表（跳过TCP预筛）"""
