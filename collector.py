@@ -47,6 +47,11 @@ def fetch_nomorewalls(config):
     log(f"[NoMoreWalls] 下载: {url}")
     data = fetch_url(url)
     if not data:
+        # fallback: 直连 GitHub raw
+        direct_url = "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml"
+        log(f"[NoMoreWalls] 反代超时，尝试直连: {direct_url}")
+        data = fetch_url(direct_url)
+    if not data:
         log("[NoMoreWalls] 下载失败，返回空")
         return []
     text = data.decode("utf-8", errors="ignore")
@@ -83,8 +88,8 @@ def fetch_mibei(config):
         return []
     article_text = article_html.decode("utf-8", errors="ignore")
 
-    txt_urls = re.findall(r'(https?://mm\.mibei77\.com/[^"\'\s<>]+\.txt)', article_text)
-    yaml_urls = re.findall(r'(https?://mm\.mibei77\.com/[^"\'\s<>]+\.(?:yaml|yml))', article_text)
+    txt_urls = re.findall(r'(https?://[a-z]+\.mibei77\.com/[^"\'\s<>]+\.txt)', article_text)
+    yaml_urls = re.findall(r'(https?://[a-z]+\.mibei77\.com/[^"\'\s<>]+\.(?:yaml|yml))', article_text)
 
     proxies = []
 
