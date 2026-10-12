@@ -632,22 +632,57 @@ def save_pool(pool):
     with open(POOL_FILE, "w") as f:
         json.dump(pool, f, ensure_ascii=False, indent=2)
 
+# 已知机房关键词（用于 fallback：ipinfo没有hosting字段时用org粗判）
+DATACENTER_KEYWORDS = [
+    "cloudflare", "amazon", "aws", "google", "microsoft", "azure",
+    "digitalocean", "vultr", "linode", "hetzner", "ovh", "choopa",
+    "alibaba", "tencent", "oracle", "akamai", "fastly", "leaseweb",
+    "datacamp", "greencloud", "psychz", "serverion", "m247",
+    "uccloud", "fairview", "g-core", "cdn77", "stackpath", "edgecast",
+    "incapsula", "quadranet", "scaleway", "mevspace", "timeweb",
+    "clouvider", "multacom", "altushost", "liteserver", "tzulo",
+    "beanfield", "hostpapa", "hurricane", "peg", "jsc",
+]
+
+# 已知住宅/宽带运营商关键词
+RESIDENTIAL_KEYWORDS = [
+    "chinanet", "chinanet", "kt", "korea telecom", "ntt", "att",
+    "at&t", "verizon", "comcast", "charter", "sprint", "t-mobile",
+    "chunghwa", "hinet", "kddi", "softbank", "singtel", "starhub",
+    "telefonica", "orange", "vodafone", "deutsche telekom",
+]
+
 def is_residential_ip(server, ip_info=None):
-    """判断是否优质IP（住宅/宽带 + 好机房）"""
+    """判断是否优质IP
+    1. hackmyip成功：hosting=false→住宅入池，hosting=true→查ASN白名单
+    2. hackmyip失败但ipinfo成功：用org粗判（机房关键词→不入池，住宅关键词→入池）
+    3. 两个都失败：保守不入池"""
     if ip_info is None:
         return False
     info = ip_info.get("info") or {}
     hosting = info.get("hosting")
+    org = (info.get("org") or info.get("isp") or "").lower()
+    asn = str(info.get("asn", "")).lower()
+
+    # 情况1: hackmyip成功，有hosting字段
     if hosting == False:
         return True
     if hosting == True:
-        asn = str(info.get("asn", "")).lower()
-        org = (info.get("org") or info.get("isp") or "").lower()
         for good_asn in GOOD_DATACENTER_ASNS:
             if good_asn in asn or good_asn in org:
                 return True
         return False
-    # hosting=None = hackmyip和ipinfo都失败了，保守不入池
+
+    # 情况2: hosting=None（hackmyip失败，fallback到ipinfo的org粗判）
+    # 先查机房关键词
+    for kw in DATACENTER_KEYWORDS:
+        if kw in org:
+            return False
+    # 再查住宅关键词
+    for kw in RESIDENTIAL_KEYWORDS:
+        if kw in org:
+            return True
+    # 情况3: 都不匹配，保守不入池
     return False
 
 def merge_pool_into_nodes(nodes, pool):
