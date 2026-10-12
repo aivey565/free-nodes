@@ -30,7 +30,8 @@ test:
   tcp_timeout_seconds: 5
   tcp_concurrency: 50
 pool:
-  max_fail_days: 15
+  max_fail_days: 5
+  max_size: 30
 output:
   top_n: 30
   good_threshold_ms: 3000

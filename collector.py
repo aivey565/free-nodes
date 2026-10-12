@@ -611,6 +611,144 @@ def batch_ip_lookup(proxies, max_workers=2):
     return results
 
 # ============================================================
+# 两级IP反查（TCP探活后调用，提前发现住宅IP）
+# ============================================================
+COUNTRY_CODE_MAP = {
+    "US": "美国", "JP": "日本", "SG": "新加坡", "TW": "台湾", "KR": "韩国",
+    "HK": "香港", "CN": "中国", "DE": "德国", "GB": "英国", "FR": "法国",
+    "NL": "荷兰", "CA": "加拿大", "AU": "澳大利亚", "RU": "俄罗斯",
+    "RO": "罗马尼亚", "FI": "芬兰", "SE": "瑞典", "CH": "瑞士", "ES": "西班牙",
+    "IT": "意大利", "IN": "印度", "BR": "巴西", "TR": "土耳其", "PL": "波兰",
+    "UA": "乌克兰", "IE": "爱尔兰", "AT": "奥地利", "BE": "比利时",
+    "CZ": "捷克", "DK": "丹麦", "NO": "挪威", "PT": "葡萄牙", "GR": "希腊",
+    "MX": "墨西哥", "TH": "泰国", "VN": "越南", "ID": "印尼", "MY": "马来西亚",
+    "PH": "菲律宾", "NZ": "新西兰", "EG": "埃及", "SA": "沙特", "AE": "阿联酋",
+    "IL": "以色列", "KZ": "哈萨克斯坦", "BG": "保加利亚", "HU": "匈牙利",
+    "SK": "斯洛伐克", "HR": "克罗地亚", "MO": "澳门", "BD": "孟加拉国",
+    "PK": "巴基斯坦", "LK": "斯里兰卡", "KH": "柬埔寨", "NP": "尼泊尔",
+}
+
+def _ipinfo_quick(server):
+    """第一级：ipinfo快速查询（无hosting字段，但有org用于粗筛）"""
+    try:
+        ip = socket.gethostbyname(server)
+    except:
+        return server, None
+    try:
+        with urllib.request.urlopen(f"https://ipinfo.io/{ip}/json", timeout=8) as resp:
+            data = json.loads(resp.read())
+            cc = data.get("country", "")
+            if cc:
+                return ip, {
+                    "country": COUNTRY_CODE_MAP.get(cc, cc),
+                    "countryCode": cc,
+                    "regionName": data.get("region", ""),
+                    "city": data.get("city", ""),
+                    "isp": data.get("org", ""),
+                    "org": data.get("org", ""),
+                    "query": ip,
+                    "hosting": None,
+                    "asn": data.get("org", "").split()[0] if data.get("org") else "",
+                }
+    except:
+        pass
+    return ip, None
+
+def _hackmyip_confirm(ip):
+    """第二级：hackmyip确认hosting字段"""
+    try:
+        with urllib.request.urlopen(f"https://hackmyip.com/api/v1/ip/{ip}", timeout=8) as resp:
+            data = json.loads(resp.read())
+            if data.get("success"):
+                d = data["data"]
+                return d.get("privacy", {}).get("hosting"), d.get("network", {})
+    except Exception as e:
+        log(f"    [hackmyip确认失败] {ip}: {e}")
+    return None, None
+
+def two_stage_ip_lookup(proxies):
+    """两级IP反查：
+    1. ipinfo全量快速查（5并发）
+    2. org粗筛疑似住宅，再用hackmyip确认hosting（2并发+1秒间隔）
+    返回 {server: {ip, info, is_residential}}
+    """
+    results = {}
+    servers = list(set(p["server"] for p in proxies))
+    log(f"两级IP反查: {len(servers)} 个唯一服务器")
+
+    # 第一级：ipinfo全量
+    log("  第一级: ipinfo 全量查询 (5并发)")
+    ipinfo_results = {}
+    fail_count = 0
+    with ThreadPoolExecutor(max_workers=5) as ex:
+        futures = {ex.submit(_ipinfo_quick, s): s for s in servers}
+        for i, fut in enumerate(as_completed(futures)):
+            server = futures[fut]
+            ip, info = fut.result()
+            if info:
+                ipinfo_results[server] = {"ip": ip, "info": info}
+            else:
+                fail_count += 1
+                ipinfo_results[server] = {"ip": ip, "info": None}
+            if (i+1) % 50 == 0:
+                log(f"    ipinfo {i+1}/{len(servers)}")
+    log(f"    ipinfo完成: 成功{len(ipinfo_results)-fail_count}, 失败{fail_count}")
+
+    # 粗筛：org不含机房关键词 = 疑似住宅
+    suspicious = []
+    for server, data in ipinfo_results.items():
+        info = data["info"]
+        if info is None:
+            continue
+        org = (info.get("org") or "").lower()
+        is_dc = any(kw in org for kw in DATACENTER_KEYWORDS)
+        if not is_dc:
+            suspicious.append((server, data["ip"], info))
+
+    log(f"  粗筛: {len(suspicious)}/{len(ipinfo_results)} 个疑似住宅/非机房")
+
+    # 第二级：hackmyip确认
+    log("  第二级: hackmyip 确认疑似住宅 (2并发, 1秒间隔)")
+    confirmed_residential = 0
+    confirmed_dc = 0
+    confirm_fail = 0
+    with ThreadPoolExecutor(max_workers=2) as ex:
+        futures = {ex.submit(_hackmyip_confirm, ip): (server, ip, info)
+                   for server, ip, info in suspicious}
+        for i, fut in enumerate(as_completed(futures)):
+            server, ip, info = futures[fut]
+            hosting, net = fut.result()
+            if hosting is not None:
+                info["hosting"] = hosting
+                if net:
+                    info["asn"] = str(net.get("asn", info.get("asn", "")))
+                    info["isp"] = net.get("isp", info.get("isp", ""))
+                    info["org"] = net.get("org", info.get("org", ""))
+                if hosting == False:
+                    confirmed_residential += 1
+                else:
+                    # 机房，再检查ASN白名单
+                    pass
+            else:
+                confirm_fail += 1
+            time.sleep(1)
+
+    # 组装最终结果
+    for server, data in ipinfo_results.items():
+        info = data["info"]
+        ip = data["ip"]
+        if info is None:
+            results[server] = {"ip": ip, "info": None, "is_residential": False}
+        else:
+            is_res = is_residential_ip(server, {"ip": ip, "info": info})
+            results[server] = {"ip": ip, "info": info, "is_residential": is_res}
+            if is_res:
+                log(f"    住宅IP: {ip} {info.get('country','')} {info.get('city','')} ({info.get('org','')[:40]})")
+
+    log(f"  两级反查完成: 确认住宅{confirmed_residential}, 机房{confirmed_dc}, 确认失败{confirm_fail}")
+    return results
+
+# ============================================================
 # 持久优质节点池
 # ============================================================
 POOL_FILE = ".cache/pool.json"
@@ -646,10 +784,12 @@ DATACENTER_KEYWORDS = [
 
 # 已知住宅/宽带运营商关键词
 RESIDENTIAL_KEYWORDS = [
-    "chinanet", "chinanet", "kt", "korea telecom", "ntt", "att",
+    "chinanet", "kt", "korea telecom", "ntt", "att",
     "at&t", "verizon", "comcast", "charter", "sprint", "t-mobile",
-    "chunghwa", "hinet", "kddi", "softbank", "singtel", "starhub",
+    "chunghwa", "hinet", "data communication business", "as3462",
+    "kddi", "softbank", "singtel", "starhub",
     "telefonica", "orange", "vodafone", "deutsche telekom",
+    "china telecom", "china unicom", "china mobile",
 ]
 
 def is_residential_ip(server, ip_info=None):
@@ -686,14 +826,19 @@ def is_residential_ip(server, ip_info=None):
     return False
 
 def merge_pool_into_nodes(nodes, pool):
-    """把池子中的历史节点合并到待测列表（跳过TCP预筛）"""
+    """把池子中的历史节点合并到待测列表（跳过TCP预筛，复用已有IP反查数据）"""
     existing = set((p["server"], p["port"]) for p in nodes)
     added = 0
     for pn in pool.get("nodes", []):
-        cfg = pn["config"]
+        cfg = dict(pn["config"])
         key = (cfg["server"], cfg["port"])
         if key not in existing:
             cfg["_from_pool"] = True
+            cfg["_ip_data"] = {
+                "ip": pn.get("ipinfo", {}).get("ip"),
+                "info": pn.get("ipinfo", {}).get("info"),
+                "is_residential": True,
+            }
             nodes.append(cfg)
             existing.add(key)
             added += 1
@@ -701,13 +846,25 @@ def merge_pool_into_nodes(nodes, pool):
         log(f"  持久池合并: +{added} 个历史优质节点（跳过TCP预筛）")
     return nodes
 
-def update_pool_after_test(pool, alive_nodes, ip_info, config):
-    """测试后更新持久池：通了清零失败计数，不通+1，≥max_fail_days淘汰"""
-    max_fail = config.get("pool", {}).get("max_fail_days", 15)
-    alive_keys = set((n["server"], n["port"]) for n in alive_nodes)
+def update_pool_after_test(pool, all_nodes, alive_keys, config):
+    """测试后更新持久池
+    - 住宅IP + URL test通 → 入池，fail_days=0
+    - 住宅IP + URL test没通 → 入池，fail_days=1（首次发现）
+    - 池子里连续max_fail天不通 → 淘汰
+    - 池子上限max_size
+    """
+    pool_cfg = config.get("pool", {})
+    max_fail = pool_cfg.get("max_fail_days", 5)
+    max_size = pool_cfg.get("max_size", 30)
     today = datetime.now().strftime("%Y-%m-%d")
 
-    # 标记今天存活的节点
+    # 构建节点查找表
+    node_map = {}
+    for p in all_nodes:
+        key = (p["server"], p["port"])
+        node_map[key] = p
+
+    # 池子里已有节点
     pool_keys = {}
     for pn in pool.get("nodes", []):
         key = (pn["config"]["server"], pn["config"]["port"])
@@ -728,20 +885,32 @@ def update_pool_after_test(pool, alive_nodes, ip_info, config):
                 log(f"  持久池淘汰: {pn['config']['server']}:{pn['config']['port']} (连续{pn['fail_days']}天不通)")
     pool["nodes"] = kept
 
-    # 新入池：今天存活且是优质IP
-    for n in alive_nodes:
-        key = (n["server"], n["port"])
-        if key not in pool_keys:
-            info = ip_info.get(n["server"]) or {}
-            if is_residential_ip(n["server"], info):
-                pool["nodes"].append({
-                    "config": n,
-                    "ipinfo": info,
-                    "fail_days": 0,
-                    "first_seen": today,
-                    "last_seen": today,
-                })
-                log(f"  持久池新增: {n['server']}:{n['port']} ({info.get('info',{}).get('country','')})")
+    # 新入池：所有住宅IP节点
+    for key, p in node_map.items():
+        if key in pool_keys:
+            continue
+        ip_data = p.get("_ip_data") or {}
+        if not ip_data.get("is_residential"):
+            continue
+        # 清理内部字段
+        clean_config = {k: v for k, v in p.items() if not k.startswith("_") and k != "name"}
+        fail_days = 0 if key in alive_keys else 1
+        pool["nodes"].append({
+            "config": clean_config,
+            "ipinfo": {"ip": ip_data.get("ip"), "info": ip_data.get("info")},
+            "fail_days": fail_days,
+            "first_seen": today,
+            "last_seen": today if fail_days == 0 else "",
+        })
+        status = "存活" if fail_days == 0 else "未通URL test"
+        info = ip_data.get("info") or {}
+        log(f"  持久池新增: {p['server']}:{p['port']} ({info.get('country','')} {info.get('city','')}) [{status}]")
+
+    # 池子上限：fail_days少的优先保留
+    if len(pool["nodes"]) > max_size:
+        pool["nodes"].sort(key=lambda x: x["fail_days"])
+        pool["nodes"] = pool["nodes"][:max_size]
+        log(f"  持久池达到上限{max_size}，已截断")
 
     log(f"  持久池总计: {len(pool['nodes'])} 个节点")
     return pool
@@ -970,21 +1139,29 @@ def load_all_rounds():
     return rounds
 
 def save_node_list(proxies):
-    """保存去重后的节点列表（第1轮调用，后续轮次复用）"""
+    """保存去重后的节点列表（第1轮调用，后续轮次复用），含IP反查结果"""
     os.makedirs(CACHE_DIR, exist_ok=True)
     path = os.path.join(CACHE_DIR, "nodes_list.json")
+    nodes_data = []
+    for p in proxies:
+        entry = {
+            "name": p["name"],
+            "raw_config": {k: v for k, v in p.items() if k != "name" and not k.startswith("_ip")},
+            "ip_data": p.get("_ip_data"),
+        }
+        nodes_data.append(entry)
     data = {
         "date": datetime.now().strftime("%Y-%m-%d"),
         "timestamp": datetime.now().isoformat(),
         "count": len(proxies),
-        "nodes": [{"name": p["name"], "raw_config": {k: v for k, v in p.items() if k != "name"}} for p in proxies],
+        "nodes": nodes_data,
     }
     with open(path, "w") as f:
         json.dump(data, f, ensure_ascii=False)
     log(f"节点列表已保存: {path} ({len(proxies)}个节点)")
 
 def load_node_list():
-    """加载节点列表（第2/3轮调用）"""
+    """加载节点列表（第2轮调用），含IP反查结果"""
     path = os.path.join(CACHE_DIR, "nodes_list.json")
     if not os.path.exists(path):
         log(f"[ERROR] 节点列表不存在: {path}")
@@ -996,6 +1173,8 @@ def load_node_list():
         for item in data["nodes"]:
             p = dict(item["raw_config"])
             p["name"] = item["name"]
+            if item.get("ip_data"):
+                p["_ip_data"] = item["ip_data"]
             proxies.append(p)
         log(f"节点列表已加载: {len(proxies)}个节点 (生成于 {data.get('timestamp','')})")
         return proxies
@@ -1043,6 +1222,22 @@ def run_single_round(round_num, config):
             deduped = fresh_nodes + pool_nodes
             log(f"TCP 测活后待测列表: {len(deduped)} (新节点 {len(fresh_nodes)} + 池子节点 {len(pool_nodes)})")
             log(f"协议分布: {dict(Counter(p['type'] for p in deduped))}")
+
+        # Phase 2.6: 两级IP反查（提前发现住宅IP，结果存到节点数据里）
+        log("Phase 2.6: 两级IP反查")
+        # 持久池节点已有IP反查数据，跳过
+        need_lookup = [p for p in deduped if not p.get("_ip_data")]
+        cached = {p["server"]: p["_ip_data"] for p in deduped if p.get("_ip_data")}
+        if need_lookup:
+            ip_lookup_results = two_stage_ip_lookup(need_lookup)
+        else:
+            ip_lookup_results = {}
+        ip_lookup_results.update(cached)
+        for p in deduped:
+            if not p.get("_ip_data"):
+                p["_ip_data"] = ip_lookup_results.get(p["server"], {"ip": None, "info": None, "is_residential": False})
+        res_count = sum(1 for p in deduped if p["_ip_data"].get("is_residential"))
+        log(f"  住宅IP节点: {res_count}/{len(deduped)}")
 
         # 重命名并保存节点列表（后续轮次复用）
         renamed = []
@@ -1165,9 +1360,18 @@ def run_finalize(config):
     stable_nodes.sort(key=lambda x: x["avg_delay"])
     log(f"稳定节点（≥{min_valid}轮有效）: {len(stable_nodes)}/{len(node_list)}")
 
-    # 5. IP反查（提前到分组前，对全部稳定节点执行，用于地区分组）
-    log("Phase: IP 反查地理位置")
-    ip_info = batch_ip_lookup([n["raw_config"] for n in stable_nodes])
+    # 5. IP反查（复用TCP阶段已有的两级反查结果，不再重复查询）
+    log("Phase: 读取IP反查数据（TCP阶段已完成）")
+    ip_info = {}
+    for p in node_list:
+        ip_data = p.get("_ip_data")
+        if ip_data and ip_data.get("info"):
+            ip_info[p["server"]] = {"ip": ip_data.get("ip"), "info": ip_data.get("info")}
+    if not ip_info:
+        log("[WARN] 节点列表中无IP反查数据，fallback到实时查询")
+        ip_info = batch_ip_lookup([n["raw_config"] for n in stable_nodes])
+    else:
+        log(f"  已有IP反查数据: {len(ip_info)} 个节点")
 
     # 6. CF 节点过滤（对中国 IP 通常不可用，限制数量）
     #    先识别 CF 节点，标记后再分组，配额选取时限制 CF 数量
@@ -1364,11 +1568,18 @@ def run_finalize(config):
         json.dump(json_data, f, ensure_ascii=False, indent=2)
     log(f"  ✓ nodes.json (详细数据)")
 
-    # 持久池更新
+    # 持久池更新（传入所有节点，函数内部根据is_residential和URL test结果决定入池）
     log("Phase: 更新持久优质节点池")
     pool = load_pool()
-    alive_for_pool = [n["raw_config"] for n in all_stable_raw]
-    pool = update_pool_after_test(pool, alive_for_pool, ip_info, config)
+    # 今天URL test存活的节点（至少1轮通）
+    alive_keys = set()
+    for name, delays in node_delays.items():
+        if any(d > 0 for d in delays):
+            for p in node_list:
+                if p["name"] == name:
+                    alive_keys.add((p["server"], p["port"]))
+                    break
+    pool = update_pool_after_test(pool, node_list, alive_keys, config)
     save_pool(pool)
     pool_nodes_yaml = []
     for i, pn in enumerate(pool.get("nodes", [])):
