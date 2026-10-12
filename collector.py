@@ -522,20 +522,43 @@ def batch_url_test(proxies, test_urls, timeout, batch_size=25):
 # IP 反查
 # ============================================================
 def ip_lookup(server):
-    """主库: ipinfo.io（准确度高、免token 5万次/月、无并发限速）
-    失败时 fallback 到 ip-api.com"""
+    """主库: hackmyip.com（免费、无需key、返回 hosting 字段判断住宅/机房）
+    失败时 fallback 到 ipinfo.io"""
     try:
         ip = socket.gethostbyname(server)
     except:
         return server, None
-    # 主库 ipinfo.io
+    # 主库 hackmyip.com
+    try:
+        url = f"https://hackmyip.com/api/v1/ip/{ip}"
+        with urllib.request.urlopen(url, timeout=8) as resp:
+            data = json.loads(resp.read())
+            if data.get("success"):
+                d = data["data"]
+                loc = d.get("location", {})
+                net = d.get("network", {})
+                priv = d.get("privacy", {})
+                return ip, {
+                    "status": "success",
+                    "country": loc.get("country_name", ""),
+                    "countryCode": loc.get("country", ""),
+                    "regionName": loc.get("region", ""),
+                    "city": loc.get("city", ""),
+                    "isp": net.get("isp", ""),
+                    "org": net.get("org", ""),
+                    "query": ip,
+                    "hosting": priv.get("hosting", False),
+                    "asn": net.get("asn", ""),
+                }
+    except:
+        pass
+    # fallback: ipinfo.io
     try:
         url = f"https://ipinfo.io/{ip}/json"
         with urllib.request.urlopen(url, timeout=8) as resp:
             data = json.loads(resp.read())
             cc = data.get("country", "")
             if cc:
-                # 转成与 ip-api 兼容的结构（country 中文名 + countryCode 两字母码）
                 cn_name = {
                     "US": "美国", "JP": "日本", "SG": "新加坡", "TW": "台湾", "KR": "韩国",
                     "HK": "香港", "CN": "中国", "DE": "德国", "GB": "英国", "FR": "法国",
@@ -559,16 +582,8 @@ def ip_lookup(server):
                     "isp": data.get("org", ""),
                     "org": data.get("org", ""),
                     "query": ip,
+                    "hosting": None,
                 }
-    except:
-        pass
-    # fallback: ip-api.com
-    try:
-        url = f"http://ip-api.com/json/{ip}?lang=zh-CN&fields=status,country,countryCode,regionName,city,isp,org,query"
-        with urllib.request.urlopen(url, timeout=8) as resp:
-            data = json.loads(resp.read())
-            if data.get("status") == "success":
-                return ip, data
     except:
         pass
     return ip, None
@@ -586,6 +601,106 @@ def batch_ip_lookup(proxies, max_workers=10):
             if (i+1) % 20 == 0:
                 log(f"  IP查询 {i+1}/{len(servers)}")
     return results
+
+# ============================================================
+# 持久优质节点池
+# ============================================================
+POOL_FILE = ".cache/pool.json"
+
+# 好机房 ASN 白名单（观察期：先放松，把优质机房也加入持久池）
+GOOD_DATACENTER_ASNS = ["as53983", "as4766", "as4713", "as9605", "as4134", "as4837", "as9808"]
+
+def load_pool():
+    """加载持久池"""
+    try:
+        with open(POOL_FILE) as f:
+            return json.load(f)
+    except:
+        return {"nodes": []}
+
+def save_pool(pool):
+    """保存持久池"""
+    os.makedirs(os.path.dirname(POOL_FILE), exist_ok=True)
+    with open(POOL_FILE, "w") as f:
+        json.dump(pool, f, ensure_ascii=False, indent=2)
+
+def is_residential_ip(server, ip_info=None):
+    """判断是否优质IP（住宅/宽带 + 好机房）"""
+    if ip_info is None:
+        return False
+    info = ip_info.get("info") or {}
+    hosting = info.get("hosting")
+    if hosting == False:
+        return True
+    if hosting == True:
+        asn = str(info.get("asn", "")).lower()
+        org = (info.get("org") or info.get("isp") or "").lower()
+        for good_asn in GOOD_DATACENTER_ASNS:
+            if good_asn in asn or good_asn in org:
+                return True
+        return False
+    return True  # hosting=None 时默认放行
+
+def merge_pool_into_nodes(nodes, pool):
+    """把池子中的历史节点合并到待测列表（跳过TCP预筛）"""
+    existing = set((p["server"], p["port"]) for p in nodes)
+    added = 0
+    for pn in pool.get("nodes", []):
+        cfg = pn["config"]
+        key = (cfg["server"], cfg["port"])
+        if key not in existing:
+            cfg["_from_pool"] = True
+            nodes.append(cfg)
+            existing.add(key)
+            added += 1
+    if added:
+        log(f"  持久池合并: +{added} 个历史优质节点（跳过TCP预筛）")
+    return nodes
+
+def update_pool_after_test(pool, alive_nodes, ip_info, config):
+    """测试后更新持久池：通了清零失败计数，不通+1，≥max_fail_days淘汰"""
+    max_fail = config.get("pool", {}).get("max_fail_days", 15)
+    alive_keys = set((n["server"], n["port"]) for n in alive_nodes)
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    # 标记今天存活的节点
+    pool_keys = {}
+    for pn in pool.get("nodes", []):
+        key = (pn["config"]["server"], pn["config"]["port"])
+        pool_keys[key] = pn
+
+    # 更新已有节点
+    kept = []
+    for key, pn in pool_keys.items():
+        if key in alive_keys:
+            pn["fail_days"] = 0
+            pn["last_seen"] = today
+            kept.append(pn)
+        else:
+            pn["fail_days"] += 1
+            if pn["fail_days"] < max_fail:
+                kept.append(pn)
+            else:
+                log(f"  持久池淘汰: {pn['config']['server']}:{pn['config']['port']} (连续{pn['fail_days']}天不通)")
+    pool["nodes"] = kept
+
+    # 新入池：今天存活且是优质IP
+    for n in alive_nodes:
+        key = (n["server"], n["port"])
+        if key not in pool_keys:
+            info = ip_info.get(n["server"]) or {}
+            if is_residential_ip(n["server"], info):
+                pool["nodes"].append({
+                    "config": n,
+                    "ipinfo": info,
+                    "fail_days": 0,
+                    "first_seen": today,
+                    "last_seen": today,
+                })
+                log(f"  持久池新增: {n['server']}:{n['port']} ({info.get('info',{}).get('country','')})")
+
+    log(f"  持久池总计: {len(pool['nodes'])} 个节点")
+    return pool
 
 # ============================================================
 # 真实名称生成
@@ -865,16 +980,24 @@ def run_single_round(round_num, config):
         log(f"去重后: {len(deduped)}")
         log(f"协议分布: {dict(Counter(p['type'] for p in deduped))}")
 
+        # Phase 2.3: 合并持久池历史节点
+        pool = load_pool()
+        if pool.get("nodes"):
+            deduped = merge_pool_into_nodes(deduped, pool)
+
         # Phase 2.5: TCP 测活预筛（减轻 URL test 压力）
         test_cfg = config.get("test", {})
         tcp_check = test_cfg.get("tcp_alive_check", True)
         if tcp_check:
             log("Phase 2.5: TCP 测活预筛")
-            deduped = tcp_alive_check(
-                deduped,
+            fresh_nodes = [p for p in deduped if not p.get("_from_pool")]
+            pool_nodes = [p for p in deduped if p.get("_from_pool")]
+            fresh_nodes = tcp_alive_check(
+                fresh_nodes,
                 timeout=test_cfg.get("tcp_timeout_seconds", 5),
                 max_workers=test_cfg.get("tcp_concurrency", 50))
-            log(f"TCP 测活后待测列表: {len(deduped)}")
+            deduped = fresh_nodes + pool_nodes
+            log(f"TCP 测活后待测列表: {len(deduped)} (新节点 {len(fresh_nodes)} + 池子节点 {len(pool_nodes)})")
             log(f"协议分布: {dict(Counter(p['type'] for p in deduped))}")
 
         # 重命名并保存节点列表（后续轮次复用）
@@ -1196,6 +1319,22 @@ def run_finalize(config):
     with open(os.path.join(output_dir, "nodes.json"), "w") as f:
         json.dump(json_data, f, ensure_ascii=False, indent=2)
     log(f"  ✓ nodes.json (详细数据)")
+
+    # 持久池更新
+    log("Phase: 更新持久优质节点池")
+    pool = load_pool()
+    alive_for_pool = [n["raw_config"] for n in all_stable_raw]
+    pool = update_pool_after_test(pool, alive_for_pool, ip_info, config)
+    save_pool(pool)
+    pool_nodes_yaml = []
+    for i, pn in enumerate(pool.get("nodes", [])):
+        p = dict(pn["config"])
+        p["name"] = f"POOL-{i+1:02d}-{pn['ipinfo'].get('info',{}).get('country','')}-{pn['ipinfo'].get('info',{}).get('city','')}"
+        pool_nodes_yaml.append({"raw_config": p, "real_name": p["name"]})
+    clash_pool = build_clash_yaml(pool_nodes_yaml, output_cfg)
+    with open(os.path.join(output_dir, "free-nodes-pool.yaml"), "w") as f:
+        yaml.dump(clash_pool, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+    log(f"  ✓ free-nodes-pool.yaml ({len(pool.get('nodes', []))}个持久优质节点)")
 
     # 汇总报告
     log(f"\n{'='*60}")

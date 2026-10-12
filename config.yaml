@@ -17,9 +17,9 @@ wg_egress:
   public_key: 4cwbtv/nQbfUBtPoTWom3VGPk0zAais7QTMLXJ883lo=
   mtu: 1280
 test:
-  rounds: 3
-  interval_minutes: 10
-  min_valid_rounds: 2
+  rounds: 2
+  interval_minutes: 30
+  min_valid_rounds: 1
   test_urls:
   - http://www.gstatic.com/generate_204
   - https://chatgpt.com/
@@ -29,6 +29,8 @@ test:
   tcp_alive_check: true
   tcp_timeout_seconds: 5
   tcp_concurrency: 50
+pool:
+  max_fail_days: 15
 output:
   top_n: 30
   good_threshold_ms: 3000

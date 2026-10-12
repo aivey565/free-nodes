@@ -1,16 +1,18 @@
-name: Round 2 Test
+name: Round 2 Test and Publish
 
 on:
-  # 生产：每天 UTC 5:35（北京 13:35）跑第2轮（密集三轮：13:05→13:35→14:05 一小时跑完）
+  # 每天 UTC 15:30（北京 23:30）跑第2轮 + 汇总发布
   schedule:
-    - cron: '35 5 * * *'
+    - cron: '30 15 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
-  test:
+  test-and-publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,7 +36,7 @@ jobs:
       - name: Download GeoData
         run: |
           curl -sL "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb" -o country.mmdb
-          curl -sL "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat" -o geosite.dat || true
+          curl -sL "https://github.com/MetaCubeX/meta-rules-dat/releases/latest/download/geosite.dat" -o geosite.dat || true
 
       - name: Show cache before
         run: |
@@ -52,21 +54,41 @@ jobs:
           python3 collector.py --round 2
           echo "=== 第2轮测试完成 ==="
 
-      - name: Show cache after
+      - name: Finalize and generate output
         run: |
-          echo "=== 缓存内容（测试后）==="
-          ls -la .cache/
-          python3 -c 'import json,glob; [print(f, ":", json.load(open(f))["timestamp"]) for f in sorted(glob.glob(".cache/round_*.json"))]'
+          echo "=== 汇总模式开始 ==="
+          python3 collector.py --finalize
+          echo "=== 汇总模式完成 ==="
+          echo "=== 输出文件 ==="
+          ls -lh output/
 
-      - name: Commit cache to repo
+      - name: Show final report
+        run: |
+          echo "=== 最终汇总报告 ==="
+          python3 -c 'import json; d=json.load(open("output/nodes.json")); m=d["meta"]; print("生成时间:", m["generated_at"]); print("测试轮次:", m["total_rounds"], m["rounds_used"]); print("唯一节点:", m["total_unique_nodes"]); print("稳定节点:", m["total_stable"]); print("优质节点:", m["total_good"]); print(); print("TOP 10:"); [print(" ", i+1, n["real_name"], str(n["avg_delay_ms"])+"ms", "有效"+str(n["valid_rounds"])+"/"+str(n["total_rounds"])+"轮", n["type"]) for i,n in enumerate(d["nodes"][:10])]'
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Commit output and cache to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f .cache/
+          git add -A
           if git diff --staged --quiet; then
             echo "无变更，跳过commit"
           else
-            git commit -m "Round 2 test result $(date '+%Y-%m-%d %H:%M')"
-            git pull --rebase -X theirs origin main || git rebase --abort
+            git commit -m "Round 2 + finalize: update nodes $(date '+%Y-%m-%d %H:%M')"
+            git pull --rebase -X theirs origin main 2>/dev/null || (git stash && git pull --rebase -X theirs origin main && git stash pop)
             git push || (git pull --rebase -X theirs origin main && git push)
           fi
+        continue-on-error: true
