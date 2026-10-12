@@ -4,16 +4,121 @@ allow-lan: false
 mode: rule
 log-level: info
 ipv6: false
-proxies: []
+proxies:
+- password: Trojan@82164024
+  port: 443
+  server: kr.tronsg.com
+  skip-cert-verify: true
+  sni: kr.tronsg.com
+  type: trojan
+  udp: true
+  name: KR-Seoul-AS20473-trojan-01
+- auth: 7ab3c77e-8fcc-4848-918f-cae3d4eac794
+  password: 7ab3c77e-8fcc-4848-918f-cae3d4eac794
+  port: 2053
+  server: 194.87.118.184
+  skip-cert-verify: true
+  sni: match-stream.lovkisport.blog
+  tls: false
+  type: hysteria2
+  name: RU-Moscow-JSC-hysteria2-02
+- encryption: mlkem768x25519plus.native.0rtt.BheP3zTPlA3cijplJnfrJSIp9rYlrGqnqEOnYD-wA20
+  network: ws
+  port: 8880
+  server: 188.114.99.0
+  tls: false
+  type: vless
+  udp: true
+  uuid: 3ee10440-225e-4cbc-83ed-3c80b90bcb07
+  ws-opts:
+    headers:
+      Host: ovh-gr1.mahkhorshidi.ir
+    path: /notls
+  name: US-San Fran-Cloudflare-vless-03
+- type: vless
+  server: 80.47.12.94
+  port: 443
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  network: tcp
+  tls: true
+  servername: pl-1-1.unturned-rust-dead.lol
+  reality-opts:
+    public-key: gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg
+    short-id: ''
+  client-fingerprint: random
+  name: PL-Warsaw-AS201814-vless-04
+- password: github.com/Alvin9999-newpac/fanqiang
+  port: 30099
+  server: ip5.934618.xyz
+  skip-cert-verify: true
+  sni: ip5.934618.xyz
+  type: anytls
+  udp: true
+  name: FR-Paris-Scaleway-anytls-05
+- type: vless
+  server: pl-1-1.unturned-rust-dead.lol
+  port: 443
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  network: tcp
+  tls: true
+  servername: pl-1-1.unturned-rust-dead.lol
+  reality-opts:
+    public-key: gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg
+    short-id: ''
+  client-fingerprint: random
+  ws-opts:
+    headers:
+      Host: pl-1-1.unturned-rust-dead.lol
+  name: PL-Warsaw-AS201814-vless-06
+- network: ws
+  port: 2095
+  server: www.epicgames.com
+  tls: false
+  type: vless
+  udp: true
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  ws-opts:
+    headers:
+      Host: uwu.femboy67.cc.cd
+    path: /
+  name: US-San Fran-Cloudflare-vless-07
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.70.191
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: FR-Paris-Scaleway-hysteria-08
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
+  - KR-Seoul-AS20473-trojan-01
+  - RU-Moscow-JSC-hysteria2-02
+  - US-San Fran-Cloudflare-vless-03
+  - PL-Warsaw-AS201814-vless-04
+  - FR-Paris-Scaleway-anytls-05
+  - PL-Warsaw-AS201814-vless-06
+  - US-San Fran-Cloudflare-vless-07
+  - FR-Paris-Scaleway-hysteria-08
 - name: ♻️ 自动选择
   type: url-test
-  proxies: []
+  proxies:
+  - KR-Seoul-AS20473-trojan-01
+  - RU-Moscow-JSC-hysteria2-02
+  - US-San Fran-Cloudflare-vless-03
+  - PL-Warsaw-AS201814-vless-04
+  - FR-Paris-Scaleway-anytls-05
+  - PL-Warsaw-AS201814-vless-06
+  - US-San Fran-Cloudflare-vless-07
+  - FR-Paris-Scaleway-hysteria-08
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

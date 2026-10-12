@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated_at": "2026-10-12T06:31:28.091630",
+    "generated_at": "2026-10-12T16:04:03.928150",
     "total_rounds": 3,
     "rounds_used": [
       1,
       2,
       3
     ],
-    "total_unique_nodes": 0,
-    "total_stable": 0,
+    "total_unique_nodes": 399,
+    "total_stable": 8,
     "total_good": 0,
-    "min_valid_rounds": 2,
+    "min_valid_rounds": 1,
     "good_threshold_ms": 3000,
     "region_quota": {
       "asia": 15,
@@ -22,5 +22,264 @@
       "米贝"
     ]
   },
-  "nodes": []
+  "nodes": [
+    {
+      "real_name": "KR-Seoul-AS20473-trojan-01",
+      "type": "trojan",
+      "server": "kr.tronsg.com",
+      "port": 443,
+      "ip": "158.247.220.26",
+      "country": "韩国",
+      "city": "Seoul",
+      "isp": "AS20473 The Constant Company, LLC",
+      "avg_delay_ms": 5699,
+      "valid_rounds": 1,
+      "total_rounds": 2,
+      "delays": [
+        0,
+        5699
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "password": "Trojan@82164024",
+        "port": 443,
+        "server": "kr.tronsg.com",
+        "skip-cert-verify": true,
+        "sni": "kr.tronsg.com",
+        "type": "trojan",
+        "udp": true,
+        "name": "node_0249"
+      }
+    },
+    {
+      "real_name": "RU-Moscow-JSC-hysteria2-02",
+      "type": "hysteria2",
+      "server": "194.87.118.184",
+      "port": 2053,
+      "ip": "194.87.118.184",
+      "country": "俄罗斯",
+      "city": "Moscow",
+      "isp": "AS9123 JSC TIMEWEB",
+      "avg_delay_ms": 3394,
+      "valid_rounds": 1,
+      "total_rounds": 2,
+      "delays": [
+        3394,
+        0
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "auth": "7ab3c77e-8fcc-4848-918f-cae3d4eac794",
+        "password": "7ab3c77e-8fcc-4848-918f-cae3d4eac794",
+        "port": 2053,
+        "server": "194.87.118.184",
+        "skip-cert-verify": true,
+        "sni": "match-stream.lovkisport.blog",
+        "tls": false,
+        "type": "hysteria2",
+        "name": "node_0372"
+      }
+    },
+    {
+      "real_name": "US-San Fran-Cloudflare-vless-03",
+      "type": "vless",
+      "server": "188.114.99.0",
+      "port": 8880,
+      "ip": "188.114.99.0",
+      "country": "美国",
+      "city": "San Francisco",
+      "isp": "AS13335 Cloudflare, Inc.",
+      "avg_delay_ms": 3582,
+      "valid_rounds": 1,
+      "total_rounds": 2,
+      "delays": [
+        3582,
+        0
+      ],
+      "is_cf": true,
+      "raw_config": {
+        "encryption": "mlkem768x25519plus.native.0rtt.BheP3zTPlA3cijplJnfrJSIp9rYlrGqnqEOnYD-wA20",
+        "network": "ws",
+        "port": 8880,
+        "server": "188.114.99.0",
+        "tls": false,
+        "type": "vless",
+        "udp": true,
+        "uuid": "3ee10440-225e-4cbc-83ed-3c80b90bcb07",
+        "ws-opts": {
+          "headers": {
+            "Host": "ovh-gr1.mahkhorshidi.ir"
+          },
+          "path": "/notls"
+        },
+        "name": "node_0184"
+      }
+    },
+    {
+      "real_name": "PL-Warsaw-AS201814-vless-04",
+      "type": "vless",
+      "server": "80.47.12.94",
+      "port": 443,
+      "ip": "80.47.12.94",
+      "country": "波兰",
+      "city": "Warsaw",
+      "isp": "AS201814 MEVSPACE sp. z o.o.",
+      "avg_delay_ms": 4138,
+      "valid_rounds": 1,
+      "total_rounds": 2,
+      "delays": [
+        0,
+        4138
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "type": "vless",
+        "server": "80.47.12.94",
+        "port": 443,
+        "uuid": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
+        "network": "tcp",
+        "tls": true,
+        "servername": "pl-1-1.unturned-rust-dead.lol",
+        "reality-opts": {
+          "public-key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+          "short-id": ""
+        },
+        "client-fingerprint": "random",
+        "name": "node_0347"
+      }
+    },
+    {
+      "real_name": "FR-Paris-Scaleway-anytls-05",
+      "type": "anytls",
+      "server": "ip5.934618.xyz",
+      "port": 30099,
+      "ip": "62.210.28.175",
+      "country": "法国",
+      "city": "Paris",
+      "isp": "AS12876 Scaleway SAS",
+      "avg_delay_ms": 4464,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        3494,
+        5434
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "password": "github.com/Alvin9999-newpac/fanqiang",
+        "port": 30099,
+        "server": "ip5.934618.xyz",
+        "skip-cert-verify": true,
+        "sni": "ip5.934618.xyz",
+        "type": "anytls",
+        "udp": true,
+        "name": "node_0201"
+      }
+    },
+    {
+      "real_name": "PL-Warsaw-AS201814-vless-06",
+      "type": "vless",
+      "server": "pl-1-1.unturned-rust-dead.lol",
+      "port": 443,
+      "ip": "80.47.12.94",
+      "country": "波兰",
+      "city": "Warsaw",
+      "isp": "AS201814 MEVSPACE sp. z o.o.",
+      "avg_delay_ms": 5006,
+      "valid_rounds": 1,
+      "total_rounds": 2,
+      "delays": [
+        0,
+        5006
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "type": "vless",
+        "server": "pl-1-1.unturned-rust-dead.lol",
+        "port": 443,
+        "uuid": "c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8",
+        "network": "tcp",
+        "tls": true,
+        "servername": "pl-1-1.unturned-rust-dead.lol",
+        "reality-opts": {
+          "public-key": "gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg",
+          "short-id": ""
+        },
+        "client-fingerprint": "random",
+        "ws-opts": {
+          "headers": {
+            "Host": "pl-1-1.unturned-rust-dead.lol"
+          }
+        },
+        "name": "node_0298"
+      }
+    },
+    {
+      "real_name": "US-San Fran-Cloudflare-vless-07",
+      "type": "vless",
+      "server": "www.epicgames.com",
+      "port": 2095,
+      "ip": "104.18.20.94",
+      "country": "美国",
+      "city": "San Francisco",
+      "isp": "AS13335 Cloudflare, Inc.",
+      "avg_delay_ms": 5944,
+      "valid_rounds": 1,
+      "total_rounds": 2,
+      "delays": [
+        5944,
+        0
+      ],
+      "is_cf": true,
+      "raw_config": {
+        "network": "ws",
+        "port": 2095,
+        "server": "www.epicgames.com",
+        "tls": false,
+        "type": "vless",
+        "udp": true,
+        "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+        "ws-opts": {
+          "headers": {
+            "Host": "uwu.femboy67.cc.cd"
+          },
+          "path": "/"
+        },
+        "name": "node_0238"
+      }
+    },
+    {
+      "real_name": "FR-Paris-Scaleway-hysteria-08",
+      "type": "hysteria",
+      "server": "62.210.70.191",
+      "port": 24667,
+      "ip": "62.210.70.191",
+      "country": "法国",
+      "city": "Paris",
+      "isp": "AS12876 Scaleway SAS",
+      "avg_delay_ms": 6252,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        5162,
+        7343
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "alpn": [
+          "h3"
+        ],
+        "auth-str": "dongtaiwang.com",
+        "down": "55 Mbps",
+        "port": 24667,
+        "protocol": "udp",
+        "server": "62.210.70.191",
+        "skip-cert-verify": true,
+        "sni": "bing.com",
+        "type": "hysteria",
+        "up": "11 Mbps",
+        "name": "node_0359"
+      }
+    }
+  ]
 }
