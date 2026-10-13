@@ -94,6 +94,33 @@
       "fail_days": 1,
       "first_seen": "2026-10-13",
       "last_seen": "2026-10-13"
+    },
+    {
+      "config": {
+        "type": "anytls",
+        "server": "yazhou09.twzq59.cc",
+        "port": 10688,
+        "password": "13f0acfa-38c1-4e82-a758-583aa31740df",
+        "sni": "yazhou09.twzq59.cc",
+        "skip-cert-verify": true,
+        "tls": true,
+        "udp": true,
+        "client-fingerprint": "chrome"
+      },
+      "ipinfo": {
+        "ip": null,
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "city": "Taipei",
+          "org": "AS3462 Data Communication Business Group",
+          "hosting": false,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-10-11",
+      "last_seen": ""
     }
   ]
 }
