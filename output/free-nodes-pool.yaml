@@ -44,6 +44,69 @@ proxies:
   udp: true
   name: POOL-03-台湾-Chang-hua
   fingerprint: chrome
+- type: anytls
+  server: yazhou09.twzq59.cc
+  port: 10688
+  password: 13f0acfa-38c1-4e82-a758-583aa31740df
+  sni: yazhou09.twzq59.cc
+  skip-cert-verify: true
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  name: POOL-04-台湾-Taipei
+- client-fingerprint: chrome
+  network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+  name: POOL-05-台湾-Taichung
+- password: humanity
+  port: 443
+  server: 219.76.13.177
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+  name: POOL-06-香港-Hong Kong
+- password: ec74bb6a86c2
+  port: 443
+  server: er8u54dh.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
+  udp: true
+  name: POOL-07-台湾-Yuanlin
+- password: ec74bb6a86c2
+  port: 443
+  server: 56481.df6h451rh.xin
+  skip-cert-verify: true
+  sni: images.ctfassets.net
+  type: anytls
+  udp: true
+  name: POOL-08-香港-Hong Kong
+- type: vless
+  server: 220.71.172.2
+  port: 16034
+  uuid: bfa5cd1f-1465-4850-b7c9-08e1a63dac2c
+  network: ws
+  tls: true
+  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
+  ech:
+    enabled: true
+    hostname: cloudflare-ech.com
+    config-url: https://dns.alidns.com/dns-query
+  name: POOL-09-韩国-Gwangju
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -53,12 +116,24 @@ proxy-groups:
   - POOL-01-台湾-Chang-hua
   - POOL-02-台湾-Yuanlin
   - POOL-03-台湾-Chang-hua
+  - POOL-04-台湾-Taipei
+  - POOL-05-台湾-Taichung
+  - POOL-06-香港-Hong Kong
+  - POOL-07-台湾-Yuanlin
+  - POOL-08-香港-Hong Kong
+  - POOL-09-韩国-Gwangju
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - POOL-01-台湾-Chang-hua
   - POOL-02-台湾-Yuanlin
   - POOL-03-台湾-Chang-hua
+  - POOL-04-台湾-Taipei
+  - POOL-05-台湾-Taichung
+  - POOL-06-香港-Hong Kong
+  - POOL-07-台湾-Yuanlin
+  - POOL-08-香港-Hong Kong
+  - POOL-09-韩国-Gwangju
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
