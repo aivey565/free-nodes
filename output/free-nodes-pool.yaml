@@ -107,6 +107,17 @@ proxies:
     hostname: cloudflare-ech.com
     config-url: https://dns.alidns.com/dns-query
   name: POOL-09-韩国-Gwangju
+- port: 443
+  server: 12.221.146.147
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: POOL-10-美国-Dallas
+  fingerprint: chrome
+- type: socks5
+  server: 183.106.215.208
+  port: 1080
+  name: POOL-11-韩国-Gyeongju
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -122,6 +133,8 @@ proxy-groups:
   - POOL-07-台湾-Yuanlin
   - POOL-08-香港-Hong Kong
   - POOL-09-韩国-Gwangju
+  - POOL-10-美国-Dallas
+  - POOL-11-韩国-Gyeongju
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -134,6 +147,8 @@ proxy-groups:
   - POOL-07-台湾-Yuanlin
   - POOL-08-香港-Hong Kong
   - POOL-09-韩国-Gwangju
+  - POOL-10-美国-Dallas
+  - POOL-11-韩国-Gyeongju
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

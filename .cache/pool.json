@@ -27,9 +27,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-13"
+      "last_seen": "2026-10-14"
     },
     {
       "config": {
@@ -55,9 +55,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-13"
+      "last_seen": "2026-10-14"
     },
     {
       "config": {
@@ -91,7 +91,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-10-13",
       "last_seen": "2026-10-13"
     },
@@ -118,7 +118,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-10-11",
       "last_seen": ""
     },
@@ -153,7 +153,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-13",
       "last_seen": ""
     },
@@ -181,7 +181,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-13",
       "last_seen": ""
     },
@@ -211,7 +211,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-13"
+      "last_seen": "2026-10-14"
     },
     {
       "config": {
@@ -237,9 +237,9 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": ""
+      "last_seen": "2026-10-14"
     },
     {
       "config": {
@@ -277,9 +277,59 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-13",
       "last_seen": ""
+    },
+    {
+      "config": {
+        "port": 443,
+        "server": "12.221.146.147",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http"
+      },
+      "ipinfo": {
+        "ip": "12.221.146.147",
+        "info": {
+          "country": "美国",
+          "countryCode": "US",
+          "regionName": "Texas",
+          "city": "Dallas",
+          "isp": "AS7018 AT&T Enterprises, LLC",
+          "org": "AS7018 AT&T Enterprises, LLC",
+          "query": "12.221.146.147",
+          "hosting": null,
+          "asn": "AS7018"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
+    },
+    {
+      "config": {
+        "type": "socks5",
+        "server": "183.106.215.208",
+        "port": 1080
+      },
+      "ipinfo": {
+        "ip": "183.106.215.208",
+        "info": {
+          "country": "韩国",
+          "countryCode": "KR",
+          "regionName": "Gyeongsangbuk-do",
+          "city": "Gyeongju",
+          "isp": "AS4766 Korea Telecom",
+          "org": "AS4766 Korea Telecom",
+          "query": "183.106.215.208",
+          "hosting": null,
+          "asn": "AS4766"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14"
     }
   ]
 }
