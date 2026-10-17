@@ -27,26 +27,6 @@ proxies:
   udp: true
   client-fingerprint: chrome
   name: POOL-02-台湾-Yuanlin
-- client-fingerprint: chrome
-  network: ws
-  port: 443
-  server: 60.248.219.53
-  servername: ty986gfazs.cainiaohub.xyz
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-03-台湾-Taichung
-- password: humanity
-  port: 443
-  server: 219.76.13.177
-  type: trojan
-  ws-opts:
-    path: '%2Fassignment'
-  name: POOL-04-香港-Hong Kong
 - password: ec74bb6a86c2
   port: 443
   server: er8u54dh.df6h451rh.xin
@@ -54,7 +34,7 @@ proxies:
   sni: px.ads.linkedin.com
   type: anytls
   udp: true
-  name: POOL-05-台湾-Yuanlin
+  name: POOL-03-台湾-Yuanlin
 - password: ec74bb6a86c2
   port: 443
   server: 56481.df6h451rh.xin
@@ -62,35 +42,18 @@ proxies:
   sni: images.ctfassets.net
   type: anytls
   udp: true
-  name: POOL-06-香港-Hong Kong
-- type: vless
-  server: 220.71.172.2
-  port: 16034
-  uuid: bfa5cd1f-1465-4850-b7c9-08e1a63dac2c
-  network: ws
-  tls: true
-  servername: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: jln31qtswdkut5.60kohcognywybguuq3ouc818oofnxfvn35daott.workers.dev
-  ech:
-    enabled: true
-    hostname: cloudflare-ech.com
-    config-url: https://dns.alidns.com/dns-query
-  name: POOL-07-韩国-Gwangju
+  name: POOL-04-香港-Hong Kong
 - port: 443
   server: 12.221.146.147
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-08-美国-Dallas
+  name: POOL-05-美国-Dallas
   fingerprint: chrome
 - type: socks5
   server: 183.106.215.208
   port: 1080
-  name: POOL-09-韩国-Gyeongju
+  name: POOL-06-韩国-Gyeongju
 - client-fingerprint: chrome
   network: ws
   port: 443
@@ -103,18 +66,18 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-10-台湾-Taichung
+  name: POOL-07-台湾-Taichung
 - port: 443
   server: 12.202.180.10
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-11-美国-Naperville
+  name: POOL-08-美国-Naperville
   fingerprint: chrome
 - type: socks5
   server: 121.169.46.116
   port: 1090
-  name: POOL-12-韩国-Haegok
+  name: POOL-09-韩国-Haegok
 - network: ws
   port: 443
   server: 60.248.219.54
@@ -126,15 +89,39 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-13-台湾-Taichung
+  name: POOL-10-台湾-Taichung
   fingerprint: chrome
 - port: 443
   server: 12.202.180.118
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-14-美国-Naperville
+  name: POOL-11-美国-Naperville
   fingerprint: chrome
+- client-fingerprint: chrome
+  network: ws
+  port: 443
+  server: 60.130.209.253
+  servername: snip.edgeoneai.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+    path: /
+  name: POOL-12-日本-Toyonaka
+- type: anytls
+  server: 654968169.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  sni: images.ctfassets.net
+  skip-cert-verify: true
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  name: POOL-13-香港-Hong Kong
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -143,35 +130,33 @@ proxy-groups:
   - DIRECT
   - POOL-01-台湾-Chang-hua
   - POOL-02-台湾-Yuanlin
-  - POOL-03-台湾-Taichung
+  - POOL-03-台湾-Yuanlin
   - POOL-04-香港-Hong Kong
-  - POOL-05-台湾-Yuanlin
-  - POOL-06-香港-Hong Kong
-  - POOL-07-韩国-Gwangju
-  - POOL-08-美国-Dallas
-  - POOL-09-韩国-Gyeongju
+  - POOL-05-美国-Dallas
+  - POOL-06-韩国-Gyeongju
+  - POOL-07-台湾-Taichung
+  - POOL-08-美国-Naperville
+  - POOL-09-韩国-Haegok
   - POOL-10-台湾-Taichung
   - POOL-11-美国-Naperville
-  - POOL-12-韩国-Haegok
-  - POOL-13-台湾-Taichung
-  - POOL-14-美国-Naperville
+  - POOL-12-日本-Toyonaka
+  - POOL-13-香港-Hong Kong
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - POOL-01-台湾-Chang-hua
   - POOL-02-台湾-Yuanlin
-  - POOL-03-台湾-Taichung
+  - POOL-03-台湾-Yuanlin
   - POOL-04-香港-Hong Kong
-  - POOL-05-台湾-Yuanlin
-  - POOL-06-香港-Hong Kong
-  - POOL-07-韩国-Gwangju
-  - POOL-08-美国-Dallas
-  - POOL-09-韩国-Gyeongju
+  - POOL-05-美国-Dallas
+  - POOL-06-韩国-Gyeongju
+  - POOL-07-台湾-Taichung
+  - POOL-08-美国-Naperville
+  - POOL-09-韩国-Haegok
   - POOL-10-台湾-Taichung
   - POOL-11-美国-Naperville
-  - POOL-12-韩国-Haegok
-  - POOL-13-台湾-Taichung
-  - POOL-14-美国-Naperville
+  - POOL-12-日本-Toyonaka
+  - POOL-13-香港-Hong Kong
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
