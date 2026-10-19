@@ -989,10 +989,12 @@ def build_clash_yaml(nodes, output_config):
             if p.get("client-fingerprint") == "unsafe":
                 p["client-fingerprint"] = "chrome"
             if p.get("fingerprint") == "unsafe":
-                p["fingerprint"] = "chrome"
-            # 仍没有 fingerprint 的，补一个 chrome
+                # 老 Clash 语法：mihomo 新版 fingerprint 是证书固定语义，浏览器指纹用 client-fingerprint
+                p.pop("fingerprint")
+                p["client-fingerprint"] = "chrome"
+            # 仍没有 fingerprint 的，补 client-fingerprint（mihomo 新版语法，Clash Verge 校验通过）
             if not p.get("fingerprint") and not p.get("client-fingerprint"):
-                p["fingerprint"] = "chrome"
+                p["client-fingerprint"] = "chrome"
         # 清洗：http 节点的 username/password 若为 null/'null'/空则删除
         # （Clash 会把字面 'null' 当作真实认证值导致连接失败）
         for k in ("username", "password"):
