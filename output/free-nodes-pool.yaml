@@ -49,7 +49,7 @@ proxies:
   tls: true
   type: http
   name: POOL-05-美国-Dallas
-  fingerprint: chrome
+  client-fingerprint: chrome
 - type: socks5
   server: 183.106.215.208
   port: 1080
@@ -73,7 +73,7 @@ proxies:
   tls: true
   type: http
   name: POOL-08-美国-Naperville
-  fingerprint: chrome
+  client-fingerprint: chrome
 - type: socks5
   server: 121.169.46.116
   port: 1090
@@ -90,14 +90,14 @@ proxies:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
   name: POOL-10-台湾-Taichung
-  fingerprint: chrome
+  client-fingerprint: chrome
 - port: 443
   server: 12.202.180.118
   skip-cert-verify: true
   tls: true
   type: http
   name: POOL-11-美国-Naperville
-  fingerprint: chrome
+  client-fingerprint: chrome
 - client-fingerprint: chrome
   network: ws
   port: 443
@@ -122,6 +122,27 @@ proxies:
   udp: true
   client-fingerprint: chrome
   name: POOL-13-香港-Hong Kong
+- password: humanity
+  port: 443
+  server: 219.76.13.177
+  type: trojan
+  ws-opts:
+    path: '%2Fassignment'
+  name: POOL-14-香港-Hong Kong
+- client-fingerprint: chrome
+  network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+  name: POOL-15-台湾-Taichung
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -141,6 +162,8 @@ proxy-groups:
   - POOL-11-美国-Naperville
   - POOL-12-日本-Toyonaka
   - POOL-13-香港-Hong Kong
+  - POOL-14-香港-Hong Kong
+  - POOL-15-台湾-Taichung
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -157,6 +180,8 @@ proxy-groups:
   - POOL-11-美国-Naperville
   - POOL-12-日本-Toyonaka
   - POOL-13-香港-Hong Kong
+  - POOL-14-香港-Hong Kong
+  - POOL-15-台湾-Taichung
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
