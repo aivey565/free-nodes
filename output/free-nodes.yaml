@@ -144,27 +144,33 @@ proxies:
       hosting: null
       asn: AS154177
     is_residential: false
-- auth: 40546f3a-0590-4a5a-a104-6eb2e6ba5f0c
-  password: 40546f3a-0590-4a5a-a104-6eb2e6ba5f0c
-  port: 23661
-  server: fr.verymad.net
-  skip-cert-verify: true
-  sni: fr.verymad.net
+- http-opts:
+    headers:
+      Host:
+      - play.googleapis.com
+    method: GET
+    path:
+    - /
+  network: http
+  port: 443
+  server: 98.92.171.189
   tls: false
-  type: hysteria2
-  name: FR-Paris-AS215540-hysteria2-07
+  type: vless
+  udp: true
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
+  name: US-Ashburn-Amazon-vless-07
   _ip_data:
-    ip: 185.193.89.254
+    ip: 98.92.171.189
     info:
-      country: 法国
-      countryCode: FR
-      regionName: Île-de-France
-      city: Paris
-      isp: AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP
-      org: AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP
-      query: 185.193.89.254
+      country: 美国
+      countryCode: US
+      regionName: Virginia
+      city: Ashburn
+      isp: AS14618 Amazon.com, Inc.
+      org: AS14618 Amazon.com, Inc.
+      query: 98.92.171.189
       hosting: null
-      asn: AS215540
+      asn: AS14618
     is_residential: false
 - http-opts:
     headers:
@@ -194,57 +200,36 @@ proxies:
       hosting: null
       asn: AS16509
     is_residential: false
-- http-opts:
-    headers:
-      Host:
-      - play.googleapis.com
-    method: GET
-    path:
-    - /
-  network: http
+- client-fingerprint: chrome
+  encryption: none
+  network: ws
   port: 443
-  server: 98.92.171.189
-  tls: false
+  server: 172.64.150.43
+  servername: snip.edgeoneai.cc.cd
+  tls: true
   type: vless
   udp: true
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: US-Ashburn-Amazon-vless-09
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  ws-opts:
+    headers:
+      Host: snip.edgeoneai.cc.cd
+      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/58.0.3029.110 Safari/537.36
+    path: /
+  xudp: true
+  name: US-San Fran-Cloudflare-vless-09
   _ip_data:
-    ip: 98.92.171.189
+    ip: 172.64.150.43
     info:
       country: 美国
       countryCode: US
-      regionName: Virginia
-      city: Ashburn
-      isp: AS14618 Amazon.com, Inc.
-      org: AS14618 Amazon.com, Inc.
-      query: 98.92.171.189
+      regionName: California
+      city: San Francisco
+      isp: AS13335 Cloudflare, Inc.
+      org: AS13335 Cloudflare, Inc.
+      query: 172.64.150.43
       hosting: null
-      asn: AS14618
-    is_residential: false
-- auth: b42d90fa667942aebc734d60
-  obfs: salamander
-  obfs-password: b42d90fa667942aebc734d60
-  password: b42d90fa667942aebc734d60
-  port: 20000
-  ports: 20000-30000
-  server: 158.178.137.129
-  skip-cert-verify: true
-  sni: rmgyvpn.rest
-  type: hysteria2
-  name: AU-Sydney-Oracle-hysteria2-10
-  _ip_data:
-    ip: 158.178.137.129
-    info:
-      country: 澳大利亚
-      countryCode: AU
-      regionName: New South Wales
-      city: Sydney
-      isp: AS31898 Oracle Corporation
-      org: AS31898 Oracle Corporation
-      query: 158.178.137.129
-      hosting: null
-      asn: AS31898
+      asn: AS13335
     is_residential: false
 - http-opts:
     headers:
@@ -260,7 +245,7 @@ proxies:
   type: vless
   udp: true
   uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-  name: US-Ashburn-Amazon-vless-11
+  name: US-Ashburn-Amazon-vless-10
   _ip_data:
     ip: 100.54.27.217
     info:
@@ -273,6 +258,31 @@ proxies:
       query: 100.54.27.217
       hosting: null
       asn: AS14618
+    is_residential: false
+- type: vless
+  server: 109.172.54.135
+  port: 8444
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  network: grpc
+  tls: true
+  servername: github.com
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+    short-id: ''
+  client-fingerprint: chrome
+  name: FI-Helsinki-AS215540-vless-11
+  _ip_data:
+    ip: 109.172.54.135
+    info:
+      country: 芬兰
+      countryCode: FI
+      regionName: Uusimaa
+      city: Helsinki
+      isp: AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP
+      org: AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP
+      query: 109.172.54.135
+      hosting: null
+      asn: AS215540
     is_residential: false
 - alpn:
   - h2
@@ -304,36 +314,45 @@ proxies:
       hosting: null
       asn: AS197574
     is_residential: false
-- client-fingerprint: chrome
+- alpn:
+  - h2
+  client-fingerprint: chrome
   encryption: none
-  network: ws
+  network: xhttp
   port: 443
-  server: 172.64.150.43
-  servername: snip.edgeoneai.cc.cd
+  server: reg.gosru.com
+  servername: reg.gosru.com
   tls: true
   type: vless
   udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-      User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/58.0.3029.110 Safari/537.36
-    path: /
+  uuid: 5de6a0ad-7d73-410b-ad50-a2bb5d47b93c
+  xhttp-opts:
+    host: reg.gosru.com
+    mode: packet-up
+    path: /assets/c8d953ad90f3a3efe3816c6557c1e596/
+    reuse-settings:
+      max-concurrency: '0'
+      max-connections: '2'
+    x-padding-bytes: 128-768
+    x-padding-header: X-Request-Context
+    x-padding-key: request_context
+    x-padding-method: tokenish
+    x-padding-obfs-mode: true
+    x-padding-placement: header
   xudp: true
-  name: US-San Fran-Cloudflare-vless-13
+  name: NL-Eygelsho-AS219064-vless-13
   _ip_data:
-    ip: 172.64.150.43
+    ip: 191.217.217.240
     info:
-      country: 美国
-      countryCode: US
-      regionName: California
-      city: San Francisco
-      isp: AS13335 Cloudflare, Inc.
-      org: AS13335 Cloudflare, Inc.
-      query: 172.64.150.43
+      country: 荷兰
+      countryCode: NL
+      regionName: Limburg
+      city: Eygelshoven
+      isp: AS219064 Akenai Products LTD
+      org: AS219064 Akenai Products LTD
+      query: 191.217.217.240
       hosting: null
-      asn: AS13335
+      asn: AS219064
     is_residential: false
 - alpn:
   - h3
@@ -369,124 +388,13 @@ proxies:
       hosting: null
       asn: AS13335
     is_residential: false
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  encryption: none
-  network: xhttp
-  port: 443
-  server: reg.gosru.com
-  servername: reg.gosru.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5de6a0ad-7d73-410b-ad50-a2bb5d47b93c
-  xhttp-opts:
-    host: reg.gosru.com
-    mode: packet-up
-    path: /assets/c8d953ad90f3a3efe3816c6557c1e596/
-    reuse-settings:
-      max-concurrency: '0'
-      max-connections: '2'
-    x-padding-bytes: 128-768
-    x-padding-header: X-Request-Context
-    x-padding-key: request_context
-    x-padding-method: tokenish
-    x-padding-obfs-mode: true
-    x-padding-placement: header
-  xudp: true
-  name: NL-Eygelsho-AS219064-vless-15
-  _ip_data:
-    ip: 191.217.217.240
-    info:
-      country: 荷兰
-      countryCode: NL
-      regionName: Limburg
-      city: Eygelshoven
-      isp: AS219064 Akenai Products LTD
-      org: AS219064 Akenai Products LTD
-      query: 191.217.217.240
-      hosting: null
-      asn: AS219064
-    is_residential: false
-- alpn:
-  - h3
-  auth-str: dongtaiwang.com
-  down: 55 Mbps
-  port: 24667
-  protocol: udp
-  server: 62.210.70.191
-  skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11 Mbps
-  name: FR-Paris-Scaleway-hysteria-16
-  _ip_data:
-    ip: 62.210.70.191
-    info:
-      country: 法国
-      countryCode: FR
-      regionName: Île-de-France
-      city: Paris
-      isp: AS12876 Scaleway SAS
-      org: AS12876 Scaleway SAS
-      query: 62.210.70.191
-      hosting: null
-      asn: AS12876
-    is_residential: false
-- type: vless
-  server: 109.172.54.135
-  port: 8444
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-  network: grpc
-  tls: true
-  servername: github.com
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-    short-id: ''
-  client-fingerprint: chrome
-  name: FI-Helsinki-AS215540-vless-17
-  _ip_data:
-    ip: 109.172.54.135
-    info:
-      country: 芬兰
-      countryCode: FI
-      regionName: Uusimaa
-      city: Helsinki
-      isp: AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP
-      org: AS215540 GLOBAL CONNECTIVITY SOLUTIONS LLP
-      query: 109.172.54.135
-      hosting: null
-      asn: AS215540
-    is_residential: false
-- port: 9002
-  server: 84.17.47.149
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  name: NL-Amsterda-Datacamp-http-18
-  _ip_data:
-    ip: 84.17.47.149
-    info:
-      country: 荷兰
-      countryCode: NL
-      regionName: North Holland
-      city: Amsterdam
-      isp: AS60068 Datacamp Limited
-      org: AS60068 Datacamp Limited
-      query: 84.17.47.149
-      hosting: null
-      asn: AS60068
-    is_residential: false
-  client-fingerprint: chrome
 - port: 9002
   server: 84.17.47.148
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  name: NL-Amsterda-Datacamp-http-19
+  name: NL-Amsterda-Datacamp-http-15
   _ip_data:
     ip: 84.17.47.148
     info:
@@ -501,57 +409,136 @@ proxies:
       asn: AS60068
     is_residential: false
   client-fingerprint: chrome
-- port: 9002
-  server: 84.17.47.150
+- port: 443
+  server: 146.70.123.98
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-  name: NL-Amsterda-Datacamp-http-20
+  name: BE-Zaventem-M247-http-16
   _ip_data:
-    ip: 84.17.47.150
+    ip: 146.70.123.98
+    info:
+      country: 比利时
+      countryCode: BE
+      regionName: Flanders
+      city: Zaventem
+      isp: AS9009 M247 Europe SRL
+      org: AS9009 M247 Europe SRL
+      query: 146.70.123.98
+      hosting: null
+      asn: AS9009
+    is_residential: false
+  client-fingerprint: chrome
+- password: None
+  port: 443
+  server: 37.120.156.34
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: PL-Ursynów-M247-http-17
+  _ip_data:
+    ip: 37.120.156.34
+    info:
+      country: 波兰
+      countryCode: PL
+      regionName: Mazovia
+      city: Ursynów
+      isp: AS9009 M247 Europe SRL
+      org: AS9009 M247 Europe SRL
+      query: 37.120.156.34
+      hosting: null
+      asn: AS9009
+    is_residential: false
+  client-fingerprint: chrome
+- port: 9443
+  server: 95.153.31.66
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: EE-Tallinn-AS1257-http-18
+  _ip_data:
+    ip: 95.153.31.66
+    info:
+      country: EE
+      countryCode: EE
+      regionName: Harjumaa
+      city: Tallinn
+      isp: AS1257 Tele2 Sverige AB
+      org: AS1257 Tele2 Sverige AB
+      query: 95.153.31.66
+      hosting: null
+      asn: AS1257
+    is_residential: false
+  client-fingerprint: chrome
+- port: 9443
+  server: 149.36.51.157
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: NL-Amsterda-Datacamp-http-19
+  _ip_data:
+    ip: 149.36.51.157
     info:
       country: 荷兰
       countryCode: NL
       regionName: North Holland
       city: Amsterdam
-      isp: AS60068 Datacamp Limited
-      org: AS60068 Datacamp Limited
-      query: 84.17.47.150
+      isp: AS212238 Datacamp Limited
+      org: AS212238 Datacamp Limited
+      query: 149.36.51.157
       hosting: null
-      asn: AS60068
+      asn: AS212238
     is_residential: false
   client-fingerprint: chrome
-- port: 9002
-  server: 84.17.47.146
+- port: 9443
+  server: 31.171.155.210
   skip-cert-verify: true
   tls: true
   type: http
-  udp: true
-  name: NL-Amsterda-Datacamp-http-21
+  name: AL-Tirana-AS197706-http-20
   _ip_data:
-    ip: 84.17.47.146
+    ip: 31.171.155.210
     info:
-      country: 荷兰
-      countryCode: NL
-      regionName: North Holland
-      city: Amsterdam
+      country: AL
+      countryCode: AL
+      regionName: Tirana
+      city: Tirana
+      isp: AS197706 Keminet SHPK
+      org: AS197706 Keminet SHPK
+      query: 31.171.155.210
+      hosting: null
+      asn: AS197706
+    is_residential: false
+  client-fingerprint: chrome
+- port: 9443
+  server: 84.17.50.214
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: GB-London-Datacamp-http-21
+  _ip_data:
+    ip: 84.17.50.214
+    info:
+      country: 英国
+      countryCode: GB
+      regionName: England
+      city: London
       isp: AS60068 Datacamp Limited
       org: AS60068 Datacamp Limited
-      query: 84.17.47.146
+      query: 84.17.50.214
       hosting: null
       asn: AS60068
     is_residential: false
   client-fingerprint: chrome
 - port: 9002
-  server: 84.17.47.125
+  server: 84.17.47.149
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
   name: NL-Amsterda-Datacamp-http-22
   _ip_data:
-    ip: 84.17.47.125
+    ip: 84.17.47.149
     info:
       country: 荷兰
       countryCode: NL
@@ -559,9 +546,49 @@ proxies:
       city: Amsterdam
       isp: AS60068 Datacamp Limited
       org: AS60068 Datacamp Limited
-      query: 84.17.47.125
+      query: 84.17.47.149
       hosting: null
       asn: AS60068
+    is_residential: false
+  client-fingerprint: chrome
+- port: 443
+  server: 146.70.244.2
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: AT-Vienna-M247-http-23
+  _ip_data:
+    ip: 146.70.244.2
+    info:
+      country: 奥地利
+      countryCode: AT
+      regionName: Vienna
+      city: Vienna
+      isp: AS9009 M247 Europe SRL
+      org: AS9009 M247 Europe SRL
+      query: 146.70.244.2
+      hosting: null
+      asn: AS9009
+    is_residential: false
+  client-fingerprint: chrome
+- port: 9443
+  server: 149.88.27.46
+  skip-cert-verify: true
+  tls: true
+  type: http
+  name: CH-Zürich-Datacamp-http-24
+  _ip_data:
+    ip: 149.88.27.46
+    info:
+      country: 瑞士
+      countryCode: CH
+      regionName: Zurich
+      city: Zürich
+      isp: AS212238 Datacamp Limited
+      org: AS212238 Datacamp Limited
+      query: 149.88.27.46
+      hosting: null
+      asn: AS212238
     is_residential: false
   client-fingerprint: chrome
 proxy-groups:
@@ -576,22 +603,24 @@ proxy-groups:
   - TW-Yuanlin-AS3462-anytls-04
   - JP-Ebara-AS20473-trojan-05
   - JP-Tokyo-AS154177-vless-06
-  - FR-Paris-AS215540-hysteria2-07
+  - US-Ashburn-Amazon-vless-07
   - US-Boardman-Amazon-vless-08
-  - US-Ashburn-Amazon-vless-09
-  - AU-Sydney-Oracle-hysteria2-10
-  - US-Ashburn-Amazon-vless-11
+  - US-San Fran-Cloudflare-vless-09
+  - US-Ashburn-Amazon-vless-10
+  - FI-Helsinki-AS215540-vless-11
   - PL-Warsaw-AS197574-vless-12
-  - US-San Fran-Cloudflare-vless-13
+  - NL-Eygelsho-AS219064-vless-13
   - US-San Fran-Cloudflare-vless-14
-  - NL-Eygelsho-AS219064-vless-15
-  - FR-Paris-Scaleway-hysteria-16
-  - FI-Helsinki-AS215540-vless-17
-  - NL-Amsterda-Datacamp-http-18
+  - NL-Amsterda-Datacamp-http-15
+  - BE-Zaventem-M247-http-16
+  - PL-Ursynów-M247-http-17
+  - EE-Tallinn-AS1257-http-18
   - NL-Amsterda-Datacamp-http-19
-  - NL-Amsterda-Datacamp-http-20
-  - NL-Amsterda-Datacamp-http-21
+  - AL-Tirana-AS197706-http-20
+  - GB-London-Datacamp-http-21
   - NL-Amsterda-Datacamp-http-22
+  - AT-Vienna-M247-http-23
+  - CH-Zürich-Datacamp-http-24
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -601,22 +630,24 @@ proxy-groups:
   - TW-Yuanlin-AS3462-anytls-04
   - JP-Ebara-AS20473-trojan-05
   - JP-Tokyo-AS154177-vless-06
-  - FR-Paris-AS215540-hysteria2-07
+  - US-Ashburn-Amazon-vless-07
   - US-Boardman-Amazon-vless-08
-  - US-Ashburn-Amazon-vless-09
-  - AU-Sydney-Oracle-hysteria2-10
-  - US-Ashburn-Amazon-vless-11
+  - US-San Fran-Cloudflare-vless-09
+  - US-Ashburn-Amazon-vless-10
+  - FI-Helsinki-AS215540-vless-11
   - PL-Warsaw-AS197574-vless-12
-  - US-San Fran-Cloudflare-vless-13
+  - NL-Eygelsho-AS219064-vless-13
   - US-San Fran-Cloudflare-vless-14
-  - NL-Eygelsho-AS219064-vless-15
-  - FR-Paris-Scaleway-hysteria-16
-  - FI-Helsinki-AS215540-vless-17
-  - NL-Amsterda-Datacamp-http-18
+  - NL-Amsterda-Datacamp-http-15
+  - BE-Zaventem-M247-http-16
+  - PL-Ursynów-M247-http-17
+  - EE-Tallinn-AS1257-http-18
   - NL-Amsterda-Datacamp-http-19
-  - NL-Amsterda-Datacamp-http-20
-  - NL-Amsterda-Datacamp-http-21
+  - AL-Tirana-AS197706-http-20
+  - GB-London-Datacamp-http-21
   - NL-Amsterda-Datacamp-http-22
+  - AT-Vienna-M247-http-23
+  - CH-Zürich-Datacamp-http-24
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
