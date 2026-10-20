@@ -978,6 +978,10 @@ def make_real_name(proxy, ip_info, index):
 # 输出格式
 # ============================================================
 def build_clash_yaml(nodes, output_config):
+    """生成 Clash YAML。
+    统一输出老字段 fingerprint（Passwall/xray 原生兼容）；
+    Clash PC 端由用户通过全局复写把 fingerprint 改写为 client-fingerprint。
+    """
     proxies = []
     for n in nodes:
         p = dict(n["raw_config"])
@@ -985,16 +989,12 @@ def build_clash_yaml(nodes, output_config):
         # 给 TLS 节点显式设置合法 uTLS fingerprint，避免 sing-box 客户端默认用 unsafe 导致
         # "unknown uTLS fingerprint: unsafe" 报错（NekoBox/sing-box 不认识 Clash 的 unsafe）
         if p.get("tls"):
-            # 源节点可能带 client-fingerprint: unsafe（Clash 特有值），sing-box 不认识，替换为 chrome
-            if p.get("client-fingerprint") == "unsafe":
-                p["client-fingerprint"] = "chrome"
-            if p.get("fingerprint") == "unsafe":
-                # 老 Clash 语法：mihomo 新版 fingerprint 是证书固定语义，浏览器指纹用 client-fingerprint
-                p.pop("fingerprint")
-                p["client-fingerprint"] = "chrome"
-            # 仍没有 fingerprint 的，补 client-fingerprint（mihomo 新版语法，Clash Verge 校验通过）
-            if not p.get("fingerprint") and not p.get("client-fingerprint"):
-                p["client-fingerprint"] = "chrome"
+            # 统一取 fingerprint（老字段，Passwall/xray 兼容）；unsafe 替换为 chrome
+            fp = p.get("fingerprint") or p.get("client-fingerprint") or "chrome"
+            if fp == "unsafe":
+                fp = "chrome"
+            p.pop("client-fingerprint", None)
+            p["fingerprint"] = fp
         # 清洗：http 节点的 username/password 若为 null/'null'/空则删除
         # （Clash 会把字面 'null' 当作真实认证值导致连接失败）
         for k in ("username", "password"):

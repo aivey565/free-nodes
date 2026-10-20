@@ -27,9 +27,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -55,9 +55,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-17"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -85,7 +85,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -113,7 +113,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-13",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -139,7 +139,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -161,7 +161,7 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-14",
       "last_seen": "2026-10-16"
     },
@@ -187,43 +187,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-15",
       "last_seen": "2026-10-19"
-    },
-    {
-      "config": {
-        "network": "ws",
-        "port": 443,
-        "server": "60.248.219.54",
-        "servername": "ty986gfazs.cainiaohub.xyz",
-        "tls": true,
-        "type": "vless",
-        "uuid": "06e177f7-240d-4687-bd85-235505801a5e",
-        "ws-opts": {
-          "headers": {
-            "Host": "ty986gfazs.cainiaohub.xyz"
-          },
-          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
-        }
-      },
-      "ipinfo": {
-        "ip": "60.248.219.54",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Taichung",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "60.248.219.54",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-10-16",
-      "last_seen": ""
     },
     {
       "config": {
@@ -247,7 +213,7 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-16",
       "last_seen": "2026-10-19"
     },
@@ -283,7 +249,7 @@
           "asn": "AS17676"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-17",
       "last_seen": ""
     },
@@ -313,9 +279,9 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-17",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -341,7 +307,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-10-19",
       "last_seen": ""
     },
@@ -377,8 +343,132 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-10-19",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "client-fingerprint": "chrome",
+        "network": "ws",
+        "port": 443,
+        "server": "59.125.69.24",
+        "servername": "ty986gfazs.cainiaohub.xyz",
+        "tls": true,
+        "type": "vless",
+        "udp": true,
+        "uuid": "06e177f7-240d-4687-bd85-235505801a5e",
+        "ws-opts": {
+          "headers": {
+            "Host": "ty986gfazs.cainiaohub.xyz"
+          },
+          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
+        }
+      },
+      "ipinfo": {
+        "ip": "59.125.69.24",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taichung",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "59.125.69.24",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-10-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "auth": "c594c7ec-8b10-11ef-a2b8-f23c9164ca5d",
+        "password": "c594c7ec-8b10-11ef-a2b8-f23c9164ca5d",
+        "port": 443,
+        "server": "74a598d0-tnhmo0-toktib-1hhyy.hk3.hyhuawei.com",
+        "skip-cert-verify": true,
+        "sni": "74a598d0-tnhmo0-toktib-1hhyy.hk3.hyhuawei.com",
+        "tls": false,
+        "type": "hysteria2"
+      },
+      "ipinfo": {
+        "ip": "116.49.85.111",
+        "info": {
+          "country": "香港",
+          "countryCode": "HK",
+          "regionName": "Hong Kong",
+          "city": "Hong Kong",
+          "isp": "AS4760 HKT Limited",
+          "org": "AS4760 HKT Limited",
+          "query": "116.49.85.111",
+          "hosting": null,
+          "asn": "AS4760"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-10-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "client-fingerprint": "chrome",
+        "network": "ws",
+        "port": 443,
+        "server": "59.125.69.23",
+        "servername": "ty986gfazs.cainiaohub.xyz",
+        "tls": true,
+        "type": "vless",
+        "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
+        "ws-opts": {
+          "headers": {
+            "Host": "ty986gfazs.cainiaohub.xyz"
+          },
+          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
+        }
+      },
+      "ipinfo": {
+        "ip": "59.125.69.23",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taichung",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "59.125.69.23",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-10-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "socks5",
+        "server": "121.169.46.116",
+        "port": 1090
+      },
+      "ipinfo": {
+        "ip": "121.169.46.116",
+        "info": {
+          "country": "韩国",
+          "countryCode": "KR",
+          "regionName": "Gyeonggi-do",
+          "city": "Haegok",
+          "isp": "AS4766 Korea Telecom",
+          "org": "AS4766 Korea Telecom",
+          "query": "121.169.46.116",
+          "hosting": null,
+          "asn": "AS4766"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-10-20",
       "last_seen": ""
     }
   ]
