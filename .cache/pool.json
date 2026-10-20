@@ -27,7 +27,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-10-13",
       "last_seen": "2026-10-20"
     },
@@ -55,7 +55,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-10-13",
       "last_seen": "2026-10-20"
     },
@@ -161,9 +161,9 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 4,
+      "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-10-16"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -187,9 +187,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 2,
+      "fail_days": 0,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-19"
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -213,45 +213,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 2,
+      "fail_days": 0,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-10-19"
-    },
-    {
-      "config": {
-        "client-fingerprint": "chrome",
-        "network": "ws",
-        "port": 443,
-        "server": "60.130.209.253",
-        "servername": "snip.edgeoneai.cc.cd",
-        "tls": true,
-        "type": "vless",
-        "udp": true,
-        "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
-        "ws-opts": {
-          "headers": {
-            "Host": "snip.edgeoneai.cc.cd"
-          },
-          "path": "/"
-        }
-      },
-      "ipinfo": {
-        "ip": "60.130.209.253",
-        "info": {
-          "country": "日本",
-          "countryCode": "JP",
-          "regionName": "Osaka",
-          "city": "Toyonaka",
-          "isp": "AS17676 SoftBank Corp.",
-          "org": "AS17676 SoftBank Corp.",
-          "query": "60.130.209.253",
-          "hosting": null,
-          "asn": "AS17676"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-10-17",
-      "last_seen": ""
+      "last_seen": "2026-10-20"
     },
     {
       "config": {
@@ -307,7 +271,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-19",
       "last_seen": ""
     },
@@ -343,7 +307,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-19",
       "last_seen": ""
     },
@@ -379,7 +343,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-20",
       "last_seen": ""
     },
@@ -408,7 +372,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-20",
       "last_seen": ""
     },
@@ -443,7 +407,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-20",
       "last_seen": ""
     },
@@ -465,6 +429,73 @@
           "query": "121.169.46.116",
           "hosting": null,
           "asn": "AS4766"
+        }
+      },
+      "fail_days": 2,
+      "first_seen": "2026-10-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "password": "74d67342-2e3d-4eba-ab0a-01c5bcec4392",
+        "port": 14151,
+        "server": "twf.zcvip1.com",
+        "skip-cert-verify": true,
+        "sni": "www.lamer.com.tw",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "114.37.226.189",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taipei",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "114.37.226.189",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-10-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "vless",
+        "server": "114.129.9.132",
+        "port": 8443,
+        "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
+        "network": "ws",
+        "tls": true,
+        "servername": "snip.edgeoneai.cc.cd",
+        "client-fingerprint": "chrome",
+        "ws-opts": {
+          "path": "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443",
+          "headers": {
+            "Host": "snip.edgeoneai.cc.cd"
+          }
+        }
+      },
+      "ipinfo": {
+        "ip": "114.129.9.132",
+        "info": {
+          "country": "EE",
+          "countryCode": "EE",
+          "regionName": "Harjumaa",
+          "city": "Tallinn",
+          "isp": "AS34702 Aktsiaselts WaveCom",
+          "org": "AS34702 Aktsiaselts WaveCom",
+          "query": "114.129.9.132",
+          "hosting": null,
+          "asn": "AS34702"
         }
       },
       "fail_days": 1,

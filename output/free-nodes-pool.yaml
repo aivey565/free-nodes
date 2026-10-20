@@ -15,8 +15,8 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-  client-fingerprint: chrome
   name: POOL-01-台湾-Chang-hua
+  fingerprint: chrome
 - type: anytls
   server: 684616s4.df6h451rh.xin
   port: 443
@@ -25,8 +25,8 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-  client-fingerprint: chrome
   name: POOL-02-台湾-Yuanlin
+  fingerprint: chrome
 - password: ec74bb6a86c2
   port: 443
   server: er8u54dh.df6h451rh.xin
@@ -49,7 +49,7 @@ proxies:
   tls: true
   type: http
   name: POOL-05-美国-Dallas
-  client-fingerprint: chrome
+  fingerprint: chrome
 - type: socks5
   server: 183.106.215.208
   port: 1080
@@ -60,28 +60,14 @@ proxies:
   tls: true
   type: http
   name: POOL-07-美国-Naperville
-  client-fingerprint: chrome
+  fingerprint: chrome
 - port: 443
   server: 12.202.180.118
   skip-cert-verify: true
   tls: true
   type: http
   name: POOL-08-美国-Naperville
-  client-fingerprint: chrome
-- client-fingerprint: chrome
-  network: ws
-  port: 443
-  server: 60.130.209.253
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /
-  name: POOL-09-日本-Toyonaka
+  fingerprint: chrome
 - type: anytls
   server: 654968169.df6h451rh.xin
   port: 443
@@ -90,17 +76,16 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-  client-fingerprint: chrome
-  name: POOL-10-香港-Hong Kong
+  name: POOL-09-香港-Hong Kong
+  fingerprint: chrome
 - password: humanity
   port: 443
   server: 219.76.13.177
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-  name: POOL-11-香港-Hong Kong
-- client-fingerprint: chrome
-  network: ws
+  name: POOL-10-香港-Hong Kong
+- network: ws
   port: 443
   server: 60.248.219.53
   servername: ty986gfazs.cainiaohub.xyz
@@ -112,9 +97,9 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-12-台湾-Taichung
-- client-fingerprint: chrome
-  network: ws
+  name: POOL-11-台湾-Taichung
+  fingerprint: chrome
+- network: ws
   port: 443
   server: 59.125.69.24
   servername: ty986gfazs.cainiaohub.xyz
@@ -126,7 +111,8 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-13-台湾-Taichung
+  name: POOL-12-台湾-Taichung
+  fingerprint: chrome
 - auth: c594c7ec-8b10-11ef-a2b8-f23c9164ca5d
   password: c594c7ec-8b10-11ef-a2b8-f23c9164ca5d
   port: 443
@@ -135,9 +121,8 @@ proxies:
   sni: 74a598d0-tnhmo0-toktib-1hhyy.hk3.hyhuawei.com
   tls: false
   type: hysteria2
-  name: POOL-14-香港-Hong Kong
-- client-fingerprint: chrome
-  network: ws
+  name: POOL-13-香港-Hong Kong
+- network: ws
   port: 443
   server: 59.125.69.23
   servername: ty986gfazs.cainiaohub.xyz
@@ -148,11 +133,36 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-15-台湾-Taichung
+  name: POOL-14-台湾-Taichung
+  fingerprint: chrome
 - type: socks5
   server: 121.169.46.116
   port: 1090
-  name: POOL-16-韩国-Haegok
+  name: POOL-15-韩国-Haegok
+- alpn:
+  - h2
+  - http/1.1
+  password: 74d67342-2e3d-4eba-ab0a-01c5bcec4392
+  port: 14151
+  server: twf.zcvip1.com
+  skip-cert-verify: true
+  sni: www.lamer.com.tw
+  type: anytls
+  udp: true
+  name: POOL-16-台湾-Taipei
+- type: vless
+  server: 114.129.9.132
+  port: 8443
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  network: ws
+  tls: true
+  servername: snip.edgeoneai.cc.cd
+  ws-opts:
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    headers:
+      Host: snip.edgeoneai.cc.cd
+  name: POOL-17-EE-Tallinn
+  fingerprint: chrome
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -167,14 +177,15 @@ proxy-groups:
   - POOL-06-韩国-Gyeongju
   - POOL-07-美国-Naperville
   - POOL-08-美国-Naperville
-  - POOL-09-日本-Toyonaka
+  - POOL-09-香港-Hong Kong
   - POOL-10-香港-Hong Kong
-  - POOL-11-香港-Hong Kong
+  - POOL-11-台湾-Taichung
   - POOL-12-台湾-Taichung
-  - POOL-13-台湾-Taichung
-  - POOL-14-香港-Hong Kong
-  - POOL-15-台湾-Taichung
-  - POOL-16-韩国-Haegok
+  - POOL-13-香港-Hong Kong
+  - POOL-14-台湾-Taichung
+  - POOL-15-韩国-Haegok
+  - POOL-16-台湾-Taipei
+  - POOL-17-EE-Tallinn
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -186,14 +197,15 @@ proxy-groups:
   - POOL-06-韩国-Gyeongju
   - POOL-07-美国-Naperville
   - POOL-08-美国-Naperville
-  - POOL-09-日本-Toyonaka
+  - POOL-09-香港-Hong Kong
   - POOL-10-香港-Hong Kong
-  - POOL-11-香港-Hong Kong
+  - POOL-11-台湾-Taichung
   - POOL-12-台湾-Taichung
-  - POOL-13-台湾-Taichung
-  - POOL-14-香港-Hong Kong
-  - POOL-15-台湾-Taichung
-  - POOL-16-韩国-Haegok
+  - POOL-13-香港-Hong Kong
+  - POOL-14-台湾-Taichung
+  - POOL-15-韩国-Haegok
+  - POOL-16-台湾-Taipei
+  - POOL-17-EE-Tallinn
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
