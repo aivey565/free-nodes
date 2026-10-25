@@ -70,31 +70,12 @@ proxies:
   server: 121.169.46.116
   port: 1090
   name: POOL-09-韩国-Haegok
-- network: ws
-  port: 443
-  server: 59.125.69.22
-  servername: tse1.mm.bing.net
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: tse1.mm.bing.net
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-10-台湾-Taichung
-  fingerprint: chrome
-- port: 24215
-  server: hinet1.2yly.com
-  tls: false
-  type: vless
-  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
-  name: POOL-11-台湾-Taipei
 - port: 52200
   server: 120.232.204.58
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-12-中国-Guangzhou
+  name: POOL-10-中国-Guangzhou
   fingerprint: chrome
 - alpn:
   - ''
@@ -113,7 +94,7 @@ proxies:
     headers:
       Host: 9641684.sdf65h4.top
     path: /
-  name: POOL-13-台湾-Yuanlin
+  name: POOL-11-台湾-Yuanlin
   fingerprint: chrome
 - password: humanity
   port: 443
@@ -121,7 +102,7 @@ proxies:
   type: trojan
   ws-opts:
     path: '%2Fassignment'
-  name: POOL-14-香港-Hong Kong
+  name: POOL-12-香港-Hong Kong
 - network: ws
   port: 443
   server: 60.248.219.53
@@ -134,7 +115,7 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-15-台湾-Taichung
+  name: POOL-13-台湾-Taichung
   fingerprint: chrome
 - port: 8090
   server: 83.206.1.225
@@ -142,7 +123,7 @@ proxies:
   tls: true
   type: http
   udp: true
-  name: POOL-16-法国-Vénissieux
+  name: POOL-14-法国-Vénissieux
   fingerprint: chrome
 - type: vless
   server: 60.130.209.253
@@ -155,12 +136,12 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
-  name: POOL-17-日本-Kurashiki
+  name: POOL-15-日本-Kurashiki
   fingerprint: chrome
 - type: socks5
   server: 116.237.180.55
   port: 7001
-  name: POOL-18-中国-Shanghai
+  name: POOL-16-中国-Shanghai
 - network: ws
   port: 443
   server: 60.248.219.78
@@ -173,7 +154,35 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-19-台湾-Taichung
+  name: POOL-17-台湾-Taichung
+  fingerprint: chrome
+- network: ws
+  port: 443
+  server: 59.125.69.23
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+  name: POOL-18-台湾-Taichung
+  fingerprint: chrome
+- password: db62309c-486a-4fd5-abc4-4e91ac495d38
+  port: 12686
+  server: user01.godvpn.lol
+  skip-cert-verify: true
+  type: anytls
+  udp: true
+  name: POOL-19-香港-Hong Kong
+- port: 8090
+  server: 173.42.49.102
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  name: POOL-20-美国-Columbia
   fingerprint: chrome
 proxy-groups:
 - name: 🚀 节点选择
@@ -190,16 +199,17 @@ proxy-groups:
   - POOL-07-美国-Naperville
   - POOL-08-香港-Hong Kong
   - POOL-09-韩国-Haegok
-  - POOL-10-台湾-Taichung
-  - POOL-11-台湾-Taipei
-  - POOL-12-中国-Guangzhou
-  - POOL-13-台湾-Yuanlin
-  - POOL-14-香港-Hong Kong
-  - POOL-15-台湾-Taichung
-  - POOL-16-法国-Vénissieux
-  - POOL-17-日本-Kurashiki
-  - POOL-18-中国-Shanghai
-  - POOL-19-台湾-Taichung
+  - POOL-10-中国-Guangzhou
+  - POOL-11-台湾-Yuanlin
+  - POOL-12-香港-Hong Kong
+  - POOL-13-台湾-Taichung
+  - POOL-14-法国-Vénissieux
+  - POOL-15-日本-Kurashiki
+  - POOL-16-中国-Shanghai
+  - POOL-17-台湾-Taichung
+  - POOL-18-台湾-Taichung
+  - POOL-19-香港-Hong Kong
+  - POOL-20-美国-Columbia
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -212,16 +222,17 @@ proxy-groups:
   - POOL-07-美国-Naperville
   - POOL-08-香港-Hong Kong
   - POOL-09-韩国-Haegok
-  - POOL-10-台湾-Taichung
-  - POOL-11-台湾-Taipei
-  - POOL-12-中国-Guangzhou
-  - POOL-13-台湾-Yuanlin
-  - POOL-14-香港-Hong Kong
-  - POOL-15-台湾-Taichung
-  - POOL-16-法国-Vénissieux
-  - POOL-17-日本-Kurashiki
-  - POOL-18-中国-Shanghai
-  - POOL-19-台湾-Taichung
+  - POOL-10-中国-Guangzhou
+  - POOL-11-台湾-Yuanlin
+  - POOL-12-香港-Hong Kong
+  - POOL-13-台湾-Taichung
+  - POOL-14-法国-Vénissieux
+  - POOL-15-日本-Kurashiki
+  - POOL-16-中国-Shanghai
+  - POOL-17-台湾-Taichung
+  - POOL-18-台湾-Taichung
+  - POOL-19-香港-Hong Kong
+  - POOL-20-美国-Columbia
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
