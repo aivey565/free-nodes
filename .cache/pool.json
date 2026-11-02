@@ -24,7 +24,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-10-13",
       "last_seen": "2026-10-30"
     },
@@ -52,7 +52,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-13",
       "last_seen": "2026-10-31"
     },
@@ -80,7 +80,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     {
       "config": {
@@ -104,7 +104,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     {
       "config": {
@@ -130,7 +130,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     {
       "config": {
@@ -156,7 +156,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     {
       "config": {
@@ -184,7 +184,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-10-17",
       "last_seen": "2026-10-30"
     },
@@ -213,7 +213,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     {
       "config": {
@@ -240,7 +240,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-11-01"
+      "last_seen": "2026-11-02"
     },
     {
       "config": {
@@ -264,46 +264,9 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-10-28",
       "last_seen": "2026-10-31"
-    },
-    {
-      "config": {
-        "alpn": [
-          "http/1.1"
-        ],
-        "network": "ws",
-        "password": "humanity",
-        "port": 443,
-        "server": "219.76.13.177",
-        "skip-cert-verify": false,
-        "sni": "www.pleadcourt.org",
-        "type": "trojan",
-        "ws-opts": {
-          "headers": {
-            "Host": "www.pleadcourt.org"
-          },
-          "path": "%2Fassignment"
-        }
-      },
-      "ipinfo": {
-        "ip": "219.76.13.177",
-        "info": {
-          "country": "香港",
-          "countryCode": "HK",
-          "regionName": "Hong Kong",
-          "city": "Hong Kong",
-          "isp": "AS4760 HKT Limited",
-          "org": "AS4760 HKT Limited",
-          "query": "219.76.13.177",
-          "hosting": null,
-          "asn": "AS4760"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-10-29",
-      "last_seen": ""
     },
     {
       "config": {
@@ -336,7 +299,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-30",
       "last_seen": ""
     },
@@ -362,7 +325,7 @@
           "asn": "AS33651"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-10-31",
       "last_seen": ""
     },
@@ -397,8 +360,32 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-01",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "socks5",
+        "server": "121.169.46.116",
+        "port": 1090
+      },
+      "ipinfo": {
+        "ip": "121.169.46.116",
+        "info": {
+          "country": "韩国",
+          "countryCode": "KR",
+          "regionName": "Gyeonggi-do",
+          "city": "Haegok",
+          "isp": "AS4766 Korea Telecom",
+          "org": "AS4766 Korea Telecom",
+          "query": "121.169.46.116",
+          "hosting": null,
+          "asn": "AS4766"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-02",
       "last_seen": ""
     }
   ]

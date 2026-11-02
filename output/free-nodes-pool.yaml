@@ -81,20 +81,6 @@ proxies:
   type: http
   name: POOL-10-中国-Guangzhou
   fingerprint: chrome
-- alpn:
-  - http/1.1
-  network: ws
-  password: humanity
-  port: 443
-  server: 219.76.13.177
-  skip-cert-verify: false
-  sni: www.pleadcourt.org
-  type: trojan
-  ws-opts:
-    headers:
-      Host: www.pleadcourt.org
-    path: '%2Fassignment'
-  name: POOL-11-香港-Hong Kong
 - network: ws
   port: 443
   server: 59.125.69.23
@@ -106,14 +92,14 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-12-台湾-Taichung
+  name: POOL-11-台湾-Taichung
   fingerprint: chrome
 - port: 57259
   server: 169.128.83.4
   tls: false
   type: vless
   uuid: a1962f23-f8f8-412d-f2ce-3361e7b72889
-  name: POOL-13-美国-New York City
+  name: POOL-12-美国-New York City
 - network: ws
   port: 443
   server: 60.248.219.53
@@ -125,8 +111,12 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-14-台湾-Taichung
+  name: POOL-13-台湾-Taichung
   fingerprint: chrome
+- type: socks5
+  server: 121.169.46.116
+  port: 1090
+  name: POOL-14-韩国-Haegok
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -143,10 +133,10 @@ proxy-groups:
   - POOL-08-法国-Vénissieux
   - POOL-09-美国-Columbia
   - POOL-10-中国-Guangzhou
-  - POOL-11-香港-Hong Kong
-  - POOL-12-台湾-Taichung
-  - POOL-13-美国-New York City
-  - POOL-14-台湾-Taichung
+  - POOL-11-台湾-Taichung
+  - POOL-12-美国-New York City
+  - POOL-13-台湾-Taichung
+  - POOL-14-韩国-Haegok
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -160,10 +150,10 @@ proxy-groups:
   - POOL-08-法国-Vénissieux
   - POOL-09-美国-Columbia
   - POOL-10-中国-Guangzhou
-  - POOL-11-香港-Hong Kong
-  - POOL-12-台湾-Taichung
-  - POOL-13-美国-New York City
-  - POOL-14-台湾-Taichung
+  - POOL-11-台湾-Taichung
+  - POOL-12-美国-New York City
+  - POOL-13-台湾-Taichung
+  - POOL-14-韩国-Haegok
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
