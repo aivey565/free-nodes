@@ -8,70 +8,10 @@ proxies:
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.36
-  type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-01
-  _ip_data:
-    ip: 202.50.253.36
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.36
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.18
-  type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-02
-  _ip_data:
-    ip: 202.50.253.18
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.18
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.45
-  type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-03
-  _ip_data:
-    ip: 202.50.253.45
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.45
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 202.50.253.72
   type: ss
   udp: true
-  name: IT-Milan-AS30088-ss-04
+  name: IT-Milan-AS30088-ss-01
   _ip_data:
     ip: 202.50.253.72
     info:
@@ -91,7 +31,7 @@ proxies:
   server: 202.50.253.63
   type: ss
   udp: true
-  name: IT-Milan-AS30088-ss-05
+  name: IT-Milan-AS30088-ss-02
   _ip_data:
     ip: 202.50.253.63
     info:
@@ -102,65 +42,6 @@ proxies:
       isp: AS30088 GTHost
       org: AS30088 GTHost
       query: 202.50.253.63
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.99
-  type: ss
-  name: IT-Milan-AS30088-ss-06
-  _ip_data:
-    ip: 202.50.253.99
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.99
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.54
-  type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-07
-  _ip_data:
-    ip: 202.50.253.54
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.54
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.27
-  type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-08
-  _ip_data:
-    ip: 202.50.253.27
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.27
       hosting: null
       asn: AS30088
     is_residential: false
@@ -177,7 +58,7 @@ proxies:
   xhttp-opts:
     mode: auto
     path: /conv4/stream/d34366ecdd31367d0fc76955c6b8d77c
-  name: DE-Frankfur-AS207957-vless-09
+  name: DE-Frankfur-AS207957-vless-03
   _ip_data:
     ip: 31.76.7.233
     info:
@@ -192,6 +73,25 @@ proxies:
       asn: AS207957
     is_residential: false
   fingerprint: firefox
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.99
+  type: ss
+  name: IT-Milan-AS30088-ss-04
+  _ip_data:
+    ip: 202.50.253.99
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.99
+      hosting: null
+      asn: AS30088
+    is_residential: false
 - alpn:
   - h3
   auth-str: dongtaiwang.com
@@ -203,7 +103,7 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11 Mbps
-  name: FR-Paris-Scaleway-hysteria-10
+  name: FR-Paris-Scaleway-hysteria-05
   _ip_data:
     ip: 62.210.28.175
     info:
@@ -216,6 +116,106 @@ proxies:
       query: 62.210.28.175
       hosting: null
       asn: AS12876
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.81
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-06
+  _ip_data:
+    ip: 202.50.253.81
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.81
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.36
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-07
+  _ip_data:
+    ip: 202.50.253.36
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.36
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.18
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-08
+  _ip_data:
+    ip: 202.50.253.18
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.18
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.45
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-09
+  _ip_data:
+    ip: 202.50.253.45
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.45
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.54
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-10
+  _ip_data:
+    ip: 202.50.253.54
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.54
+      hosting: null
+      asn: AS30088
     is_residential: false
 - network: ws
   port: 443
@@ -440,14 +440,14 @@ proxies:
     is_residential: false
   fingerprint: chrome
 - port: 9002
-  server: 84.17.47.125
+  server: 84.17.47.124
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
   name: NL-Amsterda-Datacamp-http-20
   _ip_data:
-    ip: 84.17.47.125
+    ip: 84.17.47.124
     info:
       country: 荷兰
       countryCode: NL
@@ -455,9 +455,51 @@ proxies:
       city: Amsterdam
       isp: AS60068 Datacamp Limited
       org: AS60068 Datacamp Limited
-      query: 84.17.47.125
+      query: 84.17.47.124
       hosting: null
       asn: AS60068
+    is_residential: false
+  fingerprint: chrome
+- port: 23856
+  server: 51.159.225.196
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  name: NL-Oude Mee-Scaleway-http-21
+  _ip_data:
+    ip: 51.159.225.196
+    info:
+      country: 荷兰
+      countryCode: NL
+      regionName: North Holland
+      city: Oude Meer
+      isp: AS12876 Scaleway SAS
+      org: AS12876 Scaleway SAS
+      query: 51.159.225.196
+      hosting: null
+      asn: AS12876
+    is_residential: false
+  fingerprint: chrome
+- port: 443
+  server: 213.109.163.119
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  name: DE-Jöhlinge-AS197540-http-22
+  _ip_data:
+    ip: 213.109.163.119
+    info:
+      country: 德国
+      countryCode: DE
+      regionName: Baden-Wurttemberg
+      city: Jöhlingen
+      isp: AS197540 netcup GmbH
+      org: AS197540 netcup GmbH
+      query: 213.109.163.119
+      hosting: null
+      asn: AS197540
     is_residential: false
   fingerprint: chrome
 - password: None
@@ -467,7 +509,7 @@ proxies:
   tls: true
   type: http
   udp: true
-  name: NL-Amsterda-Datacamp-http-21
+  name: NL-Amsterda-Datacamp-http-23
   _ip_data:
     ip: 84.17.47.149
     info:
@@ -483,57 +525,14 @@ proxies:
     is_residential: false
   fingerprint: chrome
 - port: 9002
-  server: 84.17.47.124
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  name: NL-Amsterda-Datacamp-http-22
-  _ip_data:
-    ip: 84.17.47.124
-    info:
-      country: 荷兰
-      countryCode: NL
-      regionName: North Holland
-      city: Amsterdam
-      isp: AS60068 Datacamp Limited
-      org: AS60068 Datacamp Limited
-      query: 84.17.47.124
-      hosting: null
-      asn: AS60068
-    is_residential: false
-  fingerprint: chrome
-- port: 19362
-  server: 51.159.225.197
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  name: NL-Oude Mee-Scaleway-http-23
-  _ip_data:
-    ip: 51.159.225.197
-    info:
-      country: 荷兰
-      countryCode: NL
-      regionName: North Holland
-      city: Oude Meer
-      isp: AS12876 Scaleway SAS
-      org: AS12876 Scaleway SAS
-      query: 51.159.225.197
-      hosting: null
-      asn: AS12876
-    is_residential: false
-  fingerprint: chrome
-- password: None
-  port: 9002
-  server: 84.17.47.148
+  server: 84.17.47.125
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
   name: NL-Amsterda-Datacamp-http-24
   _ip_data:
-    ip: 84.17.47.148
+    ip: 84.17.47.125
     info:
       country: 荷兰
       countryCode: NL
@@ -541,30 +540,30 @@ proxies:
       city: Amsterdam
       isp: AS60068 Datacamp Limited
       org: AS60068 Datacamp Limited
-      query: 84.17.47.148
+      query: 84.17.47.125
       hosting: null
       asn: AS60068
     is_residential: false
   fingerprint: chrome
-- port: 23856
-  server: 51.159.225.196
+- port: 443
+  server: 103.97.88.154
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  name: NL-Oude Mee-Scaleway-http-25
+  name: NL-Amsterda-AS56630-http-25
   _ip_data:
-    ip: 51.159.225.196
+    ip: 103.97.88.154
     info:
       country: 荷兰
       countryCode: NL
       regionName: North Holland
-      city: Oude Meer
-      isp: AS12876 Scaleway SAS
-      org: AS12876 Scaleway SAS
-      query: 51.159.225.196
+      city: Amsterdam
+      isp: AS56630 Melbikomas UAB
+      org: AS56630 Melbikomas UAB
+      query: 103.97.88.154
       hosting: null
-      asn: AS12876
+      asn: AS56630
     is_residential: false
   fingerprint: chrome
 proxy-groups:
@@ -575,14 +574,14 @@ proxy-groups:
   - DIRECT
   - IT-Milan-AS30088-ss-01
   - IT-Milan-AS30088-ss-02
-  - IT-Milan-AS30088-ss-03
+  - DE-Frankfur-AS207957-vless-03
   - IT-Milan-AS30088-ss-04
-  - IT-Milan-AS30088-ss-05
+  - FR-Paris-Scaleway-hysteria-05
   - IT-Milan-AS30088-ss-06
   - IT-Milan-AS30088-ss-07
   - IT-Milan-AS30088-ss-08
-  - DE-Frankfur-AS207957-vless-09
-  - FR-Paris-Scaleway-hysteria-10
+  - IT-Milan-AS30088-ss-09
+  - IT-Milan-AS30088-ss-10
   - US-San Fran-Cloudflare-vless-11
   - US-San Fran-Cloudflare-vless-12
   - US-San Fran-Cloudflare-vless-13
@@ -593,24 +592,24 @@ proxy-groups:
   - US-Columbia-AS11426-http-18
   - NL-Amsterda-Datacamp-http-19
   - NL-Amsterda-Datacamp-http-20
-  - NL-Amsterda-Datacamp-http-21
-  - NL-Amsterda-Datacamp-http-22
-  - NL-Oude Mee-Scaleway-http-23
+  - NL-Oude Mee-Scaleway-http-21
+  - DE-Jöhlinge-AS197540-http-22
+  - NL-Amsterda-Datacamp-http-23
   - NL-Amsterda-Datacamp-http-24
-  - NL-Oude Mee-Scaleway-http-25
+  - NL-Amsterda-AS56630-http-25
 - name: ♻️ 自动选择
   type: url-test
   proxies:
   - IT-Milan-AS30088-ss-01
   - IT-Milan-AS30088-ss-02
-  - IT-Milan-AS30088-ss-03
+  - DE-Frankfur-AS207957-vless-03
   - IT-Milan-AS30088-ss-04
-  - IT-Milan-AS30088-ss-05
+  - FR-Paris-Scaleway-hysteria-05
   - IT-Milan-AS30088-ss-06
   - IT-Milan-AS30088-ss-07
   - IT-Milan-AS30088-ss-08
-  - DE-Frankfur-AS207957-vless-09
-  - FR-Paris-Scaleway-hysteria-10
+  - IT-Milan-AS30088-ss-09
+  - IT-Milan-AS30088-ss-10
   - US-San Fran-Cloudflare-vless-11
   - US-San Fran-Cloudflare-vless-12
   - US-San Fran-Cloudflare-vless-13
@@ -621,11 +620,11 @@ proxy-groups:
   - US-Columbia-AS11426-http-18
   - NL-Amsterda-Datacamp-http-19
   - NL-Amsterda-Datacamp-http-20
-  - NL-Amsterda-Datacamp-http-21
-  - NL-Amsterda-Datacamp-http-22
-  - NL-Oude Mee-Scaleway-http-23
+  - NL-Oude Mee-Scaleway-http-21
+  - DE-Jöhlinge-AS197540-http-22
+  - NL-Amsterda-Datacamp-http-23
   - NL-Amsterda-Datacamp-http-24
-  - NL-Oude Mee-Scaleway-http-25
+  - NL-Amsterda-AS56630-http-25
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

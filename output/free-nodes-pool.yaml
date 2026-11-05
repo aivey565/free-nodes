@@ -61,29 +61,16 @@ proxies:
   type: http
   name: POOL-08-中国-Guangzhou
   fingerprint: chrome
-- network: ws
-  port: 443
-  server: 60.248.219.53
-  servername: ty986gfazs.cainiaohub.xyz
-  tls: true
-  type: vless
-  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
-  ws-opts:
-    headers:
-      Host: ty986gfazs.cainiaohub.xyz
-    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-09-台湾-Taichung
-  fingerprint: chrome
 - type: socks5
   server: 121.169.46.116
   port: 1090
-  name: POOL-10-韩国-Haegok
+  name: POOL-09-韩国-Haegok
 - cipher: chacha20-ietf-poly1305
   password: 28789988-887e-4e41-83cd-27bbfb7999ad
   port: 40006
   server: xunlinknode.csdjhajkshdjkas.com
   type: ss
-  name: POOL-11-香港-Hong Kong
+  name: POOL-10-香港-Hong Kong
 - network: ws
   port: 443
   server: 59.125.69.23
@@ -93,14 +80,40 @@ proxies:
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-12-台湾-Taichung
+  name: POOL-11-台湾-Taichung
   fingerprint: chrome
 - password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
   server: connect-se.mimowhat.online
   sni: connect-se.mimowhat.online
   type: trojan
-  name: POOL-13-瑞典-Stockholm
+  name: POOL-12-瑞典-Stockholm
+- type: anytls
+  server: 684616s4.df6h451rh.xin
+  port: 443
+  password: ec74bb6a86c2
+  sni: px.ads.linkedin.com
+  skip-cert-verify: true
+  tls: true
+  udp: true
+  name: POOL-13-台湾-Yuanlin
+  fingerprint: chrome
+- type: anytls
+  server: 654968169.df6h451rh.xin
+  port: 443
+  password: 0324fbc29561
+  sni: images.ctfassets.net
+  skip-cert-verify: true
+  tls: true
+  udp: true
+  name: POOL-14-香港-Hong Kong
+  fingerprint: chrome
+- port: 57259
+  server: 169.128.83.4
+  tls: false
+  type: vless
+  uuid: a1962f23-f8f8-412d-f2ce-3361e7b72889
+  name: POOL-15-美国-New York City
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -115,11 +128,13 @@ proxy-groups:
   - POOL-06-法国-Vénissieux
   - POOL-07-美国-Columbia
   - POOL-08-中国-Guangzhou
-  - POOL-09-台湾-Taichung
-  - POOL-10-韩国-Haegok
-  - POOL-11-香港-Hong Kong
-  - POOL-12-台湾-Taichung
-  - POOL-13-瑞典-Stockholm
+  - POOL-09-韩国-Haegok
+  - POOL-10-香港-Hong Kong
+  - POOL-11-台湾-Taichung
+  - POOL-12-瑞典-Stockholm
+  - POOL-13-台湾-Yuanlin
+  - POOL-14-香港-Hong Kong
+  - POOL-15-美国-New York City
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -131,11 +146,13 @@ proxy-groups:
   - POOL-06-法国-Vénissieux
   - POOL-07-美国-Columbia
   - POOL-08-中国-Guangzhou
-  - POOL-09-台湾-Taichung
-  - POOL-10-韩国-Haegok
-  - POOL-11-香港-Hong Kong
-  - POOL-12-台湾-Taichung
-  - POOL-13-瑞典-Stockholm
+  - POOL-09-韩国-Haegok
+  - POOL-10-香港-Hong Kong
+  - POOL-11-台湾-Taichung
+  - POOL-12-瑞典-Stockholm
+  - POOL-13-台湾-Yuanlin
+  - POOL-14-香港-Hong Kong
+  - POOL-15-美国-New York City
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
