@@ -24,7 +24,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-10-13",
       "last_seen": "2026-11-06"
     },
@@ -50,9 +50,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-07"
     },
     {
       "config": {
@@ -74,7 +74,7 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-14",
       "last_seen": "2026-11-03"
     },
@@ -100,9 +100,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-07"
     },
     {
       "config": {
@@ -128,7 +128,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-06"
+      "last_seen": "2026-11-07"
     },
     {
       "config": {
@@ -153,9 +153,9 @@
           "asn": "AS3215"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-11-05"
+      "last_seen": "2026-11-07"
     },
     {
       "config": {
@@ -180,7 +180,7 @@
           "asn": "AS11426"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-10-25",
       "last_seen": "2026-11-06"
     },
@@ -206,35 +206,9 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-28",
-      "last_seen": "2026-11-05"
-    },
-    {
-      "config": {
-        "cipher": "chacha20-ietf-poly1305",
-        "password": "28789988-887e-4e41-83cd-27bbfb7999ad",
-        "port": 40006,
-        "server": "xunlinknode.csdjhajkshdjkas.com",
-        "type": "ss"
-      },
-      "ipinfo": {
-        "ip": "58.152.58.193",
-        "info": {
-          "country": "香港",
-          "countryCode": "HK",
-          "regionName": "Hong Kong",
-          "city": "Hong Kong",
-          "isp": "AS4760 HKT Limited",
-          "org": "AS4760 HKT Limited",
-          "query": "58.152.58.193",
-          "hosting": null,
-          "asn": "AS4760"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-03",
-      "last_seen": ""
+      "last_seen": "2026-11-07"
     },
     {
       "config": {
@@ -264,7 +238,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-04",
       "last_seen": ""
     },
@@ -290,7 +264,7 @@
           "asn": "AS215960"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-04",
       "last_seen": ""
     },
@@ -318,7 +292,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-05",
       "last_seen": ""
     },
@@ -348,7 +322,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-05",
       "last_seen": ""
     },
@@ -374,7 +348,7 @@
           "asn": "AS33651"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-05",
       "last_seen": ""
     },
@@ -410,7 +384,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-06",
       "last_seen": ""
     },
@@ -438,7 +412,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-06",
       "last_seen": ""
     },
@@ -466,7 +440,7 @@
           "asn": "AS46844"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-06",
       "last_seen": ""
     },
@@ -494,7 +468,7 @@
           "asn": "AS46844"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-06",
       "last_seen": ""
     },
@@ -521,8 +495,87 @@
           "asn": "AS215960"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-06",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "password": "2f4c3fc5-8fa2-4576-a583-8f98a6026887",
+        "port": 6549,
+        "server": "tw.ccwink.cc",
+        "skip-cert-verify": true,
+        "sni": "baidu.com",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "1.160.4.171",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taipei",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "1.160.4.171",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-07",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "password": "None",
+        "port": 31343,
+        "server": "120.232.204.58",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http"
+      },
+      "ipinfo": {
+        "ip": "120.232.204.58",
+        "info": {
+          "country": "中国",
+          "countryCode": "CN",
+          "regionName": "Guangdong",
+          "city": "Guangzhou",
+          "isp": "AS9808 China Mobile Communications Group Co., Ltd.",
+          "org": "AS9808 China Mobile Communications Group Co., Ltd.",
+          "query": "120.232.204.58",
+          "hosting": null,
+          "asn": "AS9808"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07"
+    },
+    {
+      "config": {
+        "type": "socks5",
+        "server": "121.169.46.116",
+        "port": 1090
+      },
+      "ipinfo": {
+        "ip": "121.169.46.116",
+        "info": {
+          "country": "韩国",
+          "countryCode": "KR",
+          "regionName": "Gyeonggi-do",
+          "city": "Haegok",
+          "isp": "AS4766 Korea Telecom",
+          "org": "AS4766 Korea Telecom",
+          "query": "121.169.46.116",
+          "hosting": null,
+          "asn": "AS4766"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-07",
       "last_seen": ""
     }
   ]
