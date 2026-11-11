@@ -5,38 +5,30 @@ mode: rule
 log-level: info
 ipv6: false
 proxies:
-- password: ec74bb6a86c2
-  port: 443
-  server: 56481.df6h451rh.xin
-  skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
-  udp: true
-  name: POOL-01-香港-Hong Kong
 - port: 443
   server: 12.221.146.147
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-02-美国-Dallas
+  name: POOL-01-美国-Dallas
   fingerprint: chrome
 - type: socks5
   server: 183.106.215.208
   port: 1080
-  name: POOL-03-韩国-Gyeongju
+  name: POOL-02-韩国-Gyeongju
 - port: 443
   server: 12.202.180.10
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-04-美国-Naperville
+  name: POOL-03-美国-Naperville
   fingerprint: chrome
 - port: 443
   server: 12.202.180.118
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-05-美国-Naperville
+  name: POOL-04-美国-Naperville
   fingerprint: chrome
 - port: 8090
   server: 83.206.1.225
@@ -44,7 +36,7 @@ proxies:
   tls: true
   type: http
   udp: true
-  name: POOL-06-法国-Vénissieux
+  name: POOL-05-法国-Vénissieux
   fingerprint: chrome
 - port: 8090
   server: 173.42.49.102
@@ -52,14 +44,14 @@ proxies:
   tls: true
   type: http
   udp: true
-  name: POOL-07-美国-Columbia
+  name: POOL-06-美国-Columbia
   fingerprint: chrome
 - port: 40583
   server: 120.232.204.58
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-08-中国-Guangzhou
+  name: POOL-07-中国-Guangzhou
   fingerprint: chrome
 - password: 203d1d64-3313-11ed-bb74-f23c9164ca5d
   port: 443
@@ -68,27 +60,19 @@ proxies:
   sni: fbe34f09-tmm5c0-trpvht-1ey07.los.hyhuawei.com
   tls: false
   type: hysteria2
-  name: POOL-09-美国-Los Angeles
-- password: 2f4c3fc5-8fa2-4576-a583-8f98a6026887
-  port: 6549
-  server: tw.ccwink.cc
-  skip-cert-verify: true
-  sni: baidu.com
-  type: anytls
-  udp: true
-  name: POOL-10-台湾-Taipei
+  name: POOL-08-美国-Los Angeles
 - password: None
   port: 31343
   server: 120.232.204.58
   skip-cert-verify: true
   tls: true
   type: http
-  name: POOL-11-中国-Guangzhou
+  name: POOL-09-中国-Guangzhou
   fingerprint: chrome
 - type: socks5
   server: 121.169.46.116
   port: 1090
-  name: POOL-12-韩国-Haegok
+  name: POOL-10-韩国-Haegok
 - network: ws
   port: 443
   server: 59.125.69.23
@@ -98,14 +82,14 @@ proxies:
   uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
   ws-opts:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-13-台湾-Taichung
+  name: POOL-11-台湾-Taichung
   fingerprint: chrome
 - password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   port: 443
   server: connect-se.mimowhat.online
   sni: connect-se.mimowhat.online
   type: trojan
-  name: POOL-14-瑞典-Stockholm
+  name: POOL-12-瑞典-Stockholm
 - network: ws
   port: 443
   server: 60.248.219.78
@@ -118,7 +102,7 @@ proxies:
     headers:
       Host: ty986gfazs.cainiaohub.xyz
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
-  name: POOL-15-台湾-Taichung
+  name: POOL-13-台湾-Taichung
   fingerprint: chrome
 - alpn:
   - http/1.1
@@ -136,7 +120,7 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
-  name: POOL-16-香港-Hong Kong
+  name: POOL-14-香港-Hong Kong
   fingerprint: firefox
 - alpn:
   - http/1.1
@@ -154,7 +138,7 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
-  name: POOL-17-韩国-Jeonju
+  name: POOL-15-韩国-Jeonju
   fingerprint: firefox
 - alpn:
   - http/1.1
@@ -172,7 +156,7 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
-  name: POOL-18-新加坡-Singapore
+  name: POOL-16-新加坡-Singapore
   fingerprint: firefox
 - alpn:
   - http/1.1
@@ -190,13 +174,13 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
-  name: POOL-19-新加坡-Singapore
+  name: POOL-17-新加坡-Singapore
   fingerprint: firefox
 - port: 8888
   server: 123.121.134.141
   skip-cert-verify: true
   type: http
-  name: POOL-20-中国-Beijing
+  name: POOL-18-中国-Beijing
 - alpn:
   - http/1.1
   network: ws
@@ -213,7 +197,7 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
-  name: POOL-21-香港-Hong Kong
+  name: POOL-19-香港-Hong Kong
   fingerprint: firefox
 - password: 0324fbc29561
   port: 443
@@ -223,7 +207,7 @@ proxies:
   sni: images.ctfassets.net
   tls: true
   type: anytls
-  name: POOL-22-台湾-Erlin
+  name: POOL-20-台湾-Erlin
   fingerprint: chrome
 - type: anytls
   server: 684616s4.df6h451rh.xin
@@ -233,7 +217,7 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-  name: POOL-23-台湾-Yuanlin
+  name: POOL-21-台湾-Yuanlin
   fingerprint: chrome
 - type: anytls
   server: 654968169.df6h451rh.xin
@@ -243,73 +227,95 @@ proxies:
   skip-cert-verify: true
   tls: true
   udp: true
-  name: POOL-24-香港-Hong Kong
+  name: POOL-22-香港-Hong Kong
   fingerprint: chrome
 - port: 57259
   server: 169.128.83.4
   tls: false
   type: vless
   uuid: a1962f23-f8f8-412d-f2ce-3361e7b72889
-  name: POOL-25-美国-New York City
+  name: POOL-23-美国-New York City
+- network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+  name: POOL-24-台湾-Taichung
+  fingerprint: chrome
+- password: 9fbb8314-c7f1-4d5a-9af3-0bf70a1776d0
+  port: 2053
+  server: forwarded.frnhk.xyz
+  skip-cert-verify: true
+  sni: my.gosthk.site
+  type: anytls
+  udp: true
+  name: POOL-25-台湾-Yuanlin
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - POOL-01-香港-Hong Kong
-  - POOL-02-美国-Dallas
-  - POOL-03-韩国-Gyeongju
+  - POOL-01-美国-Dallas
+  - POOL-02-韩国-Gyeongju
+  - POOL-03-美国-Naperville
   - POOL-04-美国-Naperville
-  - POOL-05-美国-Naperville
-  - POOL-06-法国-Vénissieux
-  - POOL-07-美国-Columbia
-  - POOL-08-中国-Guangzhou
-  - POOL-09-美国-Los Angeles
-  - POOL-10-台湾-Taipei
-  - POOL-11-中国-Guangzhou
-  - POOL-12-韩国-Haegok
+  - POOL-05-法国-Vénissieux
+  - POOL-06-美国-Columbia
+  - POOL-07-中国-Guangzhou
+  - POOL-08-美国-Los Angeles
+  - POOL-09-中国-Guangzhou
+  - POOL-10-韩国-Haegok
+  - POOL-11-台湾-Taichung
+  - POOL-12-瑞典-Stockholm
   - POOL-13-台湾-Taichung
-  - POOL-14-瑞典-Stockholm
-  - POOL-15-台湾-Taichung
-  - POOL-16-香港-Hong Kong
-  - POOL-17-韩国-Jeonju
-  - POOL-18-新加坡-Singapore
-  - POOL-19-新加坡-Singapore
-  - POOL-20-中国-Beijing
-  - POOL-21-香港-Hong Kong
-  - POOL-22-台湾-Erlin
-  - POOL-23-台湾-Yuanlin
-  - POOL-24-香港-Hong Kong
-  - POOL-25-美国-New York City
+  - POOL-14-香港-Hong Kong
+  - POOL-15-韩国-Jeonju
+  - POOL-16-新加坡-Singapore
+  - POOL-17-新加坡-Singapore
+  - POOL-18-中国-Beijing
+  - POOL-19-香港-Hong Kong
+  - POOL-20-台湾-Erlin
+  - POOL-21-台湾-Yuanlin
+  - POOL-22-香港-Hong Kong
+  - POOL-23-美国-New York City
+  - POOL-24-台湾-Taichung
+  - POOL-25-台湾-Yuanlin
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - POOL-01-香港-Hong Kong
-  - POOL-02-美国-Dallas
-  - POOL-03-韩国-Gyeongju
+  - POOL-01-美国-Dallas
+  - POOL-02-韩国-Gyeongju
+  - POOL-03-美国-Naperville
   - POOL-04-美国-Naperville
-  - POOL-05-美国-Naperville
-  - POOL-06-法国-Vénissieux
-  - POOL-07-美国-Columbia
-  - POOL-08-中国-Guangzhou
-  - POOL-09-美国-Los Angeles
-  - POOL-10-台湾-Taipei
-  - POOL-11-中国-Guangzhou
-  - POOL-12-韩国-Haegok
+  - POOL-05-法国-Vénissieux
+  - POOL-06-美国-Columbia
+  - POOL-07-中国-Guangzhou
+  - POOL-08-美国-Los Angeles
+  - POOL-09-中国-Guangzhou
+  - POOL-10-韩国-Haegok
+  - POOL-11-台湾-Taichung
+  - POOL-12-瑞典-Stockholm
   - POOL-13-台湾-Taichung
-  - POOL-14-瑞典-Stockholm
-  - POOL-15-台湾-Taichung
-  - POOL-16-香港-Hong Kong
-  - POOL-17-韩国-Jeonju
-  - POOL-18-新加坡-Singapore
-  - POOL-19-新加坡-Singapore
-  - POOL-20-中国-Beijing
-  - POOL-21-香港-Hong Kong
-  - POOL-22-台湾-Erlin
-  - POOL-23-台湾-Yuanlin
-  - POOL-24-香港-Hong Kong
-  - POOL-25-美国-New York City
+  - POOL-14-香港-Hong Kong
+  - POOL-15-韩国-Jeonju
+  - POOL-16-新加坡-Singapore
+  - POOL-17-新加坡-Singapore
+  - POOL-18-中国-Beijing
+  - POOL-19-香港-Hong Kong
+  - POOL-20-台湾-Erlin
+  - POOL-21-台湾-Yuanlin
+  - POOL-22-香港-Hong Kong
+  - POOL-23-美国-New York City
+  - POOL-24-台湾-Taichung
+  - POOL-25-台湾-Yuanlin
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
