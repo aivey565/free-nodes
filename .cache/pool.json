@@ -24,7 +24,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-11-12"
+      "last_seen": "2026-11-13"
     },
     {
       "config": {
@@ -46,7 +46,7 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-14",
       "last_seen": "2026-11-10"
     },
@@ -74,7 +74,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-12"
+      "last_seen": "2026-11-13"
     },
     {
       "config": {
@@ -100,7 +100,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-12"
+      "last_seen": "2026-11-13"
     },
     {
       "config": {
@@ -127,7 +127,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-11-12"
+      "last_seen": "2026-11-13"
     },
     {
       "config": {
@@ -154,7 +154,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-11-12"
+      "last_seen": "2026-11-13"
     },
     {
       "config": {
@@ -178,7 +178,7 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-10-28",
       "last_seen": "2026-11-10"
     },
@@ -206,7 +206,7 @@
           "asn": "AS46844"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-06",
       "last_seen": "2026-11-10"
     },
@@ -235,89 +235,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-12"
-    },
-    {
-      "config": {
-        "type": "socks5",
-        "server": "121.169.46.116",
-        "port": 1090
-      },
-      "ipinfo": {
-        "ip": "121.169.46.116",
-        "info": {
-          "country": "韩国",
-          "countryCode": "KR",
-          "regionName": "Gyeonggi-do",
-          "city": "Haegok",
-          "isp": "AS4766 Korea Telecom",
-          "org": "AS4766 Korea Telecom",
-          "query": "121.169.46.116",
-          "hosting": null,
-          "asn": "AS4766"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-07",
-      "last_seen": "2026-11-08"
-    },
-    {
-      "config": {
-        "client-fingerprint": "chrome",
-        "network": "ws",
-        "port": 443,
-        "server": "59.125.69.23",
-        "servername": "ty986gfazs.cainiaohub.xyz",
-        "tls": true,
-        "type": "vless",
-        "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
-        "ws-opts": {
-          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
-        }
-      },
-      "ipinfo": {
-        "ip": "59.125.69.23",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Taichung",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "59.125.69.23",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "password": "FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF",
-        "port": 443,
-        "server": "connect-se.mimowhat.online",
-        "sni": "connect-se.mimowhat.online",
-        "type": "trojan"
-      },
-      "ipinfo": {
-        "ip": "185.153.55.28",
-        "info": {
-          "country": "瑞典",
-          "countryCode": "SE",
-          "regionName": "Stockholm",
-          "city": "Stockholm",
-          "isp": "AS215960 Hollander & Jacobsen UG (haftungsbeschraenkt)",
-          "org": "AS215960 Hollander & Jacobsen UG (haftungsbeschraenkt)",
-          "query": "185.153.55.28",
-          "hosting": null,
-          "asn": "AS215960"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
+      "last_seen": "2026-11-13"
     },
     {
       "config": {
@@ -350,7 +268,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -391,7 +309,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -432,7 +350,7 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -473,7 +391,7 @@
           "asn": "AS2914"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -514,7 +432,7 @@
           "asn": "AS2914"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -539,7 +457,7 @@
           "asn": "AS4808"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -580,7 +498,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -609,9 +527,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 0,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-10"
+      "last_seen": "2026-11-13"
     },
     {
       "config": {
@@ -637,7 +555,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -667,7 +585,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -693,7 +611,7 @@
           "asn": "AS33651"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-10",
       "last_seen": ""
     },
@@ -729,7 +647,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-11",
       "last_seen": ""
     },
@@ -757,7 +675,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-11",
       "last_seen": "2026-11-12"
     },
@@ -785,7 +703,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-12",
       "last_seen": ""
     },
@@ -813,8 +731,127 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-12",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "password": "9922ea3a-7314-4af5-a4cb-eb68a9b94fca",
+        "port": 2052,
+        "server": "forwarded.frnhk.xyz",
+        "skip-cert-verify": true,
+        "sni": "jp2.gosthk.site",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "61.223.117.142",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Yuanlin",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "61.223.117.142",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    {
+      "config": {
+        "password": "9b24e5d0-62be-41df-b967-9b670cf90ff8",
+        "port": 2086,
+        "server": "forwarded.frnhk.xyz",
+        "skip-cert-verify": true,
+        "sni": "de.gosthk.site",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "61.223.117.142",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Yuanlin",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "61.223.117.142",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13"
+    },
+    {
+      "config": {
+        "network": "ws",
+        "password": "b7795ce8-3863-4292-adfc-9c0a7b847774",
+        "port": 443,
+        "server": "t2w2t2w2.bpca2026.top",
+        "skip-cert-verify": true,
+        "sni": "t2w2t2w2.bpca2026.top",
+        "type": "trojan",
+        "udp": true,
+        "ws-opts": {
+          "headers": {
+            "Host": "t2w2t2w2.bpca2026.top"
+          },
+          "path": "/images"
+        }
+      },
+      "ipinfo": {
+        "ip": "111.246.24.110",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Erlin",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "111.246.24.110",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-13",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "password": "92bd8c68-6434-11ee-b644-f23c91cfbbc9",
+        "port": 443,
+        "server": "88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com",
+        "skip-cert-verify": true,
+        "sni": "88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com",
+        "tls": false,
+        "type": "hysteria2"
+      },
+      "ipinfo": {
+        "ip": "112.120.123.140",
+        "info": {
+          "country": "香港",
+          "countryCode": "HK",
+          "regionName": "Hong Kong",
+          "city": "Hong Kong",
+          "isp": "AS4760 HKT Limited",
+          "org": "AS4760 HKT Limited",
+          "query": "112.120.123.140",
+          "hosting": null,
+          "asn": "AS4760"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-13",
       "last_seen": ""
     }
   ]
