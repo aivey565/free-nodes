@@ -24,31 +24,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-11-13"
-    },
-    {
-      "config": {
-        "type": "socks5",
-        "server": "183.106.215.208",
-        "port": 1080
-      },
-      "ipinfo": {
-        "ip": "183.106.215.208",
-        "info": {
-          "country": "韩国",
-          "countryCode": "KR",
-          "regionName": "Gyeongsangbuk-do",
-          "city": "Gyeongju",
-          "isp": "AS4766 Korea Telecom",
-          "org": "AS4766 Korea Telecom",
-          "query": "183.106.215.208",
-          "hosting": null,
-          "asn": "AS4766"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-10-14",
-      "last_seen": "2026-11-10"
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -74,7 +50,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-13"
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -100,7 +76,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-13"
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -127,7 +103,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-11-13"
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -152,63 +128,9 @@
           "asn": "AS11426"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-10-25",
       "last_seen": "2026-11-13"
-    },
-    {
-      "config": {
-        "port": 40583,
-        "server": "120.232.204.58",
-        "skip-cert-verify": true,
-        "tls": true,
-        "type": "http"
-      },
-      "ipinfo": {
-        "ip": "120.232.204.58",
-        "info": {
-          "country": "中国",
-          "countryCode": "CN",
-          "regionName": "Guangdong",
-          "city": "Guangzhou",
-          "isp": "AS9808 China Mobile Communications Group Co., Ltd.",
-          "org": "AS9808 China Mobile Communications Group Co., Ltd.",
-          "query": "120.232.204.58",
-          "hosting": null,
-          "asn": "AS9808"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-10-28",
-      "last_seen": "2026-11-10"
-    },
-    {
-      "config": {
-        "password": "203d1d64-3313-11ed-bb74-f23c9164ca5d",
-        "port": 443,
-        "server": "fbe34f09-tmm5c0-trpvht-1ey07.los.hyhuawei.com",
-        "skip-cert-verify": true,
-        "sni": "fbe34f09-tmm5c0-trpvht-1ey07.los.hyhuawei.com",
-        "tls": false,
-        "type": "hysteria2"
-      },
-      "ipinfo": {
-        "ip": "64.32.13.230",
-        "info": {
-          "country": "美国",
-          "countryCode": "US",
-          "regionName": "California",
-          "city": "Los Angeles",
-          "isp": "AS46844 Sharktech",
-          "org": "AS46844 Sharktech",
-          "query": "64.32.13.230",
-          "hosting": null,
-          "asn": "AS46844"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-06",
-      "last_seen": "2026-11-10"
     },
     {
       "config": {
@@ -235,272 +157,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-13"
-    },
-    {
-      "config": {
-        "network": "ws",
-        "port": 443,
-        "server": "60.248.219.78",
-        "servername": "ty986gfazs.cainiaohub.xyz",
-        "skip-cert-verify": true,
-        "tls": true,
-        "type": "vless",
-        "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
-        "ws-opts": {
-          "headers": {
-            "Host": "ty986gfazs.cainiaohub.xyz"
-          },
-          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
-        }
-      },
-      "ipinfo": {
-        "ip": "60.248.219.78",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Taichung",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "60.248.219.78",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "alpn": [
-          "http/1.1"
-        ],
-        "client-fingerprint": "firefox",
-        "network": "ws",
-        "port": 9383,
-        "server": "218.102.64.147",
-        "servername": "speedtest.danfengno1.kdns.fr",
-        "skip-cert-verify": true,
-        "tfo": false,
-        "tls": true,
-        "type": "vless",
-        "udp": true,
-        "uuid": "26524cce-d514-4014-a426-365fb266a14d",
-        "ws-opts": {
-          "headers": {
-            "Host": "speedtest.danfengno1.kdns.fr"
-          },
-          "path": "/danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st"
-        }
-      },
-      "ipinfo": {
-        "ip": "218.102.64.147",
-        "info": {
-          "country": "香港",
-          "countryCode": "HK",
-          "regionName": "Hong Kong",
-          "city": "Hong Kong",
-          "isp": "AS4760 HKT Limited",
-          "org": "AS4760 HKT Limited",
-          "query": "218.102.64.147",
-          "hosting": null,
-          "asn": "AS4760"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "alpn": [
-          "http/1.1"
-        ],
-        "client-fingerprint": "firefox",
-        "network": "ws",
-        "port": 28017,
-        "server": "121.154.67.134",
-        "servername": "speedtest.danfengno1.kdns.fr",
-        "skip-cert-verify": true,
-        "tfo": false,
-        "tls": true,
-        "type": "vless",
-        "udp": true,
-        "uuid": "26524cce-d514-4014-a426-365fb266a14d",
-        "ws-opts": {
-          "headers": {
-            "Host": "speedtest.danfengno1.kdns.fr"
-          },
-          "path": "/danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st"
-        }
-      },
-      "ipinfo": {
-        "ip": "121.154.67.134",
-        "info": {
-          "country": "韩国",
-          "countryCode": "KR",
-          "regionName": "Jeollabuk-do",
-          "city": "Jeonju",
-          "isp": "AS4766 Korea Telecom",
-          "org": "AS4766 Korea Telecom",
-          "query": "121.154.67.134",
-          "hosting": null,
-          "asn": "AS4766"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "alpn": [
-          "http/1.1"
-        ],
-        "client-fingerprint": "firefox",
-        "network": "ws",
-        "port": 443,
-        "server": "206.54.46.225",
-        "servername": "speedtest.danfengno1.kdns.fr",
-        "skip-cert-verify": true,
-        "tfo": false,
-        "tls": true,
-        "type": "vless",
-        "udp": true,
-        "uuid": "26524cce-d514-4014-a426-365fb266a14d",
-        "ws-opts": {
-          "headers": {
-            "Host": "speedtest.danfengno1.kdns.fr"
-          },
-          "path": "/danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st"
-        }
-      },
-      "ipinfo": {
-        "ip": "206.54.46.225",
-        "info": {
-          "country": "新加坡",
-          "countryCode": "SG",
-          "regionName": "Singapore",
-          "city": "Singapore",
-          "isp": "AS2914 NTT America, Inc.",
-          "org": "AS2914 NTT America, Inc.",
-          "query": "206.54.46.225",
-          "hosting": null,
-          "asn": "AS2914"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "alpn": [
-          "http/1.1"
-        ],
-        "client-fingerprint": "firefox",
-        "network": "ws",
-        "port": 443,
-        "server": "206.54.46.241",
-        "servername": "speedtest.danfengno1.kdns.fr",
-        "skip-cert-verify": true,
-        "tfo": false,
-        "tls": true,
-        "type": "vless",
-        "udp": true,
-        "uuid": "26524cce-d514-4014-a426-365fb266a14d",
-        "ws-opts": {
-          "headers": {
-            "Host": "speedtest.danfengno1.kdns.fr"
-          },
-          "path": "/danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st"
-        }
-      },
-      "ipinfo": {
-        "ip": "206.54.46.241",
-        "info": {
-          "country": "新加坡",
-          "countryCode": "SG",
-          "regionName": "Singapore",
-          "city": "Singapore",
-          "isp": "AS2914 NTT America, Inc.",
-          "org": "AS2914 NTT America, Inc.",
-          "query": "206.54.46.241",
-          "hosting": null,
-          "asn": "AS2914"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "port": 8888,
-        "server": "123.121.134.141",
-        "skip-cert-verify": true,
-        "type": "http"
-      },
-      "ipinfo": {
-        "ip": "123.121.134.141",
-        "info": {
-          "country": "中国",
-          "countryCode": "CN",
-          "regionName": "Beijing",
-          "city": "Beijing",
-          "isp": "AS4808 China Unicom Beijing Province Network",
-          "org": "AS4808 China Unicom Beijing Province Network",
-          "query": "123.121.134.141",
-          "hosting": null,
-          "asn": "AS4808"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "alpn": [
-          "http/1.1"
-        ],
-        "client-fingerprint": "firefox",
-        "network": "ws",
-        "port": 11310,
-        "server": "218.102.64.147",
-        "servername": "speedtest.danfengno1.kdns.fr",
-        "skip-cert-verify": true,
-        "tfo": false,
-        "tls": true,
-        "type": "vless",
-        "udp": true,
-        "uuid": "26524cce-d514-4014-a426-365fb266a14d",
-        "ws-opts": {
-          "headers": {
-            "Host": "speedtest.danfengno1.kdns.fr"
-          },
-          "path": "/danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st"
-        }
-      },
-      "ipinfo": {
-        "ip": "218.102.64.147",
-        "info": {
-          "country": "香港",
-          "countryCode": "HK",
-          "regionName": "Hong Kong",
-          "city": "Hong Kong",
-          "isp": "AS4760 HKT Limited",
-          "org": "AS4760 HKT Limited",
-          "query": "218.102.64.147",
-          "hosting": null,
-          "asn": "AS4760"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -529,91 +186,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-13"
-    },
-    {
-      "config": {
-        "type": "anytls",
-        "server": "684616s4.df6h451rh.xin",
-        "port": 443,
-        "password": "ec74bb6a86c2",
-        "sni": "px.ads.linkedin.com",
-        "skip-cert-verify": true,
-        "tls": true,
-        "udp": true,
-        "client-fingerprint": "chrome"
-      },
-      "ipinfo": {
-        "ip": "111.252.177.179",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "city": "Yuanlin",
-          "org": "AS3462 Data Communication Business Group",
-          "isp": "Chunghwa Telecom",
-          "hosting": false,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "type": "anytls",
-        "server": "654968169.df6h451rh.xin",
-        "port": 443,
-        "password": "0324fbc29561",
-        "sni": "images.ctfassets.net",
-        "skip-cert-verify": true,
-        "tls": true,
-        "udp": true,
-        "client-fingerprint": "chrome"
-      },
-      "ipinfo": {
-        "ip": "203.218.69.152",
-        "info": {
-          "country": "香港",
-          "countryCode": "HK",
-          "regionName": "Hong Kong",
-          "city": "Hong Kong",
-          "isp": "AS4760 HKT Limited",
-          "org": "AS4760 HKT Limited",
-          "query": "203.218.69.152",
-          "hosting": null,
-          "asn": "AS4760"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "port": 57259,
-        "server": "169.128.83.4",
-        "tls": false,
-        "type": "vless",
-        "uuid": "a1962f23-f8f8-412d-f2ce-3361e7b72889"
-      },
-      "ipinfo": {
-        "ip": "169.128.83.4",
-        "info": {
-          "country": "美国",
-          "countryCode": "US",
-          "regionName": "New York",
-          "city": "New York City",
-          "isp": "AS33651 Comcast Cable Communications, LLC",
-          "org": "AS33651 Comcast Cable Communications, LLC",
-          "query": "169.128.83.4",
-          "hosting": null,
-          "asn": "AS33651"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-10",
-      "last_seen": ""
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -647,7 +220,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-11",
       "last_seen": ""
     },
@@ -675,9 +248,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-11-11",
-      "last_seen": "2026-11-12"
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -703,7 +276,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-12",
       "last_seen": ""
     },
@@ -731,7 +304,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-12",
       "last_seen": ""
     },
@@ -761,7 +334,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-13"
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -789,7 +362,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-13",
-      "last_seen": "2026-11-13"
+      "last_seen": "2026-11-14"
     },
     {
       "config": {
@@ -822,7 +395,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-13",
       "last_seen": ""
     },
@@ -850,7 +423,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-13",
       "last_seen": ""
     }
