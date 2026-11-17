@@ -155,7 +155,7 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-07",
       "last_seen": "2026-11-17"
     },
@@ -212,7 +212,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-11",
       "last_seen": "2026-11-17"
     },
@@ -240,7 +240,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-13",
       "last_seen": "2026-11-17"
     },
@@ -268,72 +268,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-13",
       "last_seen": "2026-11-17"
-    },
-    {
-      "config": {
-        "network": "ws",
-        "password": "b7795ce8-3863-4292-adfc-9c0a7b847774",
-        "port": 443,
-        "server": "t2w2t2w2.bpca2026.top",
-        "skip-cert-verify": true,
-        "sni": "t2w2t2w2.bpca2026.top",
-        "type": "trojan",
-        "udp": true,
-        "ws-opts": {
-          "headers": {
-            "Host": "t2w2t2w2.bpca2026.top"
-          },
-          "path": "/images"
-        }
-      },
-      "ipinfo": {
-        "ip": "111.246.24.110",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Erlin",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "111.246.24.110",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-13",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "password": "92bd8c68-6434-11ee-b644-f23c91cfbbc9",
-        "port": 443,
-        "server": "88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com",
-        "skip-cert-verify": true,
-        "sni": "88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com",
-        "tls": false,
-        "type": "hysteria2"
-      },
-      "ipinfo": {
-        "ip": "112.120.123.140",
-        "info": {
-          "country": "香港",
-          "countryCode": "HK",
-          "regionName": "Hong Kong",
-          "city": "Hong Kong",
-          "isp": "AS4760 HKT Limited",
-          "org": "AS4760 HKT Limited",
-          "query": "112.120.123.140",
-          "hosting": null,
-          "asn": "AS4760"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-13",
-      "last_seen": ""
     },
     {
       "config": {
@@ -360,7 +297,7 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-15",
       "last_seen": "2026-11-17"
     },
@@ -384,7 +321,7 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-15",
       "last_seen": ""
     },
@@ -417,6 +354,45 @@
           "query": "60.248.219.53",
           "hosting": null,
           "asn": "AS3462"
+        }
+      },
+      "fail_days": 2,
+      "first_seen": "2026-11-17",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "vless",
+        "server": "195.72.62.7",
+        "port": 443,
+        "uuid": "8197b9b9-8945-460f-99c9-325ef8a8a7c3",
+        "network": "tcp",
+        "tls": true,
+        "servername": "fexzoo.net",
+        "reality-opts": {
+          "public-key": "GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU",
+          "short-id": "2a67748b0d641e16"
+        },
+        "client-fingerprint": "firefox",
+        "ws-opts": {
+          "path": "/",
+          "headers": {
+            "Host": "fexzoo.net"
+          }
+        }
+      },
+      "ipinfo": {
+        "ip": "195.72.62.7",
+        "info": {
+          "country": "瑞典",
+          "countryCode": "SE",
+          "regionName": "Stockholm",
+          "city": "Stockholm",
+          "isp": "AS215960 Hollander & Jacobsen UG (haftungsbeschraenkt)",
+          "org": "AS215960 Hollander & Jacobsen UG (haftungsbeschraenkt)",
+          "query": "195.72.62.7",
+          "hosting": null,
+          "asn": "AS215960"
         }
       },
       "fail_days": 1,

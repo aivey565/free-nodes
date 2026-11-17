@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generated_at": "2026-11-17T00:00:54.840131",
+    "generated_at": "2026-11-17T23:16:42.315985",
     "total_rounds": 2,
     "rounds_used": [
       1,
       2
     ],
-    "total_unique_nodes": 342,
-    "total_stable": 21,
-    "total_good": 19,
+    "total_unique_nodes": 316,
+    "total_stable": 22,
+    "total_good": 20,
     "min_valid_rounds": 1,
     "good_threshold_ms": 3000,
     "region_quota": {
@@ -31,12 +31,12 @@
       "country": "台湾",
       "city": "Erlin",
       "isp": "AS3462 Data Communication Business Group",
-      "avg_delay_ms": 1560,
+      "avg_delay_ms": 2200,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        1466,
-        1653
+        2700,
+        1701
       ],
       "is_cf": false,
       "raw_config": {
@@ -49,7 +49,7 @@
         "tls": true,
         "type": "anytls",
         "_from_pool": true,
-        "name": "node_0337",
+        "name": "node_0309",
         "_ip_data": {
           "ip": "111.246.53.113",
           "info": {
@@ -68,264 +68,7 @@
       }
     },
     {
-      "real_name": "TW-Yuanlin-AS3462-anytls-02",
-      "type": "anytls",
-      "server": "forwarded.frnhk.xyz",
-      "port": 2052,
-      "ip": "61.223.117.142",
-      "country": "台湾",
-      "city": "Yuanlin",
-      "isp": "AS3462 Data Communication Business Group",
-      "avg_delay_ms": 1976,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        1976,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "password": "9922ea3a-7314-4af5-a4cb-eb68a9b94fca",
-        "port": 2052,
-        "server": "forwarded.frnhk.xyz",
-        "skip-cert-verify": true,
-        "sni": "jp2.gosthk.site",
-        "type": "anytls",
-        "udp": true,
-        "_from_pool": true,
-        "name": "node_0340",
-        "_ip_data": {
-          "ip": "61.223.117.142",
-          "info": {
-            "country": "台湾",
-            "countryCode": "TW",
-            "regionName": "Taiwan",
-            "city": "Yuanlin",
-            "isp": "AS3462 Data Communication Business Group",
-            "org": "AS3462 Data Communication Business Group",
-            "query": "61.223.117.142",
-            "hosting": null,
-            "asn": "AS3462"
-          },
-          "is_residential": true
-        }
-      }
-    },
-    {
-      "real_name": "TW-Yuanlin-AS3462-anytls-03",
-      "type": "anytls",
-      "server": "forwarded.frnhk.xyz",
-      "port": 2086,
-      "ip": "61.223.117.142",
-      "country": "台湾",
-      "city": "Yuanlin",
-      "isp": "AS3462 Data Communication Business Group",
-      "avg_delay_ms": 2053,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        2053,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "password": "9b24e5d0-62be-41df-b967-9b670cf90ff8",
-        "port": 2086,
-        "server": "forwarded.frnhk.xyz",
-        "skip-cert-verify": true,
-        "sni": "de.gosthk.site",
-        "type": "anytls",
-        "udp": true,
-        "name": "node_0191",
-        "_ip_data": {
-          "ip": "61.223.117.142",
-          "info": {
-            "country": "台湾",
-            "countryCode": "TW",
-            "regionName": "Taiwan",
-            "city": "Yuanlin",
-            "isp": "AS3462 Data Communication Business Group",
-            "org": "AS3462 Data Communication Business Group",
-            "query": "61.223.117.142",
-            "hosting": null,
-            "asn": "AS3462"
-          },
-          "is_residential": true
-        }
-      }
-    },
-    {
-      "real_name": "TW-Yuanlin-AS3462-anytls-04",
-      "type": "anytls",
-      "server": "forwarded.frnhk.xyz",
-      "port": 2053,
-      "ip": "61.223.117.142",
-      "country": "台湾",
-      "city": "Yuanlin",
-      "isp": "AS3462 Data Communication Business Group",
-      "avg_delay_ms": 2938,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        2938,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "type": "anytls",
-        "server": "forwarded.frnhk.xyz",
-        "port": 2053,
-        "password": "047e0e0c-1843-4f16-9812-ec2cc94f7a99",
-        "udp": true,
-        "tls": true,
-        "servername": "my.gosthk.site",
-        "sni": "my.gosthk.site",
-        "skip-cert-verify": false,
-        "name": "node_0265",
-        "_ip_data": {
-          "ip": "61.223.117.142",
-          "info": {
-            "country": "台湾",
-            "countryCode": "TW",
-            "regionName": "Taiwan",
-            "city": "Yuanlin",
-            "isp": "AS3462 Data Communication Business Group",
-            "org": "AS3462 Data Communication Business Group",
-            "query": "61.223.117.142",
-            "hosting": null,
-            "asn": "AS3462"
-          },
-          "is_residential": true
-        }
-      }
-    },
-    {
-      "real_name": "IT-Milan-AS30088-ss-05",
-      "type": "ss",
-      "server": "202.50.253.72",
-      "port": 19999,
-      "ip": "202.50.253.72",
-      "country": "意大利",
-      "city": "Milan",
-      "isp": "AS30088 GTHost",
-      "avg_delay_ms": 1498,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        1498,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "cipher": "aes-256-gcm",
-        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-        "port": 19999,
-        "server": "202.50.253.72",
-        "type": "ss",
-        "udp": true,
-        "name": "node_0107",
-        "_ip_data": {
-          "ip": "202.50.253.72",
-          "info": {
-            "country": "意大利",
-            "countryCode": "IT",
-            "regionName": "Lombardy",
-            "city": "Milan",
-            "isp": "AS30088 GTHost",
-            "org": "AS30088 GTHost",
-            "query": "202.50.253.72",
-            "hosting": null,
-            "asn": "AS30088"
-          },
-          "is_residential": false
-        }
-      }
-    },
-    {
-      "real_name": "IT-Milan-AS30088-ss-06",
-      "type": "ss",
-      "server": "202.50.253.36",
-      "port": 19999,
-      "ip": "202.50.253.36",
-      "country": "意大利",
-      "city": "Milan",
-      "isp": "AS30088 GTHost",
-      "avg_delay_ms": 1679,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        1679,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "cipher": "aes-256-gcm",
-        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-        "port": 19999,
-        "server": "202.50.253.36",
-        "type": "ss",
-        "udp": true,
-        "name": "node_0108",
-        "_ip_data": {
-          "ip": "202.50.253.36",
-          "info": {
-            "country": "意大利",
-            "countryCode": "IT",
-            "regionName": "Lombardy",
-            "city": "Milan",
-            "isp": "AS30088 GTHost",
-            "org": "AS30088 GTHost",
-            "query": "202.50.253.36",
-            "hosting": null,
-            "asn": "AS30088"
-          },
-          "is_residential": false
-        }
-      }
-    },
-    {
-      "real_name": "IT-Milan-AS30088-ss-07",
-      "type": "ss",
-      "server": "202.50.253.54",
-      "port": 19999,
-      "ip": "202.50.253.54",
-      "country": "意大利",
-      "city": "Milan",
-      "isp": "AS30088 GTHost",
-      "avg_delay_ms": 1882,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        1882,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "cipher": "aes-256-gcm",
-        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-        "port": 19999,
-        "server": "202.50.253.54",
-        "type": "ss",
-        "name": "node_0119",
-        "_ip_data": {
-          "ip": "202.50.253.54",
-          "info": {
-            "country": "意大利",
-            "countryCode": "IT",
-            "regionName": "Lombardy",
-            "city": "Milan",
-            "isp": "AS30088 GTHost",
-            "org": "AS30088 GTHost",
-            "query": "202.50.253.54",
-            "hosting": null,
-            "asn": "AS30088"
-          },
-          "is_residential": false
-        }
-      }
-    },
-    {
-      "real_name": "IT-Milan-AS30088-ss-08",
+      "real_name": "IT-Milan-AS30088-ss-02",
       "type": "ss",
       "server": "202.50.253.18",
       "port": 19999,
@@ -333,22 +76,21 @@
       "country": "意大利",
       "city": "Milan",
       "isp": "AS30088 GTHost",
-      "avg_delay_ms": 2009,
+      "avg_delay_ms": 1482,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        1871,
-        2147
+        1499,
+        1466
       ],
       "is_cf": false,
       "raw_config": {
+        "type": "ss",
+        "server": "202.50.253.18",
+        "port": 19999,
         "cipher": "aes-256-gcm",
         "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-        "port": 19999,
-        "server": "202.50.253.18",
-        "type": "ss",
-        "udp": true,
-        "name": "node_0178",
+        "name": "node_0226",
         "_ip_data": {
           "ip": "202.50.253.18",
           "info": {
@@ -367,141 +109,7 @@
       }
     },
     {
-      "real_name": "IT-Milan-AS30088-ss-09",
-      "type": "ss",
-      "server": "202.50.253.45",
-      "port": 19999,
-      "ip": "202.50.253.45",
-      "country": "意大利",
-      "city": "Milan",
-      "isp": "AS30088 GTHost",
-      "avg_delay_ms": 2076,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        2076,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "cipher": "aes-256-gcm",
-        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-        "port": 19999,
-        "server": "202.50.253.45",
-        "type": "ss",
-        "udp": true,
-        "name": "node_0118",
-        "_ip_data": {
-          "ip": "202.50.253.45",
-          "info": {
-            "country": "意大利",
-            "countryCode": "IT",
-            "regionName": "Lombardy",
-            "city": "Milan",
-            "isp": "AS30088 GTHost",
-            "org": "AS30088 GTHost",
-            "query": "202.50.253.45",
-            "hosting": null,
-            "asn": "AS30088"
-          },
-          "is_residential": false
-        }
-      }
-    },
-    {
-      "real_name": "PL-Warsaw-AS207957-vless-10",
-      "type": "vless",
-      "server": "bl1.nexfile.net",
-      "port": 4443,
-      "ip": "179.254.191.251",
-      "country": "波兰",
-      "city": "Warsaw",
-      "isp": "AS207957 SERV.HOST GROUP LTD",
-      "avg_delay_ms": 2272,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        2272,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "client-fingerprint": "chrome",
-        "network": "xhttp",
-        "port": 4443,
-        "server": "bl1.nexfile.net",
-        "servername": "bl1.nexfile.net",
-        "tls": true,
-        "type": "vless",
-        "udp": true,
-        "uuid": "a35c508f-4d5d-4531-842e-6e9d43c762c0",
-        "xhttp-opts": {
-          "host": "bl1.nexfile.net",
-          "mode": "auto",
-          "path": "/api/v1/sync/"
-        },
-        "name": "node_0183",
-        "_ip_data": {
-          "ip": "179.254.191.251",
-          "info": {
-            "country": "波兰",
-            "countryCode": "PL",
-            "regionName": "Mazovia",
-            "city": "Warsaw",
-            "isp": "AS207957 SERV.HOST GROUP LTD",
-            "org": "AS207957 SERV.HOST GROUP LTD",
-            "query": "179.254.191.251",
-            "hosting": null,
-            "asn": "AS207957"
-          },
-          "is_residential": false
-        }
-      }
-    },
-    {
-      "real_name": "IT-Milan-AS30088-ss-11",
-      "type": "ss",
-      "server": "202.50.253.99",
-      "port": 19999,
-      "ip": "202.50.253.99",
-      "country": "意大利",
-      "city": "Milan",
-      "isp": "AS30088 GTHost",
-      "avg_delay_ms": 2578,
-      "valid_rounds": 1,
-      "total_rounds": 2,
-      "delays": [
-        2578,
-        0
-      ],
-      "is_cf": false,
-      "raw_config": {
-        "cipher": "aes-256-gcm",
-        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
-        "port": 19999,
-        "server": "202.50.253.99",
-        "type": "ss",
-        "udp": true,
-        "name": "node_0112",
-        "_ip_data": {
-          "ip": "202.50.253.99",
-          "info": {
-            "country": "意大利",
-            "countryCode": "IT",
-            "regionName": "Lombardy",
-            "city": "Milan",
-            "isp": "AS30088 GTHost",
-            "org": "AS30088 GTHost",
-            "query": "202.50.253.99",
-            "hosting": null,
-            "asn": "AS30088"
-          },
-          "is_residential": false
-        }
-      }
-    },
-    {
-      "real_name": "IT-Milan-AS30088-ss-12",
+      "real_name": "IT-Milan-AS30088-ss-03",
       "type": "ss",
       "server": "202.50.253.27",
       "port": 19999,
@@ -509,12 +117,12 @@
       "country": "意大利",
       "city": "Milan",
       "isp": "AS30088 GTHost",
-      "avg_delay_ms": 2700,
-      "valid_rounds": 1,
+      "avg_delay_ms": 1492,
+      "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2700,
-        0
+        1491,
+        1492
       ],
       "is_cf": false,
       "raw_config": {
@@ -524,7 +132,7 @@
         "server": "202.50.253.27",
         "type": "ss",
         "udp": true,
-        "name": "node_0116",
+        "name": "node_0094",
         "_ip_data": {
           "ip": "202.50.253.27",
           "info": {
@@ -543,7 +151,130 @@
       }
     },
     {
-      "real_name": "IT-Milan-AS30088-ss-13",
+      "real_name": "IT-Milan-AS30088-ss-04",
+      "type": "ss",
+      "server": "202.50.253.72",
+      "port": 19999,
+      "ip": "202.50.253.72",
+      "country": "意大利",
+      "city": "Milan",
+      "isp": "AS30088 GTHost",
+      "avg_delay_ms": 1502,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        1506,
+        1498
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "cipher": "aes-256-gcm",
+        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+        "port": 19999,
+        "server": "202.50.253.72",
+        "type": "ss",
+        "name": "node_0098",
+        "_ip_data": {
+          "ip": "202.50.253.72",
+          "info": {
+            "country": "意大利",
+            "countryCode": "IT",
+            "regionName": "Lombardy",
+            "city": "Milan",
+            "isp": "AS30088 GTHost",
+            "org": "AS30088 GTHost",
+            "query": "202.50.253.72",
+            "hosting": null,
+            "asn": "AS30088"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "IT-Milan-AS30088-ss-05",
+      "type": "ss",
+      "server": "202.50.253.54",
+      "port": 19999,
+      "ip": "202.50.253.54",
+      "country": "意大利",
+      "city": "Milan",
+      "isp": "AS30088 GTHost",
+      "avg_delay_ms": 1510,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        1544,
+        1477
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "cipher": "aes-256-gcm",
+        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+        "port": 19999,
+        "server": "202.50.253.54",
+        "type": "ss",
+        "name": "node_0097",
+        "_ip_data": {
+          "ip": "202.50.253.54",
+          "info": {
+            "country": "意大利",
+            "countryCode": "IT",
+            "regionName": "Lombardy",
+            "city": "Milan",
+            "isp": "AS30088 GTHost",
+            "org": "AS30088 GTHost",
+            "query": "202.50.253.54",
+            "hosting": null,
+            "asn": "AS30088"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "IT-Milan-AS30088-ss-06",
+      "type": "ss",
+      "server": "202.50.253.99",
+      "port": 19999,
+      "ip": "202.50.253.99",
+      "country": "意大利",
+      "city": "Milan",
+      "isp": "AS30088 GTHost",
+      "avg_delay_ms": 1516,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        1484,
+        1549
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "cipher": "aes-256-gcm",
+        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+        "port": 19999,
+        "server": "202.50.253.99",
+        "type": "ss",
+        "name": "node_0095",
+        "_ip_data": {
+          "ip": "202.50.253.99",
+          "info": {
+            "country": "意大利",
+            "countryCode": "IT",
+            "regionName": "Lombardy",
+            "city": "Milan",
+            "isp": "AS30088 GTHost",
+            "org": "AS30088 GTHost",
+            "query": "202.50.253.99",
+            "hosting": null,
+            "asn": "AS30088"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "IT-Milan-AS30088-ss-07",
       "type": "ss",
       "server": "202.50.253.81",
       "port": 19999,
@@ -551,12 +282,12 @@
       "country": "意大利",
       "city": "Milan",
       "isp": "AS30088 GTHost",
-      "avg_delay_ms": 2741,
-      "valid_rounds": 1,
+      "avg_delay_ms": 1608,
+      "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2741,
-        0
+        1673,
+        1544
       ],
       "is_cf": false,
       "raw_config": {
@@ -565,7 +296,8 @@
         "port": 19999,
         "server": "202.50.253.81",
         "type": "ss",
-        "name": "node_0110",
+        "udp": true,
+        "name": "node_0092",
         "_ip_data": {
           "ip": "202.50.253.81",
           "info": {
@@ -584,154 +316,197 @@
       }
     },
     {
-      "real_name": "FR-Paris-Scaleway-hysteria-14",
-      "type": "hysteria",
-      "server": "62.210.28.175",
-      "port": 24667,
-      "ip": "62.210.28.175",
-      "country": "法国",
-      "city": "Paris",
-      "isp": "AS12876 Scaleway SAS",
-      "avg_delay_ms": 2852,
+      "real_name": "IT-Milan-AS30088-ss-08",
+      "type": "ss",
+      "server": "202.50.253.45",
+      "port": 19999,
+      "ip": "202.50.253.45",
+      "country": "意大利",
+      "city": "Milan",
+      "isp": "AS30088 GTHost",
+      "avg_delay_ms": 1618,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2851,
-        2854
+        1700,
+        1536
       ],
       "is_cf": false,
       "raw_config": {
-        "alpn": [
-          "h3"
-        ],
-        "auth-str": "dongtaiwang.com",
-        "down": "55 Mbps",
-        "port": 24667,
-        "protocol": "udp",
-        "server": "62.210.28.175",
-        "skip-cert-verify": true,
-        "sni": "bing.com",
-        "type": "hysteria",
-        "up": "11 Mbps",
-        "name": "node_0278",
+        "cipher": "aes-256-gcm",
+        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+        "port": 19999,
+        "server": "202.50.253.45",
+        "type": "ss",
+        "name": "node_0093",
         "_ip_data": {
-          "ip": "62.210.28.175",
+          "ip": "202.50.253.45",
           "info": {
-            "country": "法国",
-            "countryCode": "FR",
-            "regionName": "Île-de-France",
-            "city": "Paris",
-            "isp": "AS12876 Scaleway SAS",
-            "org": "AS12876 Scaleway SAS",
-            "query": "62.210.28.175",
+            "country": "意大利",
+            "countryCode": "IT",
+            "regionName": "Lombardy",
+            "city": "Milan",
+            "isp": "AS30088 GTHost",
+            "org": "AS30088 GTHost",
+            "query": "202.50.253.45",
             "hosting": null,
-            "asn": "AS12876"
+            "asn": "AS30088"
           },
           "is_residential": false
         }
       }
     },
     {
-      "real_name": "US-San Fran-Cloudflare-vless-15",
-      "type": "vless",
-      "server": "ujp.xn--ghqu5fm27b67w.com",
-      "port": 443,
-      "ip": "104.18.11.153",
-      "country": "美国",
-      "city": "San Francisco",
-      "isp": "AS13335 Cloudflare, Inc.",
-      "avg_delay_ms": 2938,
-      "valid_rounds": 1,
+      "real_name": "IT-Milan-AS30088-ss-09",
+      "type": "ss",
+      "server": "202.50.253.36",
+      "port": 19999,
+      "ip": "202.50.253.36",
+      "country": "意大利",
+      "city": "Milan",
+      "isp": "AS30088 GTHost",
+      "avg_delay_ms": 1643,
+      "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2938,
-        0
+        1668,
+        1618
       ],
-      "is_cf": true,
+      "is_cf": false,
+      "raw_config": {
+        "cipher": "aes-256-gcm",
+        "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=",
+        "port": 19999,
+        "server": "202.50.253.36",
+        "type": "ss",
+        "udp": true,
+        "name": "node_0096",
+        "_ip_data": {
+          "ip": "202.50.253.36",
+          "info": {
+            "country": "意大利",
+            "countryCode": "IT",
+            "regionName": "Lombardy",
+            "city": "Milan",
+            "isp": "AS30088 GTHost",
+            "org": "AS30088 GTHost",
+            "query": "202.50.253.36",
+            "hosting": null,
+            "asn": "AS30088"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "PL-Warsaw-AS201814-vless-10",
+      "type": "vless",
+      "server": "80.47.10.106",
+      "port": 443,
+      "ip": "80.47.10.106",
+      "country": "波兰",
+      "city": "Warsaw",
+      "isp": "AS201814 MEVSPACE sp. z o.o.",
+      "avg_delay_ms": 1852,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        1806,
+        1897
+      ],
+      "is_cf": false,
       "raw_config": {
         "type": "vless",
-        "server": "ujp.xn--ghqu5fm27b67w.com",
+        "server": "80.47.10.106",
         "port": 443,
-        "uuid": "debafe5b-6760-4b00-b0b2-ee30cbf769f0",
-        "network": "ws",
+        "uuid": "a30903dc-1bf0-4be5-8b1b-603a3a56211c",
+        "network": "tcp",
         "tls": true,
-        "servername": "portland-wins-robbie-skirt.trycloudflare.com",
+        "servername": "pl8.galioncc.com",
+        "reality-opts": {
+          "public-key": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
+          "short-id": "a7c92e4b10d6f835"
+        },
+        "client-fingerprint": "firefox",
         "ws-opts": {
-          "path": "/e0843c8ad581",
           "headers": {
-            "Host": "portland-wins-robbie-skirt.trycloudflare.com"
+            "Host": "/?Telegram---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1---@VPNine1/"
           }
         },
-        "name": "node_0243",
+        "name": "node_0238",
         "_ip_data": {
-          "ip": "104.18.11.153",
+          "ip": "80.47.10.106",
           "info": {
-            "country": "美国",
-            "countryCode": "US",
-            "regionName": "California",
-            "city": "San Francisco",
-            "isp": "AS13335 Cloudflare, Inc.",
-            "org": "AS13335 Cloudflare, Inc.",
-            "query": "104.18.11.153",
+            "country": "波兰",
+            "countryCode": "PL",
+            "regionName": "Mazovia",
+            "city": "Warsaw",
+            "isp": "AS201814 MEVSPACE sp. z o.o.",
+            "org": "AS201814 MEVSPACE sp. z o.o.",
+            "query": "80.47.10.106",
             "hosting": null,
-            "asn": "AS13335"
+            "asn": "AS201814"
           },
           "is_residential": false
         }
       }
     },
     {
-      "real_name": "IR-Tehran-AS216054-vless-16",
+      "real_name": "SE-Stockhol-AS214159-vless-11",
       "type": "vless",
-      "server": "ir2.cryptojakiro.com",
+      "server": "88.216.60.73",
       "port": 443,
-      "ip": "185.10.240.23",
-      "country": "IR",
-      "city": "Tehran",
-      "isp": "AS216054 Taymaz Gostaran Naghshe Almas Co. ( Ltd )",
-      "avg_delay_ms": 3058,
-      "valid_rounds": 1,
+      "ip": "88.216.60.73",
+      "country": "瑞典",
+      "city": "Stockholm",
+      "isp": "AS214159 UAB \"Cherry Servers\"",
+      "avg_delay_ms": 2253,
+      "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        3058,
-        0
+        2430,
+        2076
       ],
       "is_cf": false,
       "raw_config": {
-        "client-fingerprint": "chrome",
-        "network": "ws",
-        "port": 443,
-        "server": "ir2.cryptojakiro.com",
-        "servername": "ir2.cryptojakiro.com",
-        "tls": true,
         "type": "vless",
-        "uuid": "8a1a991a-f206-447a-adaf-37a57c133418",
-        "ws-opts": {
-          "headers": {
-            "Host": "ir2.cryptojakiro.com"
-          },
-          "path": "/"
+        "server": "88.216.60.73",
+        "port": 443,
+        "uuid": "a30903dc-1bf0-4be5-8b1b-603a3a56211c",
+        "network": "tcp",
+        "tls": true,
+        "servername": "ns-api-gw.galioncc.com",
+        "reality-opts": {
+          "public-key": "drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ",
+          "short-id": "a7c92e4b10d6f835"
         },
-        "name": "node_0151",
+        "client-fingerprint": "firefox",
+        "ws-opts": {
+          "path": "/",
+          "headers": {
+            "Host": "ns-api-gw.galioncc.com"
+          }
+        },
+        "name": "node_0249",
         "_ip_data": {
-          "ip": "185.10.240.23",
+          "ip": "88.216.60.73",
           "info": {
-            "country": "IR",
-            "countryCode": "IR",
-            "regionName": "Tehran",
-            "city": "Tehran",
-            "isp": "AS216054 Taymaz Gostaran Naghshe Almas Co. ( Ltd )",
-            "org": "AS216054 Taymaz Gostaran Naghshe Almas Co. ( Ltd )",
-            "query": "185.10.240.23",
+            "country": "瑞典",
+            "countryCode": "SE",
+            "regionName": "Stockholm",
+            "city": "Stockholm",
+            "isp": "AS214159 UAB \"Cherry Servers\"",
+            "org": "AS214159 UAB \"Cherry Servers\"",
+            "query": "88.216.60.73",
             "hosting": null,
-            "asn": "AS216054"
+            "asn": "AS214159"
           },
           "is_residential": false
         }
       }
     },
     {
-      "real_name": "EE-Tallinn-AS58065-vless-17",
+      "real_name": "EE-Tallinn-AS58065-vless-12",
       "type": "vless",
       "server": "196.196.148.85",
       "port": 443,
@@ -739,12 +514,12 @@
       "country": "EE",
       "city": "Tallinn",
       "isp": "AS58065 Orion Network Limited",
-      "avg_delay_ms": 4696,
+      "avg_delay_ms": 2574,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        7048,
-        2344
+        2826,
+        2321
       ],
       "is_cf": false,
       "raw_config": {
@@ -760,7 +535,13 @@
           "short-id": "361d0dd59c70516f"
         },
         "client-fingerprint": "firefox",
-        "name": "node_0250",
+        "ws-opts": {
+          "path": "/",
+          "headers": {
+            "Host": "5d0319t.nl7.h1clayd.click"
+          }
+        },
+        "name": "node_0253",
         "_ip_data": {
           "ip": "196.196.148.85",
           "info": {
@@ -779,91 +560,177 @@
       }
     },
     {
-      "real_name": "NL-Amsterda-Datacamp-http-18",
+      "real_name": "US-San Fran-Cloudflare-http-13",
       "type": "http",
-      "server": "84.17.47.124",
-      "port": 9002,
-      "ip": "84.17.47.124",
-      "country": "荷兰",
-      "city": "Amsterdam",
-      "isp": "AS60068 Datacamp Limited",
-      "avg_delay_ms": 2338,
+      "server": "172.64.68.89",
+      "port": 443,
+      "ip": "172.64.68.89",
+      "country": "美国",
+      "city": "San Francisco",
+      "isp": "AS13335 Cloudflare, Inc.",
+      "avg_delay_ms": 2394,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2232,
-        2444
+        2334,
+        2455
       ],
-      "is_cf": false,
+      "is_cf": true,
       "raw_config": {
-        "port": 9002,
-        "server": "84.17.47.124",
+        "password": "null",
+        "port": 443,
+        "server": "172.64.68.89",
         "skip-cert-verify": true,
         "tls": true,
         "type": "http",
-        "udp": true,
-        "name": "node_0215",
+        "username": "null",
+        "name": "node_0113",
         "_ip_data": {
-          "ip": "84.17.47.124",
+          "ip": "172.64.68.89",
           "info": {
-            "country": "荷兰",
-            "countryCode": "NL",
-            "regionName": "North Holland",
-            "city": "Amsterdam",
-            "isp": "AS60068 Datacamp Limited",
-            "org": "AS60068 Datacamp Limited",
-            "query": "84.17.47.124",
+            "country": "美国",
+            "countryCode": "US",
+            "regionName": "California",
+            "city": "San Francisco",
+            "isp": "AS13335 Cloudflare, Inc.",
+            "org": "AS13335 Cloudflare, Inc.",
+            "query": "172.64.68.89",
             "hosting": null,
-            "asn": "AS60068"
+            "asn": "AS13335"
           },
           "is_residential": false
         }
       }
     },
     {
-      "real_name": "NL-Amsterda-Datacamp-http-19",
+      "real_name": "US-Dallas-AS393398-http-14",
       "type": "http",
-      "server": "84.17.47.125",
-      "port": 9002,
-      "ip": "84.17.47.125",
-      "country": "荷兰",
-      "city": "Amsterdam",
-      "isp": "AS60068 Datacamp Limited",
-      "avg_delay_ms": 2364,
+      "server": "38.247.141.135",
+      "port": 443,
+      "ip": "38.247.141.135",
+      "country": "美国",
+      "city": "Dallas",
+      "isp": "AS393398 1515 ROUNDTABLE DR PROPERTY, LLC",
+      "avg_delay_ms": 2420,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2302,
-        2425
+        2385,
+        2454
       ],
       "is_cf": false,
       "raw_config": {
-        "port": 9002,
-        "server": "84.17.47.125",
+        "port": 443,
+        "server": "38.247.141.135",
         "skip-cert-verify": true,
         "tls": true,
         "type": "http",
         "udp": true,
-        "name": "node_0209",
+        "name": "node_0184",
         "_ip_data": {
-          "ip": "84.17.47.125",
+          "ip": "38.247.141.135",
           "info": {
-            "country": "荷兰",
-            "countryCode": "NL",
-            "regionName": "North Holland",
-            "city": "Amsterdam",
-            "isp": "AS60068 Datacamp Limited",
-            "org": "AS60068 Datacamp Limited",
-            "query": "84.17.47.125",
+            "country": "美国",
+            "countryCode": "US",
+            "regionName": "Texas",
+            "city": "Dallas",
+            "isp": "AS393398 1515 ROUNDTABLE DR PROPERTY, LLC",
+            "org": "AS393398 1515 ROUNDTABLE DR PROPERTY, LLC",
+            "query": "38.247.141.135",
             "hosting": null,
-            "asn": "AS60068"
+            "asn": "AS393398"
           },
           "is_residential": false
         }
       }
     },
     {
-      "real_name": "NL-Amsterda-Datacamp-http-20",
+      "real_name": "US-Columbia-AS11426-http-15",
+      "type": "http",
+      "server": "173.42.49.102",
+      "port": 8090,
+      "ip": "173.42.49.102",
+      "country": "美国",
+      "city": "Columbia",
+      "isp": "AS11426 Charter Communications Inc",
+      "avg_delay_ms": 3135,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        3127,
+        3143
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "port": 8090,
+        "server": "173.42.49.102",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http",
+        "udp": true,
+        "_from_pool": true,
+        "name": "node_0307",
+        "_ip_data": {
+          "ip": "173.42.49.102",
+          "info": {
+            "country": "美国",
+            "countryCode": "US",
+            "regionName": "South Carolina",
+            "city": "Columbia",
+            "isp": "AS11426 Charter Communications Inc",
+            "org": "AS11426 Charter Communications Inc",
+            "query": "173.42.49.102",
+            "hosting": null,
+            "asn": "AS11426"
+          },
+          "is_residential": true
+        }
+      }
+    },
+    {
+      "real_name": "US-Boardman-Amazon-http-16",
+      "type": "http",
+      "server": "44.248.167.117",
+      "port": 8443,
+      "ip": "44.248.167.117",
+      "country": "美国",
+      "city": "Boardman",
+      "isp": "AS16509 Amazon.com, Inc.",
+      "avg_delay_ms": 4262,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        3704,
+        4819
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "port": 8443,
+        "server": "44.248.167.117",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http",
+        "udp": true,
+        "name": "node_0196",
+        "_ip_data": {
+          "ip": "44.248.167.117",
+          "info": {
+            "country": "美国",
+            "countryCode": "US",
+            "regionName": "Oregon",
+            "city": "Boardman",
+            "isp": "AS16509 Amazon.com, Inc.",
+            "org": "AS16509 Amazon.com, Inc.",
+            "query": "44.248.167.117",
+            "hosting": null,
+            "asn": "AS16509"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "NL-Amsterda-Datacamp-http-17",
       "type": "http",
       "server": "84.17.47.148",
       "port": 9002,
@@ -871,12 +738,12 @@
       "country": "荷兰",
       "city": "Amsterdam",
       "isp": "AS60068 Datacamp Limited",
-      "avg_delay_ms": 2391,
+      "avg_delay_ms": 2230,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2304,
-        2478
+        2198,
+        2262
       ],
       "is_cf": false,
       "raw_config": {
@@ -887,7 +754,7 @@
         "tls": true,
         "type": "http",
         "udp": true,
-        "name": "node_0216",
+        "name": "node_0212",
         "_ip_data": {
           "ip": "84.17.47.148",
           "info": {
@@ -906,7 +773,7 @@
       }
     },
     {
-      "real_name": "NL-Amsterda-Datacamp-http-21",
+      "real_name": "NL-Amsterda-Datacamp-http-18",
       "type": "http",
       "server": "84.17.47.149",
       "port": 9002,
@@ -914,12 +781,12 @@
       "country": "荷兰",
       "city": "Amsterdam",
       "isp": "AS60068 Datacamp Limited",
-      "avg_delay_ms": 2503,
+      "avg_delay_ms": 2237,
       "valid_rounds": 2,
       "total_rounds": 2,
       "delays": [
-        2216,
-        2790
+        2254,
+        2220
       ],
       "is_cf": false,
       "raw_config": {
@@ -930,7 +797,7 @@
         "tls": true,
         "type": "http",
         "udp": true,
-        "name": "node_0202",
+        "name": "node_0214",
         "_ip_data": {
           "ip": "84.17.47.149",
           "info": {
@@ -943,6 +810,177 @@
             "query": "84.17.47.149",
             "hosting": null,
             "asn": "AS60068"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "NL-Amsterda-Datacamp-http-19",
+      "type": "http",
+      "server": "84.17.47.123",
+      "port": 9002,
+      "ip": "84.17.47.123",
+      "country": "荷兰",
+      "city": "Amsterdam",
+      "isp": "AS60068 Datacamp Limited",
+      "avg_delay_ms": 2259,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        2278,
+        2240
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "password": "None",
+        "port": 9002,
+        "server": "84.17.47.123",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http",
+        "udp": true,
+        "name": "node_0224",
+        "_ip_data": {
+          "ip": "84.17.47.123",
+          "info": {
+            "country": "荷兰",
+            "countryCode": "NL",
+            "regionName": "North Holland",
+            "city": "Amsterdam",
+            "isp": "AS60068 Datacamp Limited",
+            "org": "AS60068 Datacamp Limited",
+            "query": "84.17.47.123",
+            "hosting": null,
+            "asn": "AS60068"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "NL-Amsterda-Scaleway-http-20",
+      "type": "http",
+      "server": "51.159.225.196",
+      "port": 23856,
+      "ip": "51.159.225.196",
+      "country": "荷兰",
+      "city": "Amsterdam",
+      "isp": "AS12876 Scaleway SAS",
+      "avg_delay_ms": 2298,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        2289,
+        2306
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "password": "null",
+        "port": 23856,
+        "server": "51.159.225.196",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http",
+        "udp": true,
+        "username": "null",
+        "name": "node_0199",
+        "_ip_data": {
+          "ip": "51.159.225.196",
+          "info": {
+            "country": "荷兰",
+            "countryCode": "NL",
+            "regionName": "North Holland",
+            "city": "Amsterdam",
+            "isp": "AS12876 Scaleway SAS",
+            "org": "AS12876 Scaleway SAS",
+            "query": "51.159.225.196",
+            "hosting": null,
+            "asn": "AS12876"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "NL-Amsterda-Datacamp-http-21",
+      "type": "http",
+      "server": "84.17.47.124",
+      "port": 9002,
+      "ip": "84.17.47.124",
+      "country": "荷兰",
+      "city": "Amsterdam",
+      "isp": "AS60068 Datacamp Limited",
+      "avg_delay_ms": 2302,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        2276,
+        2327
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "port": 9002,
+        "server": "84.17.47.124",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http",
+        "udp": true,
+        "name": "node_0209",
+        "_ip_data": {
+          "ip": "84.17.47.124",
+          "info": {
+            "country": "荷兰",
+            "countryCode": "NL",
+            "regionName": "North Holland",
+            "city": "Amsterdam",
+            "isp": "AS60068 Datacamp Limited",
+            "org": "AS60068 Datacamp Limited",
+            "query": "84.17.47.124",
+            "hosting": null,
+            "asn": "AS60068"
+          },
+          "is_residential": false
+        }
+      }
+    },
+    {
+      "real_name": "IE-Dublin-Amazon-http-22",
+      "type": "http",
+      "server": "34.249.214.108",
+      "port": 443,
+      "ip": "34.249.214.108",
+      "country": "爱尔兰",
+      "city": "Dublin",
+      "isp": "AS16509 Amazon.com, Inc.",
+      "avg_delay_ms": 2305,
+      "valid_rounds": 2,
+      "total_rounds": 2,
+      "delays": [
+        2254,
+        2356
+      ],
+      "is_cf": false,
+      "raw_config": {
+        "port": 443,
+        "server": "34.249.214.108",
+        "skip-cert-verify": true,
+        "tls": true,
+        "type": "http",
+        "udp": true,
+        "name": "node_0197",
+        "_ip_data": {
+          "ip": "34.249.214.108",
+          "info": {
+            "country": "爱尔兰",
+            "countryCode": "IE",
+            "regionName": "Leinster",
+            "city": "Dublin",
+            "isp": "AS16509 Amazon.com, Inc.",
+            "org": "AS16509 Amazon.com, Inc.",
+            "query": "34.249.214.108",
+            "hosting": null,
+            "asn": "AS16509"
           },
           "is_residential": false
         }
