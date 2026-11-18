@@ -127,6 +127,27 @@ proxies:
       Host: fexzoo.net
   name: POOL-14-瑞典-Stockholm
   fingerprint: firefox
+- password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
+  port: 443
+  server: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
+  skip-cert-verify: true
+  sni: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
+  tls: false
+  type: hysteria2
+  name: POOL-15-香港-Hong Kong
+- network: ws
+  password: b7795ce8-3863-4292-adfc-9c0a7b847774
+  port: 443
+  server: t2w2t2w2.bpca2026.top
+  skip-cert-verify: true
+  sni: t2w2t2w2.bpca2026.top
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: t2w2t2w2.bpca2026.top
+    path: /images
+  name: POOL-16-台湾-Erlin
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -147,6 +168,8 @@ proxy-groups:
   - POOL-12-韩国-Haegok
   - POOL-13-台湾-Tianzhong
   - POOL-14-瑞典-Stockholm
+  - POOL-15-香港-Hong Kong
+  - POOL-16-台湾-Erlin
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -164,6 +187,8 @@ proxy-groups:
   - POOL-12-韩国-Haegok
   - POOL-13-台湾-Tianzhong
   - POOL-14-瑞典-Stockholm
+  - POOL-15-香港-Hong Kong
+  - POOL-16-台湾-Erlin
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
