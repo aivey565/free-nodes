@@ -22,9 +22,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-11-19"
+      "last_seen": "2026-11-21"
     },
     {
       "config": {
@@ -48,9 +48,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-19"
+      "last_seen": "2026-11-21"
     },
     {
       "config": {
@@ -74,9 +74,9 @@
           "asn": "AS7018"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-19"
+      "last_seen": "2026-11-21"
     },
     {
       "config": {
@@ -101,7 +101,7 @@
           "asn": "AS3215"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-10-23",
       "last_seen": "2026-11-20"
     },
@@ -130,7 +130,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-11-20"
+      "last_seen": "2026-11-21"
     },
     {
       "config": {
@@ -155,9 +155,9 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-19"
+      "last_seen": "2026-11-21"
     },
     {
       "config": {
@@ -186,120 +186,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-20"
-    },
-    {
-      "config": {
-        "password": "9fbb8314-c7f1-4d5a-9af3-0bf70a1776d0",
-        "port": 2053,
-        "server": "forwarded.frnhk.xyz",
-        "skip-cert-verify": true,
-        "sni": "my.gosthk.site",
-        "type": "anytls",
-        "udp": true
-      },
-      "ipinfo": {
-        "ip": "61.223.117.142",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Yuanlin",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "61.223.117.142",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-11",
-      "last_seen": "2026-11-17"
-    },
-    {
-      "config": {
-        "password": "9922ea3a-7314-4af5-a4cb-eb68a9b94fca",
-        "port": 2052,
-        "server": "forwarded.frnhk.xyz",
-        "skip-cert-verify": true,
-        "sni": "jp2.gosthk.site",
-        "type": "anytls",
-        "udp": true
-      },
-      "ipinfo": {
-        "ip": "61.223.117.142",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Yuanlin",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "61.223.117.142",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-13",
-      "last_seen": "2026-11-17"
-    },
-    {
-      "config": {
-        "password": "9b24e5d0-62be-41df-b967-9b670cf90ff8",
-        "port": 2086,
-        "server": "forwarded.frnhk.xyz",
-        "skip-cert-verify": true,
-        "sni": "de.gosthk.site",
-        "type": "anytls",
-        "udp": true
-      },
-      "ipinfo": {
-        "ip": "61.223.117.142",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Yuanlin",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "61.223.117.142",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-13",
-      "last_seen": "2026-11-17"
-    },
-    {
-      "config": {
-        "password": "3b985d60-e252-4935-8e03-06afeb1144c9",
-        "port": 18000,
-        "server": "112.49.65.212",
-        "servername": "www.biliimg.com",
-        "skip-cert-verify": true,
-        "sni": "www.biliimg.com",
-        "tls": true,
-        "type": "trojan"
-      },
-      "ipinfo": {
-        "ip": "112.49.65.212",
-        "info": {
-          "country": "中国",
-          "countryCode": "CN",
-          "regionName": "Fujian",
-          "city": "Fuzhou",
-          "isp": "AS9808 China Mobile Communications Group Co., Ltd.",
-          "org": "AS9808 China Mobile Communications Group Co., Ltd.",
-          "query": "112.49.65.212",
-          "hosting": null,
-          "asn": "AS9808"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-15",
-      "last_seen": "2026-11-17"
+      "last_seen": "2026-11-21"
     },
     {
       "config": {
@@ -321,48 +208,9 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-15",
       "last_seen": "2026-11-18"
-    },
-    {
-      "config": {
-        "type": "vless",
-        "server": "195.72.62.7",
-        "port": 443,
-        "uuid": "8197b9b9-8945-460f-99c9-325ef8a8a7c3",
-        "network": "tcp",
-        "tls": true,
-        "servername": "fexzoo.net",
-        "reality-opts": {
-          "public-key": "GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU",
-          "short-id": "2a67748b0d641e16"
-        },
-        "client-fingerprint": "firefox",
-        "ws-opts": {
-          "path": "/",
-          "headers": {
-            "Host": "fexzoo.net"
-          }
-        }
-      },
-      "ipinfo": {
-        "ip": "195.72.62.7",
-        "info": {
-          "country": "瑞典",
-          "countryCode": "SE",
-          "regionName": "Stockholm",
-          "city": "Stockholm",
-          "isp": "AS215960 Hollander & Jacobsen UG (haftungsbeschraenkt)",
-          "org": "AS215960 Hollander & Jacobsen UG (haftungsbeschraenkt)",
-          "query": "195.72.62.7",
-          "hosting": null,
-          "asn": "AS215960"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-17",
-      "last_seen": ""
     },
     {
       "config": {
@@ -388,7 +236,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-18",
       "last_seen": ""
     },
@@ -423,7 +271,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-18",
       "last_seen": ""
     },
@@ -450,7 +298,7 @@
           "asn": "AS4811"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-20",
       "last_seen": ""
     },
@@ -483,7 +331,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-20",
       "last_seen": ""
     },
@@ -516,7 +364,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-20",
       "last_seen": ""
     },
@@ -549,8 +397,112 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "client-fingerprint": "chrome",
+        "network": "ws",
+        "port": 443,
+        "server": "60.248.219.53",
+        "servername": "ty986gfazs.cainiaohub.xyz",
+        "tls": true,
+        "type": "vless",
+        "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
+        "ws-opts": {
+          "headers": {
+            "Host": "ty986gfazs.cainiaohub.xyz"
+          },
+          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
+        }
+      },
+      "ipinfo": {
+        "ip": "60.248.219.53",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Tianzhong",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "60.248.219.53",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-21",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "client-fingerprint": "random",
+        "network": "ws",
+        "port": 443,
+        "server": "89.128.206.51",
+        "servername": "cj1-e06.pages.dev",
+        "tls": true,
+        "type": "vless",
+        "udp": true,
+        "uuid": "9be9e1e4-d1fc-4423-b22d-cd07a4381acb",
+        "ws-opts": {
+          "headers": {
+            "Host": "cj1-e06.pages.dev"
+          },
+          "path": "/?ed=2560"
+        }
+      },
+      "ipinfo": {
+        "ip": "89.128.206.51",
+        "info": {
+          "country": "西班牙",
+          "countryCode": "ES",
+          "regionName": "Catalonia",
+          "city": "Badalona",
+          "isp": "AS12479 Orange Espagne SA",
+          "org": "AS12479 Orange Espagne SA",
+          "query": "89.128.206.51",
+          "hosting": null,
+          "asn": "AS12479"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-21",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "vless",
+        "server": "free.fugui.lol",
+        "port": 47396,
+        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
+        "network": "tcp",
+        "tls": true,
+        "servername": "swdist.apple.com",
+        "reality-opts": {
+          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
+          "short-id": "fa514b83"
+        },
+        "client-fingerprint": "chrome"
+      },
+      "ipinfo": {
+        "ip": "1.160.27.10",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taipei",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "1.160.27.10",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-21",
       "last_seen": ""
     }
   ]

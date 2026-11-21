@@ -60,60 +60,10 @@ proxies:
   type: anytls
   name: POOL-07-台湾-Erlin
   fingerprint: chrome
-- password: 9fbb8314-c7f1-4d5a-9af3-0bf70a1776d0
-  port: 2053
-  server: forwarded.frnhk.xyz
-  skip-cert-verify: true
-  sni: my.gosthk.site
-  type: anytls
-  udp: true
-  name: POOL-08-台湾-Yuanlin
-- password: 9922ea3a-7314-4af5-a4cb-eb68a9b94fca
-  port: 2052
-  server: forwarded.frnhk.xyz
-  skip-cert-verify: true
-  sni: jp2.gosthk.site
-  type: anytls
-  udp: true
-  name: POOL-09-台湾-Yuanlin
-- password: 9b24e5d0-62be-41df-b967-9b670cf90ff8
-  port: 2086
-  server: forwarded.frnhk.xyz
-  skip-cert-verify: true
-  sni: de.gosthk.site
-  type: anytls
-  udp: true
-  name: POOL-10-台湾-Yuanlin
-- password: 3b985d60-e252-4935-8e03-06afeb1144c9
-  port: 18000
-  server: 112.49.65.212
-  servername: www.biliimg.com
-  skip-cert-verify: true
-  sni: www.biliimg.com
-  tls: true
-  type: trojan
-  name: POOL-11-中国-Fuzhou
-  fingerprint: chrome
 - type: socks5
   server: 121.169.46.116
   port: 1090
-  name: POOL-12-韩国-Haegok
-- type: vless
-  server: 195.72.62.7
-  port: 443
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-  network: tcp
-  tls: true
-  servername: fexzoo.net
-  reality-opts:
-    public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU
-    short-id: 2a67748b0d641e16
-  ws-opts:
-    path: /
-    headers:
-      Host: fexzoo.net
-  name: POOL-13-瑞典-Stockholm
-  fingerprint: firefox
+  name: POOL-08-韩国-Haegok
 - password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
   port: 443
   server: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
@@ -121,7 +71,7 @@ proxies:
   sni: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
   tls: false
   type: hysteria2
-  name: POOL-14-香港-Hong Kong
+  name: POOL-09-香港-Hong Kong
 - network: ws
   password: b7795ce8-3863-4292-adfc-9c0a7b847774
   port: 443
@@ -134,14 +84,14 @@ proxies:
     headers:
       Host: t2w2t2w2.bpca2026.top
     path: /images
-  name: POOL-15-台湾-Erlin
+  name: POOL-10-台湾-Erlin
 - cipher: 2022-blake3-aes-128-gcm
   password: qryl6xVLkWXZlqD7CccpQw==
   port: 10002
   server: 103.238.140.162
   type: ss
   udp: true
-  name: POOL-16-中国-Shanghai
+  name: POOL-11-中国-Shanghai
 - type: vless
   server: free.fugui.lol
   port: 51283
@@ -152,7 +102,7 @@ proxies:
   reality-opts:
     public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
     short-id: fa514b83
-  name: POOL-17-台湾-Taipei
+  name: POOL-12-台湾-Taipei
   fingerprint: ios
 - type: vless
   server: free.fugui.lol
@@ -164,7 +114,7 @@ proxies:
   reality-opts:
     public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
     short-id: fa514b83
-  name: POOL-18-台湾-Taipei
+  name: POOL-13-台湾-Taipei
   fingerprint: ios
 - alpn:
   - h3
@@ -177,7 +127,46 @@ proxies:
   type: hysteria2
   udp: true
   up: 50 Mbps
-  name: POOL-19-香港-Hong Kong
+  name: POOL-14-香港-Hong Kong
+- network: ws
+  port: 443
+  server: 60.248.219.53
+  servername: ty986gfazs.cainiaohub.xyz
+  tls: true
+  type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  ws-opts:
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+  name: POOL-15-台湾-Tianzhong
+  fingerprint: chrome
+- network: ws
+  port: 443
+  server: 89.128.206.51
+  servername: cj1-e06.pages.dev
+  tls: true
+  type: vless
+  udp: true
+  uuid: 9be9e1e4-d1fc-4423-b22d-cd07a4381acb
+  ws-opts:
+    headers:
+      Host: cj1-e06.pages.dev
+    path: /?ed=2560
+  name: POOL-16-西班牙-Badalona
+  fingerprint: random
+- type: vless
+  server: free.fugui.lol
+  port: 47396
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+  network: tcp
+  tls: true
+  servername: swdist.apple.com
+  reality-opts:
+    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
+    short-id: fa514b83
+  name: POOL-17-台湾-Taipei
+  fingerprint: chrome
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -191,18 +180,16 @@ proxy-groups:
   - POOL-05-美国-Columbia
   - POOL-06-中国-Guangzhou
   - POOL-07-台湾-Erlin
-  - POOL-08-台湾-Yuanlin
-  - POOL-09-台湾-Yuanlin
-  - POOL-10-台湾-Yuanlin
-  - POOL-11-中国-Fuzhou
-  - POOL-12-韩国-Haegok
-  - POOL-13-瑞典-Stockholm
+  - POOL-08-韩国-Haegok
+  - POOL-09-香港-Hong Kong
+  - POOL-10-台湾-Erlin
+  - POOL-11-中国-Shanghai
+  - POOL-12-台湾-Taipei
+  - POOL-13-台湾-Taipei
   - POOL-14-香港-Hong Kong
-  - POOL-15-台湾-Erlin
-  - POOL-16-中国-Shanghai
+  - POOL-15-台湾-Tianzhong
+  - POOL-16-西班牙-Badalona
   - POOL-17-台湾-Taipei
-  - POOL-18-台湾-Taipei
-  - POOL-19-香港-Hong Kong
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -213,18 +200,16 @@ proxy-groups:
   - POOL-05-美国-Columbia
   - POOL-06-中国-Guangzhou
   - POOL-07-台湾-Erlin
-  - POOL-08-台湾-Yuanlin
-  - POOL-09-台湾-Yuanlin
-  - POOL-10-台湾-Yuanlin
-  - POOL-11-中国-Fuzhou
-  - POOL-12-韩国-Haegok
-  - POOL-13-瑞典-Stockholm
+  - POOL-08-韩国-Haegok
+  - POOL-09-香港-Hong Kong
+  - POOL-10-台湾-Erlin
+  - POOL-11-中国-Shanghai
+  - POOL-12-台湾-Taipei
+  - POOL-13-台湾-Taipei
   - POOL-14-香港-Hong Kong
-  - POOL-15-台湾-Erlin
-  - POOL-16-中国-Shanghai
+  - POOL-15-台湾-Tianzhong
+  - POOL-16-西班牙-Badalona
   - POOL-17-台湾-Taipei
-  - POOL-18-台湾-Taipei
-  - POOL-19-香港-Hong Kong
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

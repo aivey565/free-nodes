@@ -32,88 +32,10 @@ proxies:
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.72
-  type: ss
-  name: IT-Milan-AS30088-ss-02
-  _ip_data:
-    ip: 202.50.253.72
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.72
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.18
-  type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-03
-  _ip_data:
-    ip: 202.50.253.18
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.18
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.45
-  type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-04
-  _ip_data:
-    ip: 202.50.253.45
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.45
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 202.50.253.36
-  type: ss
-  name: IT-Milan-AS30088-ss-05
-  _ip_data:
-    ip: 202.50.253.36
-    info:
-      country: 意大利
-      countryCode: IT
-      regionName: Lombardy
-      city: Milan
-      isp: AS30088 GTHost
-      org: AS30088 GTHost
-      query: 202.50.253.36
-      hosting: null
-      asn: AS30088
-    is_residential: false
-- cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
   server: 202.50.253.99
   type: ss
   udp: true
-  name: IT-Milan-AS30088-ss-06
+  name: IT-Milan-AS30088-ss-02
   _ip_data:
     ip: 202.50.253.99
     info:
@@ -130,10 +52,70 @@ proxies:
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
+  server: 202.50.253.27
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-03
+  _ip_data:
+    ip: 202.50.253.27
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.27
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.36
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-04
+  _ip_data:
+    ip: 202.50.253.36
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.36
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.54
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-05
+  _ip_data:
+    ip: 202.50.253.54
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.54
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
   server: 202.50.253.63
   type: ss
   udp: true
-  name: IT-Milan-AS30088-ss-07
+  name: IT-Milan-AS30088-ss-06
   _ip_data:
     ip: 202.50.253.63
     info:
@@ -150,11 +132,12 @@ proxies:
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.90
+  server: 202.50.253.18
   type: ss
-  name: IT-Milan-AS30088-ss-08
+  udp: true
+  name: IT-Milan-AS30088-ss-07
   _ip_data:
-    ip: 202.50.253.90
+    ip: 202.50.253.18
     info:
       country: 意大利
       countryCode: IT
@@ -162,19 +145,18 @@ proxies:
       city: Milan
       isp: AS30088 GTHost
       org: AS30088 GTHost
-      query: 202.50.253.90
+      query: 202.50.253.18
       hosting: null
       asn: AS30088
     is_residential: false
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.54
+  server: 202.50.253.81
   type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-09
+  name: IT-Milan-AS30088-ss-08
   _ip_data:
-    ip: 202.50.253.54
+    ip: 202.50.253.81
     info:
       country: 意大利
       countryCode: IT
@@ -182,38 +164,203 @@ proxies:
       city: Milan
       isp: AS30088 GTHost
       org: AS30088 GTHost
-      query: 202.50.253.54
+      query: 202.50.253.81
       hosting: null
       asn: AS30088
     is_residential: false
-- alterId: 64
-  cipher: auto
-  network: ws
-  port: 30004
-  server: 192.74.236.148
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.72
+  type: ss
+  udp: true
+  name: IT-Milan-AS30088-ss-09
+  _ip_data:
+    ip: 202.50.253.72
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.72
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.124.132
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: FR-Paris-Scaleway-hysteria-10
+  _ip_data:
+    ip: 62.210.124.132
+    info:
+      country: 法国
+      countryCode: FR
+      regionName: Île-de-France
+      city: Paris
+      isp: AS12876 Scaleway SAS
+      org: AS12876 Scaleway SAS
+      query: 62.210.124.132
+      hosting: null
+      asn: AS12876
+    is_residential: false
+- type: vless
+  server: 196.196.148.85
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  network: tcp
+  tls: true
+  servername: 5d0319t.nl7.h1clayd.click
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
+  name: EE-Tallinn-AS58065-vless-11
+  _ip_data:
+    ip: 196.196.148.85
+    info:
+      country: EE
+      countryCode: EE
+      regionName: Harjumaa
+      city: Tallinn
+      isp: AS58065 Orion Network Limited
+      org: AS58065 Orion Network Limited
+      query: 196.196.148.85
+      hosting: null
+      asn: AS58065
+    is_residential: false
+  fingerprint: firefox
+- type: vless
+  server: 196.199.122.2
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  network: xhttp
+  tls: true
+  servername: 38917fx.es1.h1clayd.click
+  reality-opts:
+    public-key: 4mgkA2kT_Im0rkGi-fVSUU5CyF5xvMVcjA6MXBSEDAA
+    short-id: d5501b156391e01d
+  ws-opts:
+    path: /
+  name: ES-Zaragoza-AS58065-vless-12
+  _ip_data:
+    ip: 196.199.122.2
+    info:
+      country: 西班牙
+      countryCode: ES
+      regionName: Aragon
+      city: Zaragoza
+      isp: AS58065 Orion Network Limited
+      org: AS58065 Orion Network Limited
+      query: 196.199.122.2
+      hosting: null
+      asn: AS58065
+    is_residential: false
+  fingerprint: firefox
+- type: vless
+  server: 13.141.51.2
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  network: tcp
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
+  name: NL-Kerkrade-AS218736-vless-13
+  _ip_data:
+    ip: 13.141.51.2
+    info:
+      country: 荷兰
+      countryCode: NL
+      regionName: Limburg
+      city: Kerkrade
+      isp: AS218736 H1CLOUD LTD
+      org: AS218736 H1CLOUD LTD
+      query: 13.141.51.2
+      hosting: null
+      asn: AS218736
+    is_residential: false
+  fingerprint: firefox
+- type: vless
+  server: 196.245.52.187
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  network: tcp
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
+  name: ES-Valencia-AS58065-vless-14
+  _ip_data:
+    ip: 196.245.52.187
+    info:
+      country: 西班牙
+      countryCode: ES
+      regionName: Valencia
+      city: Valencia
+      isp: AS58065 Orion Network Limited
+      org: AS58065 Orion Network Limited
+      query: 196.245.52.187
+      hosting: null
+      asn: AS58065
+    is_residential: false
+  fingerprint: firefox
+- type: vless
+  server: 217.69.174.175
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  network: tcp
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
+  name: DE-Frankfur-AS200051-vless-15
+  _ip_data:
+    ip: 217.69.174.175
+    info:
+      country: 德国
+      countryCode: DE
+      regionName: Hesse
+      city: Frankfurt am Main
+      isp: AS200051 VPSLab Networks
+      org: AS200051 VPSLab Networks
+      query: 217.69.174.175
+      hosting: null
+      asn: AS200051
+    is_residential: false
+  fingerprint: firefox
+- port: 8090
+  server: 173.42.49.102
   skip-cert-verify: true
   tls: true
-  type: vmess
+  type: http
   udp: true
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Host: www.91334565.xyz
-    path: /path/1733477783705
-  name: US-San Jose-PEG-vmess-10
+  _from_pool: true
+  name: US-Columbia-AS11426-http-16
   _ip_data:
-    ip: 192.74.236.148
+    ip: 173.42.49.102
     info:
       country: 美国
       countryCode: US
-      regionName: California
-      city: San Jose
-      isp: AS54600 PEG TECH INC
-      org: AS54600 PEG TECH INC
-      query: 192.74.236.148
+      regionName: South Carolina
+      city: Columbia
+      isp: AS11426 Charter Communications Inc
+      org: AS11426 Charter Communications Inc
+      query: 173.42.49.102
       hosting: null
-      asn: AS54600
-    is_residential: false
+      asn: AS11426
+    is_residential: true
   fingerprint: chrome
 proxy-groups:
 - name: 🚀 节点选择
@@ -230,7 +377,13 @@ proxy-groups:
   - IT-Milan-AS30088-ss-07
   - IT-Milan-AS30088-ss-08
   - IT-Milan-AS30088-ss-09
-  - US-San Jose-PEG-vmess-10
+  - FR-Paris-Scaleway-hysteria-10
+  - EE-Tallinn-AS58065-vless-11
+  - ES-Zaragoza-AS58065-vless-12
+  - NL-Kerkrade-AS218736-vless-13
+  - ES-Valencia-AS58065-vless-14
+  - DE-Frankfur-AS200051-vless-15
+  - US-Columbia-AS11426-http-16
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -243,7 +396,13 @@ proxy-groups:
   - IT-Milan-AS30088-ss-07
   - IT-Milan-AS30088-ss-08
   - IT-Milan-AS30088-ss-09
-  - US-San Jose-PEG-vmess-10
+  - FR-Paris-Scaleway-hysteria-10
+  - EE-Tallinn-AS58065-vless-11
+  - ES-Zaragoza-AS58065-vless-12
+  - NL-Kerkrade-AS218736-vless-13
+  - ES-Valencia-AS58065-vless-14
+  - DE-Frankfur-AS200051-vless-15
+  - US-Columbia-AS11426-http-16
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
