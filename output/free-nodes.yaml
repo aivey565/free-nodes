@@ -5,28 +5,29 @@ mode: rule
 log-level: info
 ipv6: false
 proxies:
-- password: 5807f1c4-b50e-4ec0-8d01-274045da0da5
-  port: 43120
-  server: dddz-1-x.473221.xyz
+- password: 2902c46c8493
+  port: 443
+  server: er8u54dh.df6h451rh.xin
   skip-cert-verify: true
-  sni: v1-dy.ixigua.com
+  sni: px.ads.linkedin.com
   type: anytls
   udp: true
-  name: SG-Singapor-Amazon-anytls-01
+  name: TW-Yuanlin-AS3462-anytls-01
   _ip_data:
-    ip: 13.250.58.76
+    ip: 61.224.66.91
     info:
-      country: 新加坡
-      countryCode: SG
-      regionName: Singapore
-      city: Singapore
-      isp: AS16509 Amazon.com, Inc.
-      org: AS16509 Amazon.com, Inc.
-      query: 13.250.58.76
+      country: 台湾
+      countryCode: TW
+      regionName: Taiwan
+      city: Yuanlin
+      isp: AS3462 Data Communication Business Group
+      org: AS3462 Data Communication Business Group
+      query: 61.224.66.91
       hosting: null
-      asn: AS16509
-    is_residential: false
-- password: 2902c46c8493
+      asn: AS3462
+    is_residential: true
+- client-fingerprint: chrome
+  password: 2902c46c8493
   port: 443
   server: rtifgjdr.df6h451rh.xin
   skip-cert-verify: true
@@ -35,7 +36,7 @@ proxies:
   udp: true
   name: TW-Yuanlin-AS3462-anytls-02
   _ip_data:
-    ip: 122.118.144.96
+    ip: 122.118.147.245
     info:
       country: 台湾
       countryCode: TW
@@ -43,48 +44,50 @@ proxies:
       city: Yuanlin
       isp: AS3462 Data Communication Business Group
       org: AS3462 Data Communication Business Group
-      query: 122.118.144.96
+      query: 122.118.147.245
       hosting: null
       asn: AS3462
     is_residential: true
-- type: ss
-  server: 47.74.49.154
-  port: 5555
-  cipher: aes-256-gcm
-  password: '123456'
-  name: JP-Tokyo-Alibaba-ss-03
+- password: 0324fbc29561
+  port: 443
+  server: mfjh645drfj1dr6j5.df6h451rh.xin
+  skip-cert-verify: true
+  sni: px.ads.linkedin.com
+  type: anytls
+  udp: true
+  name: TW-Yuanlin-AS3462-anytls-03
   _ip_data:
-    ip: 47.74.49.154
+    ip: 125.230.98.55
     info:
-      country: 日本
-      countryCode: JP
-      regionName: Tokyo
-      city: Tokyo
-      isp: AS45102 Alibaba (US) Technology Co., Ltd.
-      org: AS45102 Alibaba (US) Technology Co., Ltd.
-      query: 47.74.49.154
+      country: 台湾
+      countryCode: TW
+      regionName: Taiwan
+      city: Yuanlin
+      isp: AS3462 Data Communication Business Group
+      org: AS3462 Data Communication Business Group
+      query: 125.230.98.55
       hosting: null
-      asn: AS45102
-    is_residential: false
-- type: ss
-  server: 47.245.40.193
-  port: 5555
-  cipher: aes-256-gcm
-  password: '123456'
-  name: JP-Tokyo-Alibaba-ss-04
+      asn: AS3462
+    is_residential: true
+- port: 1080
+  server: 59.11.209.162
+  skip-cert-verify: true
+  type: socks5
+  _from_pool: true
+  name: KR-Suwon-AS4766-socks5-04
   _ip_data:
-    ip: 47.245.40.193
+    ip: 59.11.209.162
     info:
-      country: 日本
-      countryCode: JP
-      regionName: Tokyo
-      city: Tokyo
-      isp: AS45102 Alibaba (US) Technology Co., Ltd.
-      org: AS45102 Alibaba (US) Technology Co., Ltd.
-      query: 47.245.40.193
+      country: 韩国
+      countryCode: KR
+      regionName: Gyeonggi-do
+      city: Suwon
+      isp: AS4766 Korea Telecom
+      org: AS4766 Korea Telecom
+      query: 59.11.209.162
       hosting: null
-      asn: AS45102
-    is_residential: false
+      asn: AS4766
+    is_residential: true
 - password: 0324fbc29561
   port: 443
   server: sdf65h46wr.df6h451rh.xin
@@ -109,183 +112,45 @@ proxies:
       asn: AS3462
     is_residential: true
   fingerprint: chrome
-- password: RRWtX6XP
-  port: 62000
-  server: 203.84.138.59
-  skip-cert-verify: true
-  type: socks5
-  username: 9tcjLp2W
-  name: ID-Jakarta-AS138077-socks5-06
-  _ip_data:
-    ip: 203.84.138.59
-    info:
-      country: 印尼
-      countryCode: ID
-      regionName: Jakarta
-      city: Jakarta
-      isp: AS138077 PT Abhinawa Sumberdaya Asia
-      org: AS138077 PT Abhinawa Sumberdaya Asia
-      query: 203.84.138.59
-      hosting: null
-      asn: AS138077
-    is_residential: false
-- cipher: aes-256-gcm
-  password: qpowi_vip_tunnel_2026_secure
-  port: 8388
-  server: 211.233.33.228
-  type: ss
-  name: KR-Seoul-AS3786-ss-07
-  _ip_data:
-    ip: 211.233.33.228
-    info:
-      country: 韩国
-      countryCode: KR
-      regionName: Seoul
-      city: Seoul
-      isp: AS3786 LG DACOM Corporation
-      org: AS3786 LG DACOM Corporation
-      query: 211.233.33.228
-      hosting: null
-      asn: AS3786
-    is_residential: false
-- type: ss
-  server: 47.245.54.15
-  port: 5555
-  cipher: aes-256-gcm
-  password: '123456'
-  name: JP-Tokyo-Alibaba-ss-08
-  _ip_data:
-    ip: 47.245.54.15
-    info:
-      country: 日本
-      countryCode: JP
-      regionName: Tokyo
-      city: Tokyo
-      isp: AS45102 Alibaba (US) Technology Co., Ltd.
-      org: AS45102 Alibaba (US) Technology Co., Ltd.
-      query: 47.245.54.15
-      hosting: null
-      asn: AS45102
-    is_residential: false
-- type: ss
-  server: 47.74.41.139
-  port: 5555
-  cipher: aes-256-gcm
-  password: '123456'
-  name: JP-Tokyo-Alibaba-ss-09
-  _ip_data:
-    ip: 47.74.41.139
-    info:
-      country: 日本
-      countryCode: JP
-      regionName: Tokyo
-      city: Tokyo
-      isp: AS45102 Alibaba (US) Technology Co., Ltd.
-      org: AS45102 Alibaba (US) Technology Co., Ltd.
-      query: 47.74.41.139
-      hosting: null
-      asn: AS45102
-    is_residential: false
-- type: ss
-  server: 47.245.32.129
-  port: 5555
-  cipher: aes-256-gcm
-  password: '123456'
-  name: JP-Tokyo-Alibaba-ss-10
-  _ip_data:
-    ip: 47.245.32.129
-    info:
-      country: 日本
-      countryCode: JP
-      regionName: Tokyo
-      city: Tokyo
-      isp: AS45102 Alibaba (US) Technology Co., Ltd.
-      org: AS45102 Alibaba (US) Technology Co., Ltd.
-      query: 47.245.32.129
-      hosting: null
-      asn: AS45102
-    is_residential: false
-- grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: 50a5f706c8ea4433838a207d435fbf031b008a9a
-  network: grpc
-  port: 443
-  server: 51.194.118.38
-  servername: a1259.ve8nzuk.com
+- alpn:
+  - http/1.1
+  network: ws
+  port: 8443
+  server: 147.93.171.8
+  servername: 147-93-171-8.sslip.io
   tls: true
   type: vless
   udp: true
-  uuid: 7ff1e7e1-2b5a-4e53-ae77-1516f9eb7754
-  name: NL-Amsterda-AS402394-vless-11
+  uuid: 591e7de6-f2dd-4ff9-ae21-8e00d5affa2a
+  ws-opts:
+    headers:
+      Host: 147-93-171-8.sslip.io
+    path: /vpn-live
+  name: IN-Mumbai-AS141995-vless-06
   _ip_data:
-    ip: 51.194.118.38
+    ip: 147.93.171.8
     info:
-      country: 荷兰
-      countryCode: NL
-      regionName: North Holland
-      city: Amsterdam
-      isp: AS402394 Vuedge Tech LLC
-      org: AS402394 Vuedge Tech LLC
-      query: 51.194.118.38
+      country: 印度
+      countryCode: IN
+      regionName: Maharashtra
+      city: Mumbai
+      isp: AS141995 Contabo Asia Private Limited
+      org: AS141995 Contabo Asia Private Limited
+      query: 147.93.171.8
       hosting: null
-      asn: AS402394
+      asn: AS141995
     is_residential: false
-  fingerprint: chrome
-- auth: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  port: 13337
-  server: 128.254.186.190
-  skip-cert-verify: true
-  sni: mother-earth.fyi
-  tls: false
-  type: hysteria2
-  name: DE-Frankfur-AS219284-hysteria2-12
-  _ip_data:
-    ip: 128.254.186.190
-    info:
-      country: 德国
-      countryCode: DE
-      regionName: Hesse
-      city: Frankfurt am Main
-      isp: AS219284 payload network
-      org: AS219284 payload network
-      query: 128.254.186.190
-      hosting: null
-      asn: AS219284
-    is_residential: false
-- auth: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
-  port: 13337
-  server: 128.254.186.57
-  skip-cert-verify: true
-  sni: mother-earth.fyi
-  tls: false
-  type: hysteria2
-  name: DE-Frankfur-AS219284-hysteria2-13
-  _ip_data:
-    ip: 128.254.186.57
-    info:
-      country: 德国
-      countryCode: DE
-      regionName: Hesse
-      city: Frankfurt am Main
-      isp: AS219284 payload network
-      org: AS219284 payload network
-      query: 128.254.186.57
-      hosting: null
-      asn: AS219284
-    is_residential: false
+  fingerprint: firefox
 - password: 900c8c92-1979-4c7c-8f2f-63e87d53d8fe
   port: 13337
   server: uk-tube-01.stre4m.net
-  servername: mother-earth.fyi
   skip-cert-verify: true
   sni: mother-earth.fyi
   tls: false
   type: hysteria2
-  name: DE-Frankfur-AS219284-hysteria2-14
+  name: DE-Frankfur-AS219284-hysteria2-07
   _ip_data:
-    ip: 128.254.186.213
+    ip: 128.254.186.38
     info:
       country: 德国
       countryCode: DE
@@ -293,7 +158,7 @@ proxies:
       city: Frankfurt am Main
       isp: AS219284 payload network
       org: AS219284 payload network
-      query: 128.254.186.213
+      query: 128.254.186.38
       hosting: null
       asn: AS219284
     is_residential: false
@@ -303,7 +168,7 @@ proxies:
   server: 202.50.253.18
   type: ss
   udp: true
-  name: IT-Milan-AS30088-ss-15
+  name: IT-Milan-AS30088-ss-08
   _ip_data:
     ip: 202.50.253.18
     info:
@@ -320,12 +185,11 @@ proxies:
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.36
+  server: 202.50.253.90
   type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-16
+  name: IT-Milan-AS30088-ss-09
   _ip_data:
-    ip: 202.50.253.36
+    ip: 202.50.253.90
     info:
       country: 意大利
       countryCode: IT
@@ -333,19 +197,57 @@ proxies:
       city: Milan
       isp: AS30088 GTHost
       org: AS30088 GTHost
-      query: 202.50.253.36
+      query: 202.50.253.90
+      hosting: null
+      asn: AS30088
+    is_residential: false
+- type: ss
+  server: 47.254.128.109
+  port: 443
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+  name: DE-Frankfur-Alibaba-ss-10
+  _ip_data:
+    ip: 47.254.128.109
+    info:
+      country: 德国
+      countryCode: DE
+      regionName: Hesse
+      city: Frankfurt am Main
+      isp: AS45102 Alibaba (US) Technology Co., Ltd.
+      org: AS45102 Alibaba (US) Technology Co., Ltd.
+      query: 47.254.128.109
+      hosting: null
+      asn: AS45102
+    is_residential: false
+- cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  port: 19999
+  server: 202.50.253.45
+  type: ss
+  name: IT-Milan-AS30088-ss-11
+  _ip_data:
+    ip: 202.50.253.45
+    info:
+      country: 意大利
+      countryCode: IT
+      regionName: Lombardy
+      city: Milan
+      isp: AS30088 GTHost
+      org: AS30088 GTHost
+      query: 202.50.253.45
       hosting: null
       asn: AS30088
     is_residential: false
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.54
+  server: 202.50.253.63
   type: ss
   udp: true
-  name: IT-Milan-AS30088-ss-17
+  name: IT-Milan-AS30088-ss-12
   _ip_data:
-    ip: 202.50.253.54
+    ip: 202.50.253.63
     info:
       country: 意大利
       countryCode: IT
@@ -353,7 +255,7 @@ proxies:
       city: Milan
       isp: AS30088 GTHost
       org: AS30088 GTHost
-      query: 202.50.253.54
+      query: 202.50.253.63
       hosting: null
       asn: AS30088
     is_residential: false
@@ -362,8 +264,7 @@ proxies:
   port: 19999
   server: 202.50.253.99
   type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-18
+  name: IT-Milan-AS30088-ss-13
   _ip_data:
     ip: 202.50.253.99
     info:
@@ -380,12 +281,11 @@ proxies:
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.90
+  server: 202.50.253.36
   type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-19
+  name: IT-Milan-AS30088-ss-14
   _ip_data:
-    ip: 202.50.253.90
+    ip: 202.50.253.36
     info:
       country: 意大利
       countryCode: IT
@@ -393,19 +293,18 @@ proxies:
       city: Milan
       isp: AS30088 GTHost
       org: AS30088 GTHost
-      query: 202.50.253.90
+      query: 202.50.253.36
       hosting: null
       asn: AS30088
     is_residential: false
 - cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   port: 19999
-  server: 202.50.253.27
+  server: 202.50.253.72
   type: ss
-  udp: true
-  name: IT-Milan-AS30088-ss-20
+  name: IT-Milan-AS30088-ss-15
   _ip_data:
-    ip: 202.50.253.27
+    ip: 202.50.253.72
     info:
       country: 意大利
       countryCode: IT
@@ -413,30 +312,130 @@ proxies:
       city: Milan
       isp: AS30088 GTHost
       org: AS30088 GTHost
-      query: 202.50.253.27
+      query: 202.50.253.72
       hosting: null
       asn: AS30088
     is_residential: false
-- password: exaxgqkKkd0TAMrCxeonWg==
+- network: ws
   port: 443
-  server: usgp1-cdn-route.couldflare-cdn.com
+  server: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+  servername: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
   tls: true
-  type: http
-  udp: true
-  username: mrwdfNTD8M79LCukCieldrqZWqs=
-  name: US-Los Ange-AS153371-http-21
+  type: vless
+  uuid: 1fd2e2d1-96f5-2056-19fd-b375b1a9d851
+  ws-opts:
+    headers:
+      Host: xray-b8ct4r2f-sahdon-hosaindoost.cloady.io
+    path: /ffad70ffdfc3bcda
+  name: US-St. Loui-AS40021-vless-16
   _ip_data:
-    ip: 23.130.4.221
+    ip: 157.173.204.183
+    info:
+      country: 美国
+      countryCode: US
+      regionName: Missouri
+      city: St. Louis
+      isp: AS40021 Contabo Inc.
+      org: AS40021 Contabo Inc.
+      query: 157.173.204.183
+      hosting: null
+      asn: AS40021
+    is_residential: false
+  fingerprint: chrome
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  port: 24667
+  protocol: udp
+  server: 62.210.124.132
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+  name: FR-Paris-Scaleway-hysteria-17
+  _ip_data:
+    ip: 62.210.124.132
+    info:
+      country: 法国
+      countryCode: FR
+      regionName: Île-de-France
+      city: Paris
+      isp: AS12876 Scaleway SAS
+      org: AS12876 Scaleway SAS
+      query: 62.210.124.132
+      hosting: null
+      asn: AS12876
+    is_residential: false
+- password: ppyefe3k
+  port: 62000
+  server: 23.230.200.176
+  skip-cert-verify: true
+  type: socks5
+  username: u1f0cijj
+  _from_pool: true
+  name: US-Santa Cl-AS33651-socks5-18
+  _ip_data:
+    ip: 23.230.200.176
     info:
       country: 美国
       countryCode: US
       regionName: California
-      city: Los Angeles
-      isp: AS153371 BACK WAVES LIMITED
-      org: AS153371 BACK WAVES LIMITED
-      query: 23.130.4.221
+      city: Santa Clara
+      isp: AS33651 Comcast Cable Communications, LLC
+      org: AS33651 Comcast Cable Communications, LLC
+      query: 23.230.200.176
       hosting: null
-      asn: AS153371
+      asn: AS33651
+    is_residential: true
+- type: vless
+  server: 196.245.52.187
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  network: tcp
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+  reality-opts:
+    public-key: UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY
+    short-id: ba2a3dce62b99092
+  name: ES-Valencia-AS58065-vless-19
+  _ip_data:
+    ip: 196.245.52.187
+    info:
+      country: 西班牙
+      countryCode: ES
+      regionName: Valencia
+      city: Valencia
+      isp: AS58065 Orion Network Limited
+      org: AS58065 Orion Network Limited
+      query: 196.245.52.187
+      hosting: null
+      asn: AS58065
+    is_residential: false
+  fingerprint: firefox
+- type: vless
+  server: 196.196.148.85
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  network: tcp
+  tls: true
+  servername: 5d0319t.nl7.h1clayd.click
+  reality-opts:
+    public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
+    short-id: 361d0dd59c70516f
+  name: EE-Tallinn-AS58065-vless-20
+  _ip_data:
+    ip: 196.196.148.85
+    info:
+      country: EE
+      countryCode: EE
+      regionName: Harjumaa
+      city: Tallinn
+      isp: AS58065 Orion Network Limited
+      org: AS58065 Orion Network Limited
+      query: 196.196.148.85
+      hosting: null
+      asn: AS58065
     is_residential: false
   fingerprint: chrome
 - port: 443
@@ -445,7 +444,7 @@ proxies:
   tls: true
   type: http
   udp: true
-  name: US-San Fran-Cloudflare-http-22
+  name: US-San Fran-Cloudflare-http-21
   _ip_data:
     ip: 172.64.69.89
     info:
@@ -460,101 +459,59 @@ proxies:
       asn: AS13335
     is_residential: false
   fingerprint: chrome
-- port: 9002
-  server: 138.199.35.220
-  skip-cert-verify: true
+- password: exaxgqkKkd0TAMrCxeonWg==
+  port: 443
+  server: usgp1-cdn-route.couldflare-cdn.com
   tls: true
   type: http
-  name: US-Los Ange-Datacamp-http-23
+  udp: true
+  username: mrwdfNTD8M79LCukCieldrqZWqs=
+  name: US-Los Ange-AS153371-http-22
   _ip_data:
-    ip: 138.199.35.220
+    ip: 23.130.4.221
     info:
       country: 美国
       countryCode: US
       regionName: California
       city: Los Angeles
-      isp: AS212238 Datacamp Limited
-      org: AS212238 Datacamp Limited
-      query: 138.199.35.220
+      isp: AS153371 BACK WAVES LIMITED
+      org: AS153371 BACK WAVES LIMITED
+      query: 23.130.4.221
       hosting: null
-      asn: AS212238
+      asn: AS153371
     is_residential: false
   fingerprint: chrome
 - port: 9002
-  server: 138.199.35.201
+  server: 158.173.154.5
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  x-toolall-mihomo: true
-  name: US-Los Ange-Datacamp-http-24
+  name: DE-Frankfur-Datacamp-http-23
   _ip_data:
-    ip: 138.199.35.201
+    ip: 158.173.154.5
     info:
-      country: 美国
-      countryCode: US
-      regionName: California
-      city: Los Angeles
+      country: 德国
+      countryCode: DE
+      regionName: Hesse
+      city: Frankfurt am Main
       isp: AS212238 Datacamp Limited
       org: AS212238 Datacamp Limited
-      query: 138.199.35.201
+      query: 158.173.154.5
       hosting: null
       asn: AS212238
     is_residential: false
   fingerprint: chrome
-- port: 9002
-  server: 138.199.35.200
+- password: None
+  port: 9002
+  server: 84.17.47.149
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  x-toolall-mihomo: true
-  name: US-Los Ange-Datacamp-http-25
+  name: NL-Amsterda-Datacamp-http-24
   _ip_data:
-    ip: 138.199.35.200
-    info:
-      country: 美国
-      countryCode: US
-      regionName: California
-      city: Los Angeles
-      isp: AS212238 Datacamp Limited
-      org: AS212238 Datacamp Limited
-      query: 138.199.35.200
-      hosting: null
-      asn: AS212238
-    is_residential: false
-  fingerprint: chrome
-- port: 9002
-  server: 138.199.35.196
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  x-toolall-mihomo: true
-  name: US-Los Ange-Datacamp-http-26
-  _ip_data:
-    ip: 138.199.35.196
-    info:
-      country: 美国
-      countryCode: US
-      regionName: California
-      city: Los Angeles
-      isp: AS212238 Datacamp Limited
-      org: AS212238 Datacamp Limited
-      query: 138.199.35.196
-      hosting: null
-      asn: AS212238
-    is_residential: false
-  fingerprint: chrome
-- port: 9002
-  server: 84.17.47.148
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  name: NL-Amsterda-Datacamp-http-27
-  _ip_data:
-    ip: 84.17.47.148
+    ip: 84.17.47.149
     info:
       country: 荷兰
       countryCode: NL
@@ -562,7 +519,92 @@ proxies:
       city: Amsterdam
       isp: AS60068 Datacamp Limited
       org: AS60068 Datacamp Limited
-      query: 84.17.47.148
+      query: 84.17.47.149
+      hosting: null
+      asn: AS60068
+    is_residential: false
+  fingerprint: chrome
+- port: 9002
+  server: 84.17.47.125
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  name: NL-Amsterda-Datacamp-http-25
+  _ip_data:
+    ip: 84.17.47.125
+    info:
+      country: 荷兰
+      countryCode: NL
+      regionName: North Holland
+      city: Amsterdam
+      isp: AS60068 Datacamp Limited
+      org: AS60068 Datacamp Limited
+      query: 84.17.47.125
+      hosting: null
+      asn: AS60068
+    is_residential: false
+  fingerprint: chrome
+- port: 9002
+  server: 84.17.47.147
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  name: NL-Amsterda-Datacamp-http-26
+  _ip_data:
+    ip: 84.17.47.147
+    info:
+      country: 荷兰
+      countryCode: NL
+      regionName: North Holland
+      city: Amsterdam
+      isp: AS60068 Datacamp Limited
+      org: AS60068 Datacamp Limited
+      query: 84.17.47.147
+      hosting: null
+      asn: AS60068
+    is_residential: false
+  fingerprint: chrome
+- port: 9002
+  server: 84.17.47.124
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  name: NL-Amsterda-Datacamp-http-27
+  _ip_data:
+    ip: 84.17.47.124
+    info:
+      country: 荷兰
+      countryCode: NL
+      regionName: North Holland
+      city: Amsterdam
+      isp: AS60068 Datacamp Limited
+      org: AS60068 Datacamp Limited
+      query: 84.17.47.124
+      hosting: null
+      asn: AS60068
+    is_residential: false
+  fingerprint: chrome
+- password: None
+  port: 9002
+  server: 84.17.47.123
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+  name: NL-Amsterda-Datacamp-http-28
+  _ip_data:
+    ip: 84.17.47.123
+    info:
+      country: 荷兰
+      countryCode: NL
+      regionName: North Holland
+      city: Amsterdam
+      isp: AS60068 Datacamp Limited
+      org: AS60068 Datacamp Limited
+      query: 84.17.47.123
       hosting: null
       asn: AS60068
     is_residential: false
@@ -573,7 +615,7 @@ proxies:
   tls: true
   type: http
   udp: true
-  name: IE-Dublin-Amazon-http-28
+  name: IE-Dublin-Amazon-http-29
   _ip_data:
     ip: 34.249.214.108
     info:
@@ -589,14 +631,14 @@ proxies:
     is_residential: false
   fingerprint: chrome
 - port: 9002
-  server: 158.173.154.5
+  server: 158.173.154.1
   skip-cert-verify: true
   tls: true
   type: http
   udp: true
-  name: DE-Frankfur-Datacamp-http-29
+  name: DE-Frankfur-Datacamp-http-30
   _ip_data:
-    ip: 158.173.154.5
+    ip: 158.173.154.1
     info:
       country: 德国
       countryCode: DE
@@ -604,30 +646,9 @@ proxies:
       city: Frankfurt am Main
       isp: AS212238 Datacamp Limited
       org: AS212238 Datacamp Limited
-      query: 158.173.154.5
+      query: 158.173.154.1
       hosting: null
       asn: AS212238
-    is_residential: false
-  fingerprint: chrome
-- port: 443
-  server: 18.200.158.139
-  skip-cert-verify: true
-  tls: true
-  type: http
-  udp: true
-  name: IE-Dublin-Amazon-http-30
-  _ip_data:
-    ip: 18.200.158.139
-    info:
-      country: 爱尔兰
-      countryCode: IE
-      regionName: Leinster
-      city: Dublin
-      isp: AS16509 Amazon.com, Inc.
-      org: AS16509 Amazon.com, Inc.
-      query: 18.200.158.139
-      hosting: null
-      asn: AS16509
     is_residential: false
   fingerprint: chrome
 proxy-groups:
@@ -636,69 +657,69 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - SG-Singapor-Amazon-anytls-01
+  - TW-Yuanlin-AS3462-anytls-01
   - TW-Yuanlin-AS3462-anytls-02
-  - JP-Tokyo-Alibaba-ss-03
-  - JP-Tokyo-Alibaba-ss-04
+  - TW-Yuanlin-AS3462-anytls-03
+  - KR-Suwon-AS4766-socks5-04
   - TW-Erlin-AS3462-anytls-05
-  - ID-Jakarta-AS138077-socks5-06
-  - KR-Seoul-AS3786-ss-07
-  - JP-Tokyo-Alibaba-ss-08
-  - JP-Tokyo-Alibaba-ss-09
-  - JP-Tokyo-Alibaba-ss-10
-  - NL-Amsterda-AS402394-vless-11
-  - DE-Frankfur-AS219284-hysteria2-12
-  - DE-Frankfur-AS219284-hysteria2-13
-  - DE-Frankfur-AS219284-hysteria2-14
+  - IN-Mumbai-AS141995-vless-06
+  - DE-Frankfur-AS219284-hysteria2-07
+  - IT-Milan-AS30088-ss-08
+  - IT-Milan-AS30088-ss-09
+  - DE-Frankfur-Alibaba-ss-10
+  - IT-Milan-AS30088-ss-11
+  - IT-Milan-AS30088-ss-12
+  - IT-Milan-AS30088-ss-13
+  - IT-Milan-AS30088-ss-14
   - IT-Milan-AS30088-ss-15
-  - IT-Milan-AS30088-ss-16
-  - IT-Milan-AS30088-ss-17
-  - IT-Milan-AS30088-ss-18
-  - IT-Milan-AS30088-ss-19
-  - IT-Milan-AS30088-ss-20
-  - US-Los Ange-AS153371-http-21
-  - US-San Fran-Cloudflare-http-22
-  - US-Los Ange-Datacamp-http-23
-  - US-Los Ange-Datacamp-http-24
-  - US-Los Ange-Datacamp-http-25
-  - US-Los Ange-Datacamp-http-26
+  - US-St. Loui-AS40021-vless-16
+  - FR-Paris-Scaleway-hysteria-17
+  - US-Santa Cl-AS33651-socks5-18
+  - ES-Valencia-AS58065-vless-19
+  - EE-Tallinn-AS58065-vless-20
+  - US-San Fran-Cloudflare-http-21
+  - US-Los Ange-AS153371-http-22
+  - DE-Frankfur-Datacamp-http-23
+  - NL-Amsterda-Datacamp-http-24
+  - NL-Amsterda-Datacamp-http-25
+  - NL-Amsterda-Datacamp-http-26
   - NL-Amsterda-Datacamp-http-27
-  - IE-Dublin-Amazon-http-28
-  - DE-Frankfur-Datacamp-http-29
-  - IE-Dublin-Amazon-http-30
+  - NL-Amsterda-Datacamp-http-28
+  - IE-Dublin-Amazon-http-29
+  - DE-Frankfur-Datacamp-http-30
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - SG-Singapor-Amazon-anytls-01
+  - TW-Yuanlin-AS3462-anytls-01
   - TW-Yuanlin-AS3462-anytls-02
-  - JP-Tokyo-Alibaba-ss-03
-  - JP-Tokyo-Alibaba-ss-04
+  - TW-Yuanlin-AS3462-anytls-03
+  - KR-Suwon-AS4766-socks5-04
   - TW-Erlin-AS3462-anytls-05
-  - ID-Jakarta-AS138077-socks5-06
-  - KR-Seoul-AS3786-ss-07
-  - JP-Tokyo-Alibaba-ss-08
-  - JP-Tokyo-Alibaba-ss-09
-  - JP-Tokyo-Alibaba-ss-10
-  - NL-Amsterda-AS402394-vless-11
-  - DE-Frankfur-AS219284-hysteria2-12
-  - DE-Frankfur-AS219284-hysteria2-13
-  - DE-Frankfur-AS219284-hysteria2-14
+  - IN-Mumbai-AS141995-vless-06
+  - DE-Frankfur-AS219284-hysteria2-07
+  - IT-Milan-AS30088-ss-08
+  - IT-Milan-AS30088-ss-09
+  - DE-Frankfur-Alibaba-ss-10
+  - IT-Milan-AS30088-ss-11
+  - IT-Milan-AS30088-ss-12
+  - IT-Milan-AS30088-ss-13
+  - IT-Milan-AS30088-ss-14
   - IT-Milan-AS30088-ss-15
-  - IT-Milan-AS30088-ss-16
-  - IT-Milan-AS30088-ss-17
-  - IT-Milan-AS30088-ss-18
-  - IT-Milan-AS30088-ss-19
-  - IT-Milan-AS30088-ss-20
-  - US-Los Ange-AS153371-http-21
-  - US-San Fran-Cloudflare-http-22
-  - US-Los Ange-Datacamp-http-23
-  - US-Los Ange-Datacamp-http-24
-  - US-Los Ange-Datacamp-http-25
-  - US-Los Ange-Datacamp-http-26
+  - US-St. Loui-AS40021-vless-16
+  - FR-Paris-Scaleway-hysteria-17
+  - US-Santa Cl-AS33651-socks5-18
+  - ES-Valencia-AS58065-vless-19
+  - EE-Tallinn-AS58065-vless-20
+  - US-San Fran-Cloudflare-http-21
+  - US-Los Ange-AS153371-http-22
+  - DE-Frankfur-Datacamp-http-23
+  - NL-Amsterda-Datacamp-http-24
+  - NL-Amsterda-Datacamp-http-25
+  - NL-Amsterda-Datacamp-http-26
   - NL-Amsterda-Datacamp-http-27
-  - IE-Dublin-Amazon-http-28
-  - DE-Frankfur-Datacamp-http-29
-  - IE-Dublin-Amazon-http-30
+  - NL-Amsterda-Datacamp-http-28
+  - IE-Dublin-Amazon-http-29
+  - DE-Frankfur-Datacamp-http-30
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50

@@ -155,7 +155,7 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-07",
       "last_seen": "2026-11-27"
     },
@@ -220,7 +220,7 @@
           "asn": "AS12479"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-21",
       "last_seen": "2026-11-27"
     },
@@ -248,7 +248,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-27",
       "last_seen": "2026-11-27"
     },
@@ -276,7 +276,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-27",
       "last_seen": "2026-11-27"
     },
@@ -333,7 +333,7 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-27",
       "last_seen": "2026-11-27"
     },
@@ -373,7 +373,7 @@
           "asn": "AS2914"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-22",
       "last_seen": "2026-11-22"
     },
@@ -415,7 +415,7 @@
           "asn": "AS2914"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-22",
       "last_seen": "2026-11-22"
     },
@@ -442,9 +442,9 @@
           "asn": "AS33651"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-11-27",
-      "last_seen": ""
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -467,9 +467,9 @@
           "asn": "AS4766"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-11-27",
-      "last_seen": ""
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -494,9 +494,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-11-27",
-      "last_seen": ""
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -524,9 +524,9 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-11-27",
-      "last_seen": ""
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -553,9 +553,9 @@
           "asn": "AS4760"
         }
       },
-      "fail_days": 1,
+      "fail_days": 0,
       "first_seen": "2026-11-27",
-      "last_seen": ""
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -582,7 +582,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-27",
       "last_seen": ""
     },
@@ -610,7 +610,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -638,7 +638,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -666,7 +666,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -695,7 +695,7 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -734,7 +734,7 @@
           "asn": "AS215960"
         }
       },
-      "fail_days": 2,
+      "fail_days": 3,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -769,7 +769,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-21",
       "last_seen": ""
     },
@@ -802,101 +802,36 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 3,
+      "fail_days": 4,
       "first_seen": "2026-11-21",
       "last_seen": ""
     },
     {
       "config": {
-        "cipher": "2022-blake3-aes-128-gcm",
-        "password": "qryl6xVLkWXZlqD7CccpQw==",
-        "port": 10002,
-        "server": "103.238.140.162",
-        "type": "ss",
+        "password": "487be461-690d-480a-a59d-f46b10524e11",
+        "port": 57180,
+        "server": "turn.gosthk.site",
+        "skip-cert-verify": true,
+        "sni": "turn.gosthk.site",
+        "type": "anytls",
         "udp": true
       },
       "ipinfo": {
-        "ip": "103.238.140.162",
-        "info": {
-          "country": "中国",
-          "countryCode": "CN",
-          "regionName": "Shanghai",
-          "city": "Shanghai",
-          "isp": "AS4811 China Telecom (Group)",
-          "org": "AS4811 China Telecom (Group)",
-          "query": "103.238.140.162",
-          "hosting": null,
-          "asn": "AS4811"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-20",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "type": "vless",
-        "server": "free.fugui.lol",
-        "port": 51283,
-        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
-        "network": "tcp",
-        "tls": true,
-        "servername": "swdist.apple.com",
-        "reality-opts": {
-          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
-          "short-id": "fa514b83"
-        },
-        "client-fingerprint": "ios"
-      },
-      "ipinfo": {
-        "ip": "1.160.0.146",
+        "ip": "1.170.239.229",
         "info": {
           "country": "台湾",
           "countryCode": "TW",
           "regionName": "Taiwan",
-          "city": "Taipei",
+          "city": "Ershui",
           "isp": "AS3462 Data Communication Business Group",
           "org": "AS3462 Data Communication Business Group",
-          "query": "1.160.0.146",
+          "query": "1.170.239.229",
           "hosting": null,
           "asn": "AS3462"
         }
       },
-      "fail_days": 4,
-      "first_seen": "2026-11-20",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "type": "vless",
-        "server": "free.fugui.lol",
-        "port": 19482,
-        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
-        "network": "tcp",
-        "tls": true,
-        "servername": "swdist.apple.com",
-        "reality-opts": {
-          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
-          "short-id": "fa514b83"
-        },
-        "client-fingerprint": "ios"
-      },
-      "ipinfo": {
-        "ip": "1.160.0.146",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Taipei",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "1.160.0.146",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-20",
+      "fail_days": 1,
+      "first_seen": "2026-11-27",
       "last_seen": ""
     }
   ]

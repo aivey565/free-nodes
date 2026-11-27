@@ -264,37 +264,14 @@ proxies:
     short-id: fa514b83
   name: POOL-27-台湾-Taipei
   fingerprint: chrome
-- cipher: 2022-blake3-aes-128-gcm
-  password: qryl6xVLkWXZlqD7CccpQw==
-  port: 10002
-  server: 103.238.140.162
-  type: ss
+- password: 487be461-690d-480a-a59d-f46b10524e11
+  port: 57180
+  server: turn.gosthk.site
+  skip-cert-verify: true
+  sni: turn.gosthk.site
+  type: anytls
   udp: true
-  name: POOL-28-中国-Shanghai
-- type: vless
-  server: free.fugui.lol
-  port: 51283
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  network: tcp
-  tls: true
-  servername: swdist.apple.com
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    short-id: fa514b83
-  name: POOL-29-台湾-Taipei
-  fingerprint: ios
-- type: vless
-  server: free.fugui.lol
-  port: 19482
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  network: tcp
-  tls: true
-  servername: swdist.apple.com
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-    short-id: fa514b83
-  name: POOL-30-台湾-Taipei
-  fingerprint: ios
+  name: POOL-28-台湾-Ershui
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -328,9 +305,7 @@ proxy-groups:
   - POOL-25-瑞典-Stockholm
   - POOL-26-台湾-Tianzhong
   - POOL-27-台湾-Taipei
-  - POOL-28-中国-Shanghai
-  - POOL-29-台湾-Taipei
-  - POOL-30-台湾-Taipei
+  - POOL-28-台湾-Ershui
 - name: ♻️ 自动选择
   type: url-test
   proxies:
@@ -361,9 +336,7 @@ proxy-groups:
   - POOL-25-瑞典-Stockholm
   - POOL-26-台湾-Tianzhong
   - POOL-27-台湾-Taipei
-  - POOL-28-中国-Shanghai
-  - POOL-29-台湾-Taipei
-  - POOL-30-台湾-Taipei
+  - POOL-28-台湾-Ershui
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
