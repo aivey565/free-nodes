@@ -24,7 +24,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-14",
-      "last_seen": "2026-11-22"
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -50,7 +50,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-22"
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -76,7 +76,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-16",
-      "last_seen": "2026-11-22"
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -103,7 +103,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-23",
-      "last_seen": "2026-11-22"
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -130,7 +130,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-10-25",
-      "last_seen": "2026-11-22"
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -157,7 +157,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-07",
-      "last_seen": "2026-11-22"
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -186,192 +186,7 @@
       },
       "fail_days": 0,
       "first_seen": "2026-11-10",
-      "last_seen": "2026-11-22"
-    },
-    {
-      "config": {
-        "type": "socks5",
-        "server": "121.169.46.116",
-        "port": 1090
-      },
-      "ipinfo": {
-        "ip": "121.169.46.116",
-        "info": {
-          "country": "韩国",
-          "countryCode": "KR",
-          "regionName": "Gyeonggi-do",
-          "city": "Haegok",
-          "isp": "AS4766 Korea Telecom",
-          "org": "AS4766 Korea Telecom",
-          "query": "121.169.46.116",
-          "hosting": null,
-          "asn": "AS4766"
-        }
-      },
-      "fail_days": 4,
-      "first_seen": "2026-11-15",
-      "last_seen": "2026-11-18"
-    },
-    {
-      "config": {
-        "cipher": "2022-blake3-aes-128-gcm",
-        "password": "qryl6xVLkWXZlqD7CccpQw==",
-        "port": 10002,
-        "server": "103.238.140.162",
-        "type": "ss",
-        "udp": true
-      },
-      "ipinfo": {
-        "ip": "103.238.140.162",
-        "info": {
-          "country": "中国",
-          "countryCode": "CN",
-          "regionName": "Shanghai",
-          "city": "Shanghai",
-          "isp": "AS4811 China Telecom (Group)",
-          "org": "AS4811 China Telecom (Group)",
-          "query": "103.238.140.162",
-          "hosting": null,
-          "asn": "AS4811"
-        }
-      },
-      "fail_days": 3,
-      "first_seen": "2026-11-20",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "type": "vless",
-        "server": "free.fugui.lol",
-        "port": 51283,
-        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
-        "network": "tcp",
-        "tls": true,
-        "servername": "swdist.apple.com",
-        "reality-opts": {
-          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
-          "short-id": "fa514b83"
-        },
-        "client-fingerprint": "ios"
-      },
-      "ipinfo": {
-        "ip": "1.160.0.146",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Taipei",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "1.160.0.146",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 3,
-      "first_seen": "2026-11-20",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "type": "vless",
-        "server": "free.fugui.lol",
-        "port": 19482,
-        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
-        "network": "tcp",
-        "tls": true,
-        "servername": "swdist.apple.com",
-        "reality-opts": {
-          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
-          "short-id": "fa514b83"
-        },
-        "client-fingerprint": "ios"
-      },
-      "ipinfo": {
-        "ip": "1.160.0.146",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Taipei",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "1.160.0.146",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 3,
-      "first_seen": "2026-11-20",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "alpn": [
-          "h3"
-        ],
-        "auth": "b7f20af6-7523-11f1-a6a1-f23c913c8d2b",
-        "down": "200 Mbps",
-        "password": "b7f20af6-7523-11f1-a6a1-f23c913c8d2b",
-        "port": 443,
-        "server": "906512ec-tovmo0-tou0p4-1ji20.hk3.hyhuawei.com",
-        "skip-cert-verify": true,
-        "type": "hysteria2",
-        "udp": true,
-        "up": "50 Mbps"
-      },
-      "ipinfo": {
-        "ip": "219.73.99.158",
-        "info": {
-          "country": "香港",
-          "countryCode": "HK",
-          "regionName": "Hong Kong",
-          "city": "Hong Kong",
-          "isp": "AS4760 HKT Limited",
-          "org": "AS4760 HKT Limited",
-          "query": "219.73.99.158",
-          "hosting": null,
-          "asn": "AS4760"
-        }
-      },
-      "fail_days": 3,
-      "first_seen": "2026-11-20",
-      "last_seen": ""
-    },
-    {
-      "config": {
-        "client-fingerprint": "chrome",
-        "network": "ws",
-        "port": 443,
-        "server": "60.248.219.53",
-        "servername": "ty986gfazs.cainiaohub.xyz",
-        "tls": true,
-        "type": "vless",
-        "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
-        "ws-opts": {
-          "headers": {
-            "Host": "ty986gfazs.cainiaohub.xyz"
-          },
-          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
-        }
-      },
-      "ipinfo": {
-        "ip": "60.248.219.53",
-        "info": {
-          "country": "台湾",
-          "countryCode": "TW",
-          "regionName": "Taiwan",
-          "city": "Tianzhong",
-          "isp": "AS3462 Data Communication Business Group",
-          "org": "AS3462 Data Communication Business Group",
-          "query": "60.248.219.53",
-          "hosting": null,
-          "asn": "AS3462"
-        }
-      },
-      "fail_days": 2,
-      "first_seen": "2026-11-21",
-      "last_seen": ""
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -405,42 +220,122 @@
           "asn": "AS12479"
         }
       },
-      "fail_days": 2,
+      "fail_days": 0,
       "first_seen": "2026-11-21",
-      "last_seen": ""
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
-        "type": "vless",
-        "server": "free.fugui.lol",
-        "port": 47396,
-        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
-        "network": "tcp",
-        "tls": true,
-        "servername": "swdist.apple.com",
-        "reality-opts": {
-          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
-          "short-id": "fa514b83"
-        },
-        "client-fingerprint": "chrome"
+        "password": "b0a3f86d-9db9-42df-9f4a-bf2de45a091c",
+        "port": 443,
+        "server": "theme.lovehk.xyz",
+        "skip-cert-verify": true,
+        "sni": "theme.lovehk.xyz",
+        "type": "anytls",
+        "udp": true
       },
       "ipinfo": {
-        "ip": "1.160.27.10",
+        "ip": "42.200.230.138",
+        "info": {
+          "country": "香港",
+          "countryCode": "HK",
+          "regionName": "Hong Kong",
+          "city": "Hong Kong",
+          "isp": "AS4760 HKT Limited",
+          "org": "AS4760 HKT Limited",
+          "query": "42.200.230.138",
+          "hosting": null,
+          "asn": "AS4760"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "config": {
+        "password": "1010cbba-c467-45cd-87f3-a583871f6c1a",
+        "port": 443,
+        "server": "signal.lovehk.xyz",
+        "skip-cert-verify": true,
+        "sni": "signal.lovehk.xyz",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "42.200.230.138",
+        "info": {
+          "country": "香港",
+          "countryCode": "HK",
+          "regionName": "Hong Kong",
+          "city": "Hong Kong",
+          "isp": "AS4760 HKT Limited",
+          "org": "AS4760 HKT Limited",
+          "query": "42.200.230.138",
+          "hosting": null,
+          "asn": "AS4760"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "config": {
+        "password": "2902c46c8493",
+        "port": 443,
+        "server": "rtifgjdr.df6h451rh.xin",
+        "skip-cert-verify": true,
+        "sni": "docs.microsoft.com",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "122.118.144.96",
         "info": {
           "country": "台湾",
           "countryCode": "TW",
           "regionName": "Taiwan",
-          "city": "Taipei",
+          "city": "Yuanlin",
           "isp": "AS3462 Data Communication Business Group",
           "org": "AS3462 Data Communication Business Group",
-          "query": "1.160.27.10",
+          "query": "122.118.144.96",
           "hosting": null,
           "asn": "AS3462"
         }
       },
-      "fail_days": 2,
-      "first_seen": "2026-11-21",
-      "last_seen": ""
+      "fail_days": 0,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
+    },
+    {
+      "config": {
+        "client-fingerprint": "chrome",
+        "password": "2902c46c8493",
+        "port": 443,
+        "server": "ibsdsf.df6h451rh.xin",
+        "skip-cert-verify": true,
+        "sni": "docs.microsoft.com",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "218.250.145.235",
+        "info": {
+          "country": "香港",
+          "countryCode": "HK",
+          "regionName": "Hong Kong",
+          "city": "Hong Kong",
+          "isp": "AS4760 HKT Limited",
+          "org": "AS4760 HKT Limited",
+          "query": "218.250.145.235",
+          "hosting": null,
+          "asn": "AS4760"
+        }
+      },
+      "fail_days": 0,
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27"
     },
     {
       "config": {
@@ -478,7 +373,7 @@
           "asn": "AS2914"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-22",
       "last_seen": "2026-11-22"
     },
@@ -520,9 +415,176 @@
           "asn": "AS2914"
         }
       },
-      "fail_days": 0,
+      "fail_days": 1,
       "first_seen": "2026-11-22",
       "last_seen": "2026-11-22"
+    },
+    {
+      "config": {
+        "password": "ppyefe3k",
+        "port": 62000,
+        "server": "23.230.200.176",
+        "skip-cert-verify": true,
+        "type": "socks5",
+        "username": "u1f0cijj"
+      },
+      "ipinfo": {
+        "ip": "23.230.200.176",
+        "info": {
+          "country": "美国",
+          "countryCode": "US",
+          "regionName": "California",
+          "city": "Santa Clara",
+          "isp": "AS33651 Comcast Cable Communications, LLC",
+          "org": "AS33651 Comcast Cable Communications, LLC",
+          "query": "23.230.200.176",
+          "hosting": null,
+          "asn": "AS33651"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-27",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "port": 1080,
+        "server": "59.11.209.162",
+        "skip-cert-verify": true,
+        "type": "socks5"
+      },
+      "ipinfo": {
+        "ip": "59.11.209.162",
+        "info": {
+          "country": "韩国",
+          "countryCode": "KR",
+          "regionName": "Gyeonggi-do",
+          "city": "Suwon",
+          "isp": "AS4766 Korea Telecom",
+          "org": "AS4766 Korea Telecom",
+          "query": "59.11.209.162",
+          "hosting": null,
+          "asn": "AS4766"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-27",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "password": "2902c46c8493",
+        "port": 443,
+        "server": "er8u54dh.df6h451rh.xin",
+        "skip-cert-verify": true,
+        "sni": "px.ads.linkedin.com",
+        "type": "anytls"
+      },
+      "ipinfo": {
+        "ip": "61.224.91.37",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Yuanlin",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "61.224.91.37",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-27",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "fingerprint": "",
+        "password": "0324fbc29561",
+        "port": 443,
+        "server": "mfjh645drfj1dr6j5.df6h451rh.xin",
+        "skip-cert-verify": true,
+        "sni": "px.ads.linkedin.com",
+        "type": "anytls",
+        "udp": true,
+        "username": "0324fbc29561"
+      },
+      "ipinfo": {
+        "ip": "125.230.77.153",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Yuanlin",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "125.230.77.153",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-27",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "client-fingerprint": "chrome",
+        "password": "0324fbc29561",
+        "port": 443,
+        "server": "5641sdds.df6h451rh.xin",
+        "skip-cert-verify": true,
+        "sni": "images.ctfassets.net",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "119.236.179.44",
+        "info": {
+          "country": "香港",
+          "countryCode": "HK",
+          "regionName": "Hong Kong",
+          "city": "Hong Kong",
+          "isp": "AS4760 HKT Limited",
+          "org": "AS4760 HKT Limited",
+          "query": "119.236.179.44",
+          "hosting": null,
+          "asn": "AS4760"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-27",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "client-fingerprint": "chrome",
+        "password": "0324fbc29561",
+        "port": 443,
+        "server": "a54ge.df6h451rh.xin",
+        "skip-cert-verify": true,
+        "sni": "docs.microsoft.com",
+        "type": "anytls",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "125.224.51.253",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Yuanlin",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "125.224.51.253",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 1,
+      "first_seen": "2026-11-27",
+      "last_seen": ""
     },
     {
       "config": {
@@ -548,7 +610,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -576,7 +638,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -604,7 +666,7 @@
           "asn": "AS3462"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -633,7 +695,7 @@
           "asn": "AS9808"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-22",
       "last_seen": ""
     },
@@ -672,8 +734,169 @@
           "asn": "AS215960"
         }
       },
-      "fail_days": 1,
+      "fail_days": 2,
       "first_seen": "2026-11-22",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "client-fingerprint": "chrome",
+        "network": "ws",
+        "port": 443,
+        "server": "60.248.219.53",
+        "servername": "ty986gfazs.cainiaohub.xyz",
+        "tls": true,
+        "type": "vless",
+        "uuid": "c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
+        "ws-opts": {
+          "headers": {
+            "Host": "ty986gfazs.cainiaohub.xyz"
+          },
+          "path": "/81574b6b-c9d7-44a0-b83d-dad56e8cb530"
+        }
+      },
+      "ipinfo": {
+        "ip": "60.248.219.53",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Tianzhong",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "60.248.219.53",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 3,
+      "first_seen": "2026-11-21",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "vless",
+        "server": "free.fugui.lol",
+        "port": 47396,
+        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
+        "network": "tcp",
+        "tls": true,
+        "servername": "swdist.apple.com",
+        "reality-opts": {
+          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
+          "short-id": "fa514b83"
+        },
+        "client-fingerprint": "chrome"
+      },
+      "ipinfo": {
+        "ip": "1.160.27.10",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taipei",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "1.160.27.10",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 3,
+      "first_seen": "2026-11-21",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "cipher": "2022-blake3-aes-128-gcm",
+        "password": "qryl6xVLkWXZlqD7CccpQw==",
+        "port": 10002,
+        "server": "103.238.140.162",
+        "type": "ss",
+        "udp": true
+      },
+      "ipinfo": {
+        "ip": "103.238.140.162",
+        "info": {
+          "country": "中国",
+          "countryCode": "CN",
+          "regionName": "Shanghai",
+          "city": "Shanghai",
+          "isp": "AS4811 China Telecom (Group)",
+          "org": "AS4811 China Telecom (Group)",
+          "query": "103.238.140.162",
+          "hosting": null,
+          "asn": "AS4811"
+        }
+      },
+      "fail_days": 4,
+      "first_seen": "2026-11-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "vless",
+        "server": "free.fugui.lol",
+        "port": 51283,
+        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
+        "network": "tcp",
+        "tls": true,
+        "servername": "swdist.apple.com",
+        "reality-opts": {
+          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
+          "short-id": "fa514b83"
+        },
+        "client-fingerprint": "ios"
+      },
+      "ipinfo": {
+        "ip": "1.160.0.146",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taipei",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "1.160.0.146",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 4,
+      "first_seen": "2026-11-20",
+      "last_seen": ""
+    },
+    {
+      "config": {
+        "type": "vless",
+        "server": "free.fugui.lol",
+        "port": 19482,
+        "uuid": "ead3595f-4020-4e76-a3ec-c248e1a2f2f7",
+        "network": "tcp",
+        "tls": true,
+        "servername": "swdist.apple.com",
+        "reality-opts": {
+          "public-key": "IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ",
+          "short-id": "fa514b83"
+        },
+        "client-fingerprint": "ios"
+      },
+      "ipinfo": {
+        "ip": "1.160.0.146",
+        "info": {
+          "country": "台湾",
+          "countryCode": "TW",
+          "regionName": "Taiwan",
+          "city": "Taipei",
+          "isp": "AS3462 Data Communication Business Group",
+          "org": "AS3462 Data Communication Business Group",
+          "query": "1.160.0.146",
+          "hosting": null,
+          "asn": "AS3462"
+        }
+      },
+      "fail_days": 4,
+      "first_seen": "2026-11-20",
       "last_seen": ""
     }
   ]
